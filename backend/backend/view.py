@@ -2,12 +2,6 @@ from django.http import HttpResponse
 from django.http import JsonResponse
 import json
 
-
-
-
-
-
-
 def hello(request):
     print(request.method)
     if (request.method == 'POST'):

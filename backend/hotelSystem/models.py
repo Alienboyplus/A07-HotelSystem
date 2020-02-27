@@ -16,5 +16,4 @@ class UserFaceInfo(models.Model):
         managed = True
         db_table = 'user_face_info'
 
-
 # Create your models here.

@@ -7,23 +7,25 @@ from captcha.fields import CaptchaField
 import json
 import django
 
+
+#TODO(mhn): 待研究采用何种验证码
 class do_register(APIView):
     def post(self, request):
         # print(request.method)
         try:
-            json_result = json.loads(request.body)
 
             # 读取用户传来的信息，并打印出来
-            print(json_result)
-            phoneNumber = json_result["phoneNumber"]
-            passWord = json_result["password"]
+            phoneNumber = request.data.get("phoneNumber")
+            passWord = request.data.get("password")
+            print(phoneNumber)
+            print(passWord)
 
             # 在数据库中保存用户信息
             # 这里是有涉及到auth和自己建的表
-            user = User.objects.create_user(username=phoneNumber, password=passWord)
-            reg = UserFaceInfo(phone_number=phoneNumber, password=passWord)
-            user.save()
-            reg.save()
+            User.objects.create_user(username=phoneNumber, password=passWord)
+            UserFaceInfo(phone_number=phoneNumber, password=passWord)
+            #user.save()
+            #reg.save()
         except django.db.utils.IntegrityError:
             # 数据库中已经有该信息，返回
             return JsonResponse({"code": 1, "message":"Phone number has been registerd!"})

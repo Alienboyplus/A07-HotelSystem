@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.conf.urls import url, include
 from django.urls import path
 from rest_framework.routers import DefaultRouter
-from . import view, register, LogIn
+from . import view, register, login
 from hotelSystem import views
 
 
@@ -25,7 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/',view.hello),
     path('do_register/', register.do_register.as_view()),
-    #path('login/', LogIn.login_views),
+    path('do_login/', login.do_login.as_view()),
     url(r'^captcha/', include('captcha.urls')),
 ]
 
