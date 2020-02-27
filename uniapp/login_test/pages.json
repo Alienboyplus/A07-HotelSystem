@@ -10,6 +10,10 @@
             "path": "pages/login/register",
             "style": {}
         } 
+        ,{
+            "path" : "pages/login/success",
+            "style" : {}
+        }
     ],
     "globalStyle": {
     	"navigationBarTextStyle": "black",

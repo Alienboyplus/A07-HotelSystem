@@ -155,14 +155,36 @@
 						password:this.passData
 					},
 					head:{
-						'content-type': 'application/json'
+						'content-type': 'application/jsson'
 					},
 					method:'POST',
 					success: (res) => {
 						console.log(res.data)
+						if(res.data.code == "0"){
+							console.log("注册成功")
+							
+							/*
+							这里补充一个异步
+							先显示注册成功的弹窗
+							然后跳转到login界面
+							*/
+							
+							uni.showToast({
+								title:"注册成功！",
+								duration:2000,
+							})
+							
+							uni.navigateTo({
+								url: 'login'
+							})
+						}
+						/*
+						补充已经注册的情况(res.data.code == "1")
+						*/
+						
 					}
 				})
-				console.log("注册成功")
+				
 				_this.isRotate=true
 				setTimeout(function(){
 					_this.isRotate=false

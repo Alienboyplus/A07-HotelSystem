@@ -34,9 +34,9 @@
 				<view class="login_icon">
 					<view class="cuIcon-weibo" @tap="login_weibo"></view>
 				</view>
-				<view class="login_icon">
+<!-- 				<view class="login_icon">
 					<view class="cuIcon-github" @tap="login_github"></view>
-				</view>
+				</view> -->
 			</view>
 			
 			<!-- 底部信息 -->
@@ -112,7 +112,7 @@
 		            return;
 		        }
 				uni.request({
-					url:'http://127.0.0.1:8000/login/',
+					url:'http://127.0.0.1:8000/do_login/',
 					data:{
 						phoneNumber:this.phoneData,
 						password:this.passData
@@ -123,9 +123,36 @@
 					method:'POST',
 					success: (res) => {
 						console.log(res.data)
+						if(res.data.code == 0){
+							console.log("登录成功")
+							uni.navigateTo({
+								url:"success"
+							})
+						}
+						else if(res.data.code == 1){
+							console.log("用户身份过期")
+							uni.showToast({
+								icon: 'none',
+								position: 'bottom',
+								title: '用户身份过期，请重新登录'
+							})
+						}
+						else if(res.data.code == 2){
+							console.log("用户名或密码有误")
+							uni.showToast({
+								icon: 'none',
+								position: 'bottom',
+								title: '用户名或密码有误'
+							})
+						}
+						// if(res.data.text == 0){
+						// 	uni.navigateTo({
+								
+						// 	})
+						// }
 					}
 				})
-				console.log("登录成功")
+				
 				
 				_this.isRotate=true
 				setTimeout(function(){
