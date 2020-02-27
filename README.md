@@ -15,6 +15,16 @@ A07——酒店视觉AI解决方案
 
 数据库：MySQL
 
+-----
+
+#### 推荐安装软件
+
+前端（Vue）：HBuilder X
+
+后端（Python）：JetBrains PyCharm 
+
+数据库（MySQL）：MySQL workbench
+
 ------
 
 #### 环境配置流程
@@ -78,10 +88,6 @@ A07——酒店视觉AI解决方案
 5. 在**backend**目录下启动cmd，输入
 
    ```shell
-   python manage.py inspectdb	
-   ```
-
-   ```shell
    python manage.py migrate
    ```
 
@@ -98,3 +104,39 @@ A07——酒店视觉AI解决方案
    ```
 
    项目即可正常启动
+   
+2. （2.22后端更新注册功能），目前可以测试注册功能：
+
+   * 用HBuilder X打开uniapp下的login_test项目
+   * 选择【运行】→【运行到内置浏览器】
+   * 切换到注册页面，打开内置浏览器的开发者工具
+   * 按流程注册，输入11位手机号码，6位以上的密码，验证码随便输（还没写完功能）
+   * 在开发者工具里的console里查看返回数据，如果是*{code: 0, message: "success"}*则注册成功，可以在数据库里的auth_user表和user_face_info表中看到相关信息
+   * 其他报错请百度或者找我吧XD
+   
+3. （2.27后端更新restful api），启动项目后可以更方便地增删改测试用户信息：
+
+   * 启动项目后访问<http://127.0.0.1:8000/>
+   * <http://127.0.0.1:8000/register/>是用户注册信息，用于登录注册
+   * <http://127.0.0.1:8000/register/>是用户的其他信息
+   * 填写完post即可
+
+---
+
+#### 可能遇到的问题
+
+1. 在启动时可能会遇到
+
+   ```python
+   ModuleNotFoundError: No module named 'xxxxx'
+   ```
+
+   之类的报错，一般来说都是'xxxx'这个包没有安装，解决方法通常是在cmd里输入：
+
+   ```shell
+   pip install xxxxx
+   ```
+
+   如果还不能安装就再百度一下吧
+
+   项目里涉及到的东西有点多，我也没有一一记下来
