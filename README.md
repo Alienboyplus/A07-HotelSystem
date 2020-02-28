@@ -116,9 +116,10 @@ A07——酒店视觉AI解决方案
 5. 在**backend**目录下启动cmd，输入
 
    ```shell
+   python manage.py makemigrations
    python manage.py migrate
-   ```
-
+```
+   
    至此，环境配置基本完成
 
 ------
