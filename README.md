@@ -118,7 +118,7 @@ A07——酒店视觉AI解决方案
    ```shell
    python manage.py makemigrations
    python manage.py migrate
-```
+   ```
    
    至此，环境配置基本完成
 
@@ -133,7 +133,7 @@ A07——酒店视觉AI解决方案
    ```
 
    项目即可正常启动
-   
+
 2. 我个人会用到的git指令，每次准备提交也是这个步骤（在本地的git bash里）：
 
    **（下载文件做一次ok）右键选择【Git Bash Here】，然后输入：**
