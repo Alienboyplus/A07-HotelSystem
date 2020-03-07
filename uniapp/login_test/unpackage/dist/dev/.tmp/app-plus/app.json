@@ -2,7 +2,8 @@
   "pages": [
     "pages/login/login",
     "pages/login/forget",
-    "pages/login/register"
+    "pages/login/register",
+    "pages/login/success"
   ],
   "window": {
     "navigationBarTextStyle": "black",

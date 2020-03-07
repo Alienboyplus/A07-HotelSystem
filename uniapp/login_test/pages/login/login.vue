@@ -75,19 +75,19 @@
 		methods: {
 			isLogin(){
 				//判断缓存中是否登录过，直接登录
-				// try {
-				// 	const value = uni.getStorageSync('setUserData');
-				// 	if (value) {
-				// 		//有登录信息
-				// 		console.log("已登录用户：",value);
-				// 		_this.$store.dispatch("setUserData",value); //存入状态
-				// 		uni.reLaunch({
-				// 			url: '../../../pages/index',
-				// 		});
-				// 	}
-				// } catch (e) {
-				// 	// error
-				// }
+				try {
+					const value = uni.getStorageSync('setUserData');
+					if (value) {
+						//有登录信息
+						console.log("已登录用户：",value);
+						_this.$store.dispatch("setUserData",value); //存入状态
+						uni.reLaunch({
+							url: '../../../pages/index',
+						});
+					}
+				} catch (e) {
+					// error
+				}
 			},
 		    startLogin(){
 				//登录
@@ -158,9 +158,9 @@
 				setTimeout(function(){
 					_this.isRotate=false
 				},3000)
-				// uni.showLoading({
-				// 	title: '登录中'
-				// });
+				uni.showLoading({
+					title: '登录中'
+				});
 				// getLogin()
 				// .then(res => {
 				// 	//console.log(res)
