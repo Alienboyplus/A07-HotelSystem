@@ -34,11 +34,13 @@ A07——酒店视觉AI解决方案
    - 在开发者工具里的console里查看返回数据，如果是*{code: 0, message: "success"}*则注册成功，可以在数据库里的auth_user表和user_face_info表中看到相关信息
    - 注册（成功后）会自行跳转到登录页面
    - 其他报错请百度或者找我吧XD
+   
 2. （2.27后端更新restful api），启动项目后可以更方便地增删改测试用户信息：
    - 启动项目后访问<http://127.0.0.1:8000/>
    - <http://127.0.0.1:8000/register/>是用户注册信息，用于登录注册
    - <http://127.0.0.1:8000/userinfo/>是用户的其他信息
    - 填写完post即可
+   
 3. （2.27后端更新登录功能），目前可以测试登录功能：
    - 用HBuilder X打开uniapp下的login_test项目
    - 选择【运行】→【运行到内置浏览器】
@@ -46,6 +48,26 @@ A07——酒店视觉AI解决方案
    - 按流程登录，输入注册的手机号以及对应的密码
    - 如果成功跳转到success页面则成功，其他常见报错基本都会有弹窗提示（没有就看开发者工具）
    - 还没研究清楚如何保持用户的登录状态
+   
+4. （3.7更新用餐码），目前前端可以支持二维码的显示，后端支持生成二维码的text
+
+   *需要先新建一张表，根据之前写的环境配置步骤选择hotel_system数据库，然后输入：
+
+   ```mysql
+   CREATE TABLE `hotel_system`.`dining_qrcode` (
+     `id` INT NOT NULL,
+     `phonenumber` VARCHAR(45) NOT NULL,
+     `qrcode` VARCHAR(45) NOT NULL,
+     PRIMARY KEY (`id`));
+   ```
+
+   ```mysql
+   ALTER TABLE `hotel_system`.`dining_qrcode` 
+   CHANGE COLUMN `id` `id` INT(11) NOT NULL AUTO_INCREMENT ;
+   ```
+
+   * 前端和后端的信息对接不是问题
+   * 更进一步的问题是，**如何模拟并开发扫码设备，从而登记用户用餐信息？**
 
 ------
 

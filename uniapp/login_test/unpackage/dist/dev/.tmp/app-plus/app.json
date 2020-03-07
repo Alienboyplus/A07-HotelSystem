@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/login/zhiwen-share",
     "pages/login/login",
     "pages/login/forget",
     "pages/login/register",

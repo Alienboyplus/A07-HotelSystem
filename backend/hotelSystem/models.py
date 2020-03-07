@@ -16,4 +16,12 @@ class UserFaceInfo(models.Model):
         managed = True
         db_table = 'user_face_info'
 
+class DiningQrcode(models.Model):
+    phonenumber = models.CharField(max_length=45)
+    qrcode = models.CharField(max_length=45)
+
+    class Meta:
+        managed = True
+        db_table = 'dining_qrcode'
+
 # Create your models here.
