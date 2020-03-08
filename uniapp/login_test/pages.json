@@ -1,13 +1,14 @@
 {
     "pages": [ //pages数组中第一项表示应用启动页,
         {
+            "path": "pages/login/login",
+            "style": {}
+        }, 
+		{
         	"path":"pages/login/zhiwen-share",
         	"style": {} 
         },
 		{
-            "path": "pages/login/login",
-            "style": {}
-        }, {
             "path": "pages/login/forget",
             "style": {}
         }, {

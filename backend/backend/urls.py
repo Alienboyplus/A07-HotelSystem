@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.conf.urls import url, include
 from django.urls import path
 from rest_framework.routers import DefaultRouter
-from . import view, register, login
+from . import view, register, login, dining_qrcode
 from hotelSystem import views
 
 
@@ -26,10 +26,12 @@ urlpatterns = [
     path('hello/',view.hello),
     path('do_register/', register.do_register.as_view()),
     path('do_login/', login.do_login.as_view()),
+    path('do_qrcode/', dining_qrcode.qrcode.as_view()),
     url(r'^captcha/', include('captcha.urls')),
 ]
 
 router = DefaultRouter()
 router.register(r'userinfo',views.UserFaceViewSet)
 router.register(r'register', views.registerViewSet)
+router.register(r'qrcode', views.DiningQrcodeViewSet)
 urlpatterns += router.urls

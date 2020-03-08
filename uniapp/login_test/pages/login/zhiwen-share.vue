@@ -46,11 +46,13 @@
 				// type:0,
 				qrcodeText: 'example text message.',
 				qrcodeSize: 215,
-				qrcodeSrc: ''
+				qrcodeSrc: '',
+				phoneData: '15989584538'
+				
 			}
 		},
 		onLoad() {
-			this.make()
+			this.initialize();
 			this.version = plus.runtime.version;
 			uni.getProvider({
 				service: 'share',
@@ -85,20 +87,49 @@
 					console.log('获取登录通道失败'+ JSON.stringify(e));
 				}
 			});
+
 		},
 		methods:{
-			//复制分享链接
+			initialize() {
+				uni.request({
+					url:'http://127.0.0.1:8000/do_qrcode/',
+					data:{
+						phoneNumber:this.phoneData,
+					},
+					/*
+					这里其实应该传一个用户登录的信息
+					到数据库里去找对应的信息
+					但是我暂时没研究清楚该怎么写，就先写死了电话QAQ
+					*/
+					head:{
+						'content-type': 'application/json'
+					},
+					method:'POST',
+					success: (res) => {
+						console.log(res.data);
+						this.qrcodeText = res.data.text;
+						this.make();
+					},
+					fail: () => {
+						uni.showToast({
+							icon:'none',
+							duration:3000,
+							title:'请检查网络链接！'
+						})
+					}
+				});
+			},
 			make() {
-			  uQRCode.make({
-			    canvasId: 'qrcode',
-			    text: this.qrcodeText,
-			    size: 215,
-			    margin: 10,
-			    success: res => {
-			      console.log(res)
-				  this.qrcodeSrc = res
-			    }
-			  })
+				uQRCode.make({
+					canvasId: 'qrcode',
+					text: this.qrcodeText,
+					size: 215,
+					margin: 10,
+					success: res => {
+						console.log(res)
+						this.qrcodeSrc = res
+					}
+				})
 			},
 			sharurl(){
 				uni.setClipboardData({
