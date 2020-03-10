@@ -4,7 +4,7 @@
 		<view class="content">
 			<!-- 主体 -->
 			<view class="main">
-				<view class="tips">若你忘记了密码，可在此重置新密码</view>
+				<view class="tips">修改密码</view>
 				<wInput
 					v-model="phoneData"
 					type="text"
@@ -34,7 +34,7 @@
 			</view>
 			
 			<wButton 
-				text="重置密码"
+				text="修改密码"
 				:rotate="isRotate" 
 				@click.native="startRePass()"
 			></wButton>
@@ -122,7 +122,7 @@
 				    return false;
 				}
 				uni.showModal({
-				    title: '密码重置成功!',
+				    title: '密码修改成功!',
 				    content: '是否请往登录界面',
 					duration:2000,
 				    success: function (res) {
@@ -132,7 +132,7 @@
 						} 
 					}
 				});
-				console.log("重置密码成功")
+				console.log("修改密码成功")
 				_this.isRotate=true
 				setTimeout(function(){
 					_this.isRotate=false

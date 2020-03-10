@@ -126,7 +126,7 @@
 						if(res.data.code == 0){
 							console.log("登录成功")
 							uni.navigateTo({
-								url:"success"
+								url:"infor"
 							})
 						}
 						else if(res.data.code == 1){
