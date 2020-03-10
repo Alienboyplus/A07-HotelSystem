@@ -11,24 +11,34 @@
 		{
             "path": "pages/login/forget",
             "style": {}
-        }, {
+        }, 
+		{
             "path": "pages/login/register",
             "style": {}
         } 
-        ,  {
+        ,  
+		{
             "path" : "pages/login/map",
             "style" : {}
         }
-		,  {
+		,  
+		{
 		    "path" : "pages/login/infor",
 		    "style" : {}
 		}
-		,	{
+		,	
+		{
 		    "path" : "pages/login/info",
 		    "style" : {}
 		}
-		,	{
+		,	
+		{
 		    "path" : "pages/login/modify",
+		    "style" : {}
+		}
+		,
+		{
+		    "path" : "pages/login/pay",
 		    "style" : {}
 		}
     ],

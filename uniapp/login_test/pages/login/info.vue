@@ -7,12 +7,12 @@
           <cmd-cel-item title="头像" slot-right arrow>
             <cmd-avatar src="https://avatar.bbs.miui.com/images/noavatar_small.gif"></cmd-avatar>
           </cmd-cel-item>
-          <cmd-cel-item title="积分" addon="566" arrow></cmd-cel-item>
-          <cmd-cel-item title="昵称" addon="Slimmer" arrow></cmd-cel-item>
-          <cmd-cel-item title="姓名" addon="Lich" arrow></cmd-cel-item>
-          <cmd-cel-item title="联系方式" addon="15676109501" arrow></cmd-cel-item>
+          <cmd-cel-item title="积分" addon="666" arrow></cmd-cel-item>
+          <cmd-cel-item title="昵称" addon="Macle" arrow></cmd-cel-item>
+          <cmd-cel-item title="姓名" addon="颜王亮" arrow></cmd-cel-item>
+          <cmd-cel-item title="联系方式" addon="19975269386" arrow></cmd-cel-item>
           <cmd-cel-item title="证件号码" addon="450112xxxxxxxx2017" arrow></cmd-cel-item>
-          <cmd-cel-item title="我的地址" addon="广西壮族自治区南宁市西乡塘区大学西路29号" arrow></cmd-cel-item>
+          <cmd-cel-item title="我的地址" addon="杭州电子科技大学" arrow></cmd-cel-item>
           <cmd-cel-item title="修改密码" @click="fnClick('modify')" arrow></cmd-cel-item>
           <button class="btn-logout">"退出登录"</button>
         </view>

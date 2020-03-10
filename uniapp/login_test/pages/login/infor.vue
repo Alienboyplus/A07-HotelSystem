@@ -8,13 +8,13 @@
       </view>
     </view>
     <view class="person-list">
-      <cmd-cell-item title="我的设备" slot-left arrow>
+      <cmd-cell-item title="地图" slot-left @click="fnClick('map')" arrow>
         <cmd-icon type="bullet-list" size="24" color="#000000"></cmd-icon>
       </cmd-cell-item>
-      <cmd-cell-item title="消息通知" slot-left arrow>
+      <cmd-cell-item title="餐卷" slot-left @click="fnClick('zhiwen-share')"arrow>
         <cmd-icon type="message" size="24" color="#000000"></cmd-icon>
       </cmd-cell-item>
-      <cmd-cell-item title="系统设置" slot-left arrow>
+      <cmd-cell-item title="支付" slot-left @click="fnClick('pay')"arrow>
         <cmd-icon type="settings" size="24" color="#000000"></cmd-icon>
       </cmd-cell-item>
       <cmd-cell-item title="检查版本" addon="v1.0" slot-left arrow>
@@ -46,8 +46,25 @@
         uni.navigateTo({
           url: 'info'
         })
-      }
+      },
+	  fnClick(type){
+	    if(type == 'map'){
+	      uni.navigateTo({
+	        url:'map'
+	      })
+	    }
+		if(type == 'zhiwen-share'){
+		  uni.navigateTo({
+		    url:'zhiwen-share'
+		  })
+		}
+		if(type == 'pay'){
+		  uni.navigateTo({
+		    url:'pay'
+		  })
+		}
     }
+  },
   }
 </script>
 
