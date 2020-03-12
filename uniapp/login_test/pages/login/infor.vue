@@ -11,7 +11,7 @@
       <cmd-cell-item title="地图" slot-left @click="fnClick('map')" arrow>
         <cmd-icon type="bullet-list" size="24" color="#000000"></cmd-icon>
       </cmd-cell-item>
-      <cmd-cell-item title="餐卷" slot-left @click="fnClick('zhiwen-share')"arrow>
+      <cmd-cell-item title="餐卷" slot-left @click="fnClick('dinningCode')"arrow>
         <cmd-icon type="message" size="24" color="#000000"></cmd-icon>
       </cmd-cell-item>
       <cmd-cell-item title="支付" slot-left @click="fnClick('pay')"arrow>
@@ -53,9 +53,9 @@
 	        url:'map'
 	      })
 	    }
-		if(type == 'zhiwen-share'){
+		if(type == 'dinningCode'){
 		  uni.navigateTo({
-		    url:'zhiwen-share'
+		    url:'dinningCode'
 		  })
 		}
 		if(type == 'pay'){

@@ -1,0 +1,156 @@
+<template>
+	<div class="content">
+		<div class="text-area">
+			<input class="uni-input" focus placeholder="输入名字" v-model="name"/>
+		</div>
+		<button class="mini-btn" type="primary" size="mini" @click="uploadPics()">读取图片</button>
+		<button class="mini-btn" type="primary" size="mini" @click="register">提交注册</button>
+		<canvas canvas-id="mycanvas" style="height: 1000rpx;"></canvas>
+	</div>
+</template>
+
+<script>
+	import { pathToBase64, base64ToPath } from '@/js_sdk/gsq-image-tools/image-tools/index.js'
+	export default {
+		data() {
+			return {
+				base64 :"",
+				name:"",
+				filePath:""
+			};
+		},
+		methods: {
+			uploadPics(){
+				var _this=this
+			    uni.chooseImage({
+			        count: 1, 
+			        sizeType: ['compressed'], //可以指定是原图还是压缩图，默认二者都有
+			        success: function (res) {
+						_this.imgPath = res.tempFilePaths.toString()
+						_this.filePath = res.tempFilePaths[0]
+						pathToBase64(_this.imgPath)
+						  .then(base64 => {
+						    _this.base64 = base64;
+							console.log(_this.base64)
+						  })
+						  .catch(error => {
+						    console.error(error)
+						  })
+						
+						console.log(_this.imgPath)
+						uni.getImageInfo({
+							src: _this.imgPath,
+							success: function (image) {
+								let canvasWidth = image.width;
+								let canvasHeight = image.height;
+								let base = canvasWidth/canvasHeight;
+			                    //设置画布最大宽度
+								if(canvasWidth>800){
+									canvasWidth = 800;
+									canvasHeight = Math.floor(canvasWidth/base);
+								}
+								let ctx = uni.createCanvasContext('mycanvas');
+								//设置比例
+								let radio = uni.getSystemInfoSync().screenWidth/1500;
+								ctx.clearRect(0, 0, canvasWidth*radio, canvasHeight*radio);
+								ctx.drawImage(_this.imgPath, 0, 0, canvasWidth*radio, canvasHeight*radio);
+								ctx.draw();
+							}
+						});
+			        }
+			    });
+			},
+			register(){
+				if(this.name == ""){
+					uni.showToast({
+							title:"请先输入名字！",
+							duration:3000,
+							icon:'none'
+						});
+					}
+				else if(this.base64 == ""){
+					uni.showToast({
+							title:"请先上传照片！",
+							duration:3000,
+							icon:'none'
+						});
+				}
+				else{
+					// uni.uploadFile({
+					// 	filePath:this.filePath,
+					// 	url:
+					// 	name:this.name,
+					// 	success
+					// })
+					
+					//这段js暂时先鸽了，等我把django的功能写好再补充
+					//功能是将上传的图片保存到对应路径下
+					uni.request({
+						//我的服务器地址，上传成功后有提示
+						//不成功也会返回相关的错误提示
+						//可以找我看看有没有上传成功
+						//
+						url:"http://39.106.209.123:8089/faceAdd",
+						header: {
+							'content-type': 'application/x-www-form-urlencoded', 
+						},
+						data:{
+							name:this.name,
+							file:this.base64,
+							groupId:"101"
+						},
+						method:'POST',
+						success: (res) => {
+							console.log("success!");
+							console.log(res.data);
+							if(res.data.code == 0){
+								uni.showToast({
+									title:'注册成功！',
+									duration:3000
+								});
+							}
+							if(res.data.code == 14){
+								uni.showToast({
+									icon:'none',
+									title:'未检测出人脸，请重试',
+									duration:3000
+								});
+							}
+						},
+						fail: (res) => {
+							console.log("fail");
+							console.log(res.data)
+						}
+					})
+				}
+
+			}
+		}
+	}
+</script>
+
+<style>
+	.content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.logo {
+		margin-top: 200px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 50rpx;
+	}
+
+	.text-area {
+		display: flex;
+		justify-content: center;
+	}
+	
+	.title {
+		font-size: 36rpx;
+		color: #8f8f94;
+	}
+</style>
