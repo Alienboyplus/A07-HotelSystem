@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'hotelSystem',
     'corsheaders',
-    'captcha',
+    #'captcha',
     'rest_framework'
 ]
 

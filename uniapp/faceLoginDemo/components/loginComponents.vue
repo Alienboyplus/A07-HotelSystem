@@ -76,20 +76,22 @@
 						});
 				}
 				else{
-					// uni.uploadFile({
-					// 	filePath:this.filePath,
-					// 	url:
-					// 	name:this.name,
-					// 	success
-					// })
-					
-					//这段js暂时先鸽了，等我把django的功能写好再补充
-					//功能是将上传的图片保存到对应路径下
+					uni.uploadFile({
+						filePath:this.filePath,
+						
+						/*本地*/
+						//url:"http://127.0.0.1:8000/do_upload/",
+						
+						/*服务器端*/
+						url:"http://39.106.209.123:8000/do_upload/",
+						name:'myfile',
+						success: (res) => {
+							console.log(res.data)
+						}
+					})
 					uni.request({
-						//我的服务器地址，上传成功后有提示
-						//不成功也会返回相关的错误提示
-						//可以找我看看有没有上传成功
-						//
+						
+						/*服务器端*/
 						url:"http://39.106.209.123:8089/faceAdd",
 						header: {
 							'content-type': 'application/x-www-form-urlencoded', 

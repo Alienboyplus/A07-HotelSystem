@@ -4,7 +4,7 @@ from django.http import JsonResponse
 from django.contrib.auth.models import User
 from hotelSystem.models import UserFaceInfo
 from hotelSystem.models import DiningQrcode
-from captcha.fields import CaptchaField
+#from captcha.fields import CaptchaField
 import random, base64, django, time, json
 
 #TODO(mhn): 待研究采用何种验证码
