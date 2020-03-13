@@ -112,7 +112,8 @@
 		            return;
 		        }
 				uni.request({
-					url:'http://127.0.0.1:8000/do_login/',
+					//url:'http://127.0.0.1:8000/do_login/',
+					url:'http://39.106.209.123:8000/do_login/',
 					data:{
 						phoneNumber:this.phoneData,
 						password:this.passData
