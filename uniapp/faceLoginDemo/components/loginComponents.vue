@@ -6,6 +6,11 @@
 		<button class="mini-btn" type="primary" size="mini" @click="uploadPics()">读取图片</button>
 		<button class="mini-btn" type="primary" size="mini" @click="register">提交注册</button>
 		<canvas canvas-id="mycanvas" style="height: 1000rpx;"></canvas>
+		<div class="result">
+			<label>age:{{this.age}}</label><br/>
+			<label>gender:{{this.gender}}</label><br/>
+			<label>is_alive:{{this.liveness}}</label>
+		</div>
 	</div>
 </template>
 
@@ -16,7 +21,10 @@
 			return {
 				base64 :"",
 				name:"",
-				filePath:""
+				filePath:"",
+				age:"",
+				gender:"",
+				liveness:"",
 			};
 		},
 		methods: {
@@ -31,7 +39,7 @@
 						pathToBase64(_this.imgPath)
 						  .then(base64 => {
 						    _this.base64 = base64;
-							console.log(_this.base64)
+							//console.log(_this.base64)
 						  })
 						  .catch(error => {
 						    console.error(error)
@@ -76,22 +84,26 @@
 						});
 				}
 				else{
-					uni.uploadFile({
-						filePath:this.filePath,
+					// uni.uploadFile({
+					// 	filePath:this.filePath,
 						
-						/*本地*/
-						//url:"http://127.0.0.1:8000/do_upload/",
+					// 	/*本地*/
+					// 	//url:"http://127.0.0.1:8000/do_upload/",
 						
-						/*服务器端*/
-						url:"http://39.106.209.123:8000/do_upload/",
-						name:'myfile',
-						success: (res) => {
-							console.log(res.data)
-						}
+					// 	/*服务器端*/
+					// 	url:"http://39.106.209.123:8000/do_upload/",
+					// 	name:'myfile',
+					// 	success: (res) => {
+					// 		console.log(res.data)
+					// 	}
+					// })
+					uni.showLoading({
+						title:'加载中...'
 					})
 					uni.request({
 						
 						/*服务器端*/
+						//url:"http://127.0.0.1:8080/faceAdd",
 						url:"http://39.106.209.123:8089/faceAdd",
 						header: {
 							'content-type': 'application/x-www-form-urlencoded', 
@@ -105,11 +117,15 @@
 						success: (res) => {
 							console.log("success!");
 							console.log(res.data);
+							uni.hideLoading();
 							if(res.data.code == 0){
 								uni.showToast({
 									title:'注册成功！',
 									duration:3000
 								});
+								this.age = res.data.age;
+								this.gender = (res.data.gender == 1 ? "女" : "男");
+								this.liveness = (res.data.liveness == 1 ? "活体" : "非活体");
 							}
 							if(res.data.code == 14){
 								uni.showToast({
