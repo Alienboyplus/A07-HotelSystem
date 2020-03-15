@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.views.static import serve
 from django.conf.urls import url, include
 from django.urls import path
 from rest_framework.routers import DefaultRouter
@@ -27,7 +28,9 @@ urlpatterns = [
     path('do_register/', register.do_register.as_view()),
     path('do_login/', login.do_login.as_view()),
     path('do_qrcode/', dining_qrcode.qrcode.as_view()),
-    path('do_upload/', uploadPics.upload_file)
+    path('do_upload/', uploadPics.upload_file),
+    url(r'uploadimage/$', view.uploadImg),
+    url(r'^D:/upload/(?P<path>.*)$', serve, {'document_root': 'D:/upload'})
     #url(r'^captcha/', include('captcha.urls')),
 ]
 
