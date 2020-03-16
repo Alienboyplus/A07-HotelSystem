@@ -7,7 +7,7 @@ A07——酒店视觉AI解决方案
 
 前端：VueJs (uniapp)
 
-后端：Python3 Django
+后端：Python3 Django, Java
 
 数据库：MySQL
 
@@ -17,7 +17,7 @@ A07——酒店视觉AI解决方案
 
 前端（Vue）：HBuilder X
 
-后端（Python）：JetBrains PyCharm 
+后端（Python）：JetBrains PyCharm, IntelliJ IDEA
 
 数据库（MySQL）：MySQL workbench
 
