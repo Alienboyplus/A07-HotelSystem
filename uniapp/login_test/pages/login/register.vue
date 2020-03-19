@@ -101,10 +101,10 @@
 				    title: '验证码已发送至您的手机，请注意查收！'
 				});
 				
-				//@TODO
-				//暂时先不开放
+
 				uni.request({
-					url:'http://127.0.0.1:8000/gen_captcha/',
+					//url:'http://127.0.0.1:8000/gen_captcha/',
+					url:'http://39.106.209.123:8000/gen_captcha/',
 					head:{
 						'content-type': 'application/jsson'
 					},
@@ -114,6 +114,20 @@
 					method:'POST',
 					success: (res) => {
 						console.log(res.data)
+						if(res.data.code == 1){
+							uni.showToast({
+								icon: 'none',
+								position: 'bottom',
+								title: '服务器错误，请重试！'
+							})
+						}
+						else if(res.data.code == 2){
+							uni.showToast({
+								icon: 'none',
+								position: 'bottom',
+								title: '验证码错误！'
+							})
+						}
 					},
 					fail: (res) => {
 						console.log(res.data)
@@ -168,8 +182,8 @@
 				    return false;
 				}
 				uni.request({
-					url:'http://127.0.0.1:8000/do_register/',
-					//url:'http://39.106.209.123:8000/do_register/',
+					//url:'http://127.0.0.1:8000/do_register/',
+					url:'http://39.106.209.123:8000/do_register/',
 					data:{
 						phoneNumber:this.phoneData,
 						password:this.passData,
