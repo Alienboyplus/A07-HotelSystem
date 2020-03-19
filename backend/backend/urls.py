@@ -18,7 +18,7 @@ from django.views.static import serve
 from django.conf.urls import url, include
 from django.urls import path
 from rest_framework.routers import DefaultRouter
-from . import view, register, login, dining_qrcode, uploadPics
+from . import view, register, login, dining_qrcode, uploadPics, captcha
 from hotelSystem import views
 
 
@@ -29,6 +29,7 @@ urlpatterns = [
     path('do_login/', login.do_login.as_view()),
     path('do_qrcode/', dining_qrcode.qrcode.as_view()),
     path('do_upload/', uploadPics.upload_file),
+    path('gen_captcha/', captcha.gen_captcha.as_view()),
     url(r'uploadimage/$', view.uploadImg),
     url(r'^D:/upload/(?P<path>.*)$', serve, {'document_root': 'D:/upload'})
     #url(r'^captcha/', include('captcha.urls')),

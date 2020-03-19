@@ -42,4 +42,13 @@ class uploadImage(models.Model):
     class Meta:
         managed = True
         db_table = 'uploadImage'
+
+class Captcha(models.Model):
+    phonenumber = models.CharField(max_length=45)
+    captcha = models.CharField(max_length=6)
+
+    class Meta:
+        managed = False
+        db_table = 'captcha'
+
 # Create your models here.

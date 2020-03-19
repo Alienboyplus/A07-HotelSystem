@@ -26,12 +26,12 @@ A07——酒店视觉AI解决方案
 #### 更新日志
 
 1. （2.22后端更新注册功能），目前可以测试注册功能：
-   - 用HBuilder X打开uniapp下的login_test项目
+   - 用HBuilder X打开uniapp下的`login_test`项目
    - 选择【运行】→【运行到内置浏览器】
    - 切换到注册页面，打开内置浏览器的开发者工具
    - 按流程注册，输入11位手机号码，6位以上的密码
    - 验证码随便输（还没写完功能）
-   - 在开发者工具里的console里查看返回数据，如果是*{code: 0, message: "success"}*则注册成功，可以在数据库里的auth_user表和user_face_info表中看到相关信息
+   - 在开发者工具里的console里查看返回数据，如果是*{code: 0, message: "success"}*则注册成功，可以在数据库里的`auth_user`表和`user_face_info`表中看到相关信息
    - 注册（成功后）会自行跳转到登录页面
    - 其他报错请百度或者找我吧XD
    
@@ -42,7 +42,7 @@ A07——酒店视觉AI解决方案
    - 填写完post即可
    
 3. （2.27后端更新登录功能），目前可以测试登录功能：
-   - 用HBuilder X打开uniapp下的login_test项目
+   - 用HBuilder X打开uniapp下的`login_test`项目
    - 选择【运行】→【运行到内置浏览器】
    - 切换到登录页面，打开内置浏览器的开发者工具
    - 按流程登录，输入注册的手机号以及对应的密码
@@ -51,7 +51,7 @@ A07——酒店视觉AI解决方案
    
 4. （3.7更新用餐码），目前前端可以支持二维码的显示，后端支持生成二维码的text
 
-   *需要先新建一张表，根据之前写的环境配置步骤选择hotel_system数据库，然后输入：
+   *需要先新建一张表，根据之前写的环境配置步骤选择`hotel_system`数据库，然后输入：
 
    ```mysql
    CREATE TABLE `hotel_system`.`dining_qrcode` (
@@ -117,6 +117,30 @@ A07——酒店视觉AI解决方案
    * 本地的django文件是不能进行ocr处理的，必须要从线上的URL获取图片才可以，有需要可以找我:D
    
    * 两个功能均已部署在服务器上了
+   
+10. （3.19更新验证码）本地已经运行成功，通过手机测试，明天推上服务器
+
+    * 新建了张表，先去MySQL里操作一下：
+
+      ```mysql
+      CREATE TABLE `hotel_system`.`captcha` (
+        `id` INT NOT NULL AUTO_INCREMENT,
+        `phonenumber` VARCHAR(45) NOT NULL,
+        `captcha` VARCHAR(6) NOT NULL,
+        PRIMARY KEY (`id`))
+      ENGINE = InnoDB;
+      ```
+
+    * 然后是喜闻乐见的合并数据库，在`backend`目录下启动cmd，输入：
+
+      ```shell
+      python manage.py runserver
+      python manage.py makemigrations
+      ```
+
+    * 用的是网易云的网易易盾api<https://dun.163.com/>
+
+    * 目前白嫖的功能，时间次数有限，14天内100次，到时候要用再换人认证吧，不是很麻烦
 
 #### 环境配置流程
 
@@ -195,7 +219,7 @@ A07——酒店视觉AI解决方案
 
 #### 启动后台 / 简单的git指令
 
-1. 在**backend**根目录下运行cmd，输入：
+1. 在`backend`根目录下运行cmd，输入：
 
    ```shell
    python manage.py runserver

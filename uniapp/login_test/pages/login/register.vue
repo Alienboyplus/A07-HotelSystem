@@ -24,7 +24,7 @@
 					<wInput
 						v-model="verCode"
 						type="number"
-						maxlength="4"
+						maxlength="6"
 						placeholder="验证码"
 						
 						isShowCode
@@ -98,17 +98,36 @@
 				uni.showToast({
 				    icon: 'none',
 					position: 'bottom',
-				    title: '模拟倒计时触发'
+				    title: '验证码已发送至您的手机，请注意查收！'
 				});
 				
-				setTimeout(function(){
-					_this.$refs.runCode.$emit('runCode',0); //假装模拟下需要 终止倒计时
-					uni.showToast({
-					    icon: 'none',
-						position: 'bottom',
-					    title: '模拟倒计时终止'
-					});
-				},3000)
+				//@TODO
+				//暂时先不开放
+				uni.request({
+					url:'http://127.0.0.1:8000/gen_captcha/',
+					head:{
+						'content-type': 'application/jsson'
+					},
+					data:{
+						phoneNumber:this.phoneData
+					},
+					method:'POST',
+					success: (res) => {
+						console.log(res.data)
+					},
+					fail: (res) => {
+						console.log(res.data)
+					}
+				})
+				
+				// setTimeout(function(){
+				// 	_this.$refs.runCode.$emit('runCode',0); //假装模拟下需要 终止倒计时
+				// 	uni.showToast({
+				// 	    icon: 'none',
+				// 		position: 'bottom',
+				// 	    title: '模拟倒计时终止'
+				// 	});
+				// },3000)
 			},
 		    startReg() {
 				//注册
@@ -140,20 +159,21 @@
 		            });
 		            return false;
 		        }
-				if (this.verCode.length != 4) {
+				if (this.verCode.length != 6) {
 				    uni.showToast({
 				        icon: 'none',
 						position: 'bottom',
-				        title: '验证码不正确'
+				        title: '验证码长度有误！'
 				    });
 				    return false;
 				}
 				uni.request({
-					//url:'http://127.0.0.1:8000/do_register/',
-					url:'http://39.106.209.123:8000/do_register/',
+					url:'http://127.0.0.1:8000/do_register/',
+					//url:'http://39.106.209.123:8000/do_register/',
 					data:{
 						phoneNumber:this.phoneData,
-						password:this.passData
+						password:this.passData,
+						verCode:this.verCode,
 					},
 					head:{
 						'content-type': 'application/jsson'
@@ -187,7 +207,7 @@
 						}
 													
 					}
-				})
+				});
 				
 				_this.isRotate=true
 				setTimeout(function(){
