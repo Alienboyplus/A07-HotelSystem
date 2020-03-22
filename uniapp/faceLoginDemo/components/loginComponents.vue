@@ -39,7 +39,7 @@
 						pathToBase64(_this.imgPath)
 						  .then(base64 => {
 						    _this.base64 = base64;
-							//console.log(_this.base64)
+							console.log(_this.base64)
 						  })
 						  .catch(error => {
 						    console.error(error)
@@ -53,14 +53,14 @@
 								let canvasHeight = image.height;
 								let base = canvasWidth/canvasHeight;
 			                    //设置画布最大宽度
-								if(canvasWidth>800){
-									canvasWidth = 800;
+								if(canvasWidth!=1200){
+									canvasWidth = 1200;
 									canvasHeight = Math.floor(canvasWidth/base);
 								}
 								let ctx = uni.createCanvasContext('mycanvas');
 								//设置比例
 								let radio = uni.getSystemInfoSync().screenWidth/1500;
-								ctx.clearRect(0, 0, canvasWidth*radio, canvasHeight*radio);
+								ctx.clearRect(0, 0, canvasWidth*base, canvasHeight*base);
 								ctx.drawImage(_this.imgPath, 0, 0, canvasWidth*radio, canvasHeight*radio);
 								ctx.draw();
 							}
@@ -101,10 +101,9 @@
 						title:'加载中...'
 					})
 					uni.request({
-						
 						/*服务器端*/
-						//url:"http://127.0.0.1:8080/faceAdd",
-						url:"http://39.106.209.123:8089/faceAdd",
+						url:"http://127.0.0.1:8080/faceAdd",
+						//url:"http://39.106.209.123:8089/faceAdd",
 						header: {
 							'content-type': 'application/x-www-form-urlencoded', 
 						},

@@ -37,11 +37,13 @@
 </template>
 <script>
 var _self;
+import { pathToBase64, base64ToPath } from '@/js_sdk/gsq-image-tools/image-tools/index.js'
 export default {
 	data() {
 		return {
 			idCard1 : '../../static/imgs/idcard1.png',
-			idCard2 : '../../static/imgs/idcard2.png'
+			idCard2 : '../../static/imgs/idcard2.png',
+			idCard1base64 : ''
 		};
 	},
 	onLoad:function(){
@@ -51,16 +53,38 @@ export default {
 		selectImg1 : function() {
 			uni.chooseImage({
 				count:1,
+				sizeType: ['compressed'], 
 				success:function(res){
 					_self.idCard1 = res.tempFilePaths[0];
+					_self.imgPath = res.tempFilePaths.toString()
+					//_self.filePath = res.tempFilePaths[0]
+					pathToBase64(_self.imgPath)
+					  .then(base64 => {
+					    _self.idCard1base64 = base64;
+						//console.log(_self.idCard1base64)
+					  })
+					  .catch(error => {
+					    console.error(error)
+					  })
 				}
 			})
 		},
 		selectImg2 : function() {
 			uni.chooseImage({
 				count:1,
+				sizeType: ['compressed'], 
 				success:function(res){
 					_self.idCard2 = res.tempFilePaths[0];
+					// _self.imgPath = res.tempFilePaths.toString()
+					// //_self.filePath = res.tempFilePaths[0]
+					// pathToBase64(_self.imgPath)
+					//   .then(base64 => {
+					//     _self.idCard2base64 = base64;
+					// 	console.log(_self.idCard2base64)
+					//   })
+					//   .catch(error => {
+					//     console.error(error)
+					//   })
 				}
 			})
 		},
@@ -75,36 +99,76 @@ export default {
 			});
 		},
 		uploadCards : function(){
-			if(this.idCard1 == '../../static/imgs/idcard1.png' || this.idCard2 == '../../static/imgs/idcard2.png'){
-				uni.showToast({title:"请选择身份证照片", icon:"none"});
-				return;
-			}
-			// 因底层限制一次上传一个
-			uni.showLoading({title:"上传中"});
-			// 上传正面
-			var uploadTask1 = uni.uploadFile({
-				url: 'http://39.106.209.123:8000/uploadimage/',
-				filePath: _self.idCard1,
-				fileType: 'image',
-				name: 'img',
-				success: function (uploadFileRes) {
-					// 上传成功后返回服务器端保存的路径
-					console.log(uploadFileRes.data);
-					// 上传背面
-					var uploadTask2 = uni.uploadFile({
-						url: 'http://39.106.209.123:8000/uploadimage/',
-						filePath: _self.idCard2,
-						fileType: 'image',
-						name: 'img',
-						success: function (uploadFileRes) {
-							// 上传成功后返回服务器端保存的路径
-							console.log(uploadFileRes.data);
-							// 至此2张照片上传完毕
-							uni.hideLoading();
-						}
-					 });
+			// if(this.idCard1 == '../../static/imgs/idcard1.png' || this.idCard2 == '../../static/imgs/idcard2.png'){
+			// 	uni.showToast({title:"请选择身份证照片", icon:"none"});
+			// 	return;
+			// }
+			// // 因底层限制一次上传一个
+			// uni.showLoading({title:"上传中"});
+			// // 上传正面
+			// var uploadTask1 = uni.uploadFile({
+			// 	url: 'http://39.106.209.123:8000/uploadimage/',
+			// 	filePath: _self.idCard1,
+			// 	fileType: 'image',
+			// 	name: 'img',
+			// 	success: function (uploadFileRes) {
+			// 		// 上传成功后返回服务器端保存的路径
+			// 		console.log(uploadFileRes.data);
+			// 		// 上传背面
+			// 		var uploadTask2 = uni.uploadFile({
+			// 			url: 'http://39.106.209.123:8000/uploadimage/',
+			// 			filePath: _self.idCard2,
+			// 			fileType: 'image',
+			// 			name: 'img',
+			// 			success: function (uploadFileRes) {
+			// 				// 上传成功后返回服务器端保存的路径
+			// 				console.log(uploadFileRes.data);
+			// 				// 至此2张照片上传完毕
+			// 				uni.hideLoading();
+			// 			}
+			// 		 });
+			// 	}
+			//  });
+			uni.showLoading({
+				title:'加载中...'
+			})
+			 uni.request({
+			 	//url:'http://127.0.0.1:8080/faceSearch',
+				url:'http://39.106.209.123:8089/faceSearch',
+				header: {
+					'content-type': 'application/x-www-form-urlencoded', 
+				},
+				data:{
+					file:this.idCard1base64,
+					groupId:"101",
+				},
+				method:'POST',
+				success: (res) => {
+					if(res.data.code == 0){
+						uni.showToast({
+							icon:"none",
+							title:"相似人员："+res.data.data.name+",相似度："+res.data.data.similarValue+"%"
+						})
+					}
+					else if(res.data.code == 15){
+						uni.showToast({
+							icon:"none",
+							title:"未找到相似人员！"
+						})
+					}
+					uni.hideLoading();
+					console.log(res.data)
+				},
+				fail: (res) => {
+					console.log(res.data)
+					uni.hideLoading();
+					uni.showToast({
+						icon:"none",
+						title:"上传失败！请确保图片大小不要过大！"
+					})
+
 				}
-			 });
+			 })
 		}
 	},
 }
