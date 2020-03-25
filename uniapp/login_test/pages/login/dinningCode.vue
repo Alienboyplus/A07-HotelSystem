@@ -1,4 +1,5 @@
 <template>
+
 	<view class="content" >
 	<view class="top"></view>
 	<view class="banner">

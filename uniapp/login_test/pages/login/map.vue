@@ -1,5 +1,8 @@
 <template>
 	<view>
+		<view class="example-body">
+			<uni-nav-bar left-icon="arrowleft" title="标题"  @clickLeft="back" />
+		</view>		
 		<view class="page-body">
 		    <view class="page-section page-section-gap">
 		       <map style="width: 100%; height: 600px;" :controls="controls" :circles="circles" :polyline='polyline' :scale="scale" :latitude="latitude" :longitude="longitude" :markers="covers">
@@ -21,19 +24,19 @@
 				    longitude: 120.14326,//经度
 				    iconPath: '',	//显示的图标			
 					title:'阿打算',//标注点名
-					label:{//为标记点旁边增加标签
-				            content:'文本1',//文本
-				            color:'#F76350',//文本颜色
-					    anchorX:0,//label的坐标，原点是 marker 对应的经纬度
-					    anchorY:-80,//label的坐标，原点是 marker 对应的经纬度 
-				            bgColor:'#fff',//背景色
-				            padding:5,//文本边缘留白
-					    borderWidth:1,//边框宽度
-					    borderColor:'#D84C29',//边框颜色							
-					    textAlign:'right'//文本对齐方式。
-				     },
+					// label:{//为标记点旁边增加标签
+				 //            content:'酒店',//文本
+				 //            color:'#F76350',//文本颜色
+					//     anchorX:0,//label的坐标，原点是 marker 对应的经纬度
+					//     anchorY:-80,//label的坐标，原点是 marker 对应的经纬度 
+				 //            bgColor:'#fff',//背景色
+				 //            padding:5,//文本边缘留白
+					//     borderWidth:1,//边框宽度
+					//     borderColor:'#D84C29',//边框颜色							
+					//     textAlign:'right'//文本对齐方式。
+				 //     },
 					 callout:{//自定义标记点上方的气泡窗口 点击有效
-				            content:'地点1',
+				            content:'酒店',
 				            color:'#F76350',
 				            fontSize:12,
 							borderRadius:5,
@@ -110,6 +113,14 @@
 					console.log('经度：' + res.longitude);
 				}
 			});
+		},
+		methods: {
+		    /**
+		     * 打开用户信息页
+		     */
+			  back() {
+			  	uni.navigateTo({url: 'register'});
+		  }
 		}
 	}
 </script>

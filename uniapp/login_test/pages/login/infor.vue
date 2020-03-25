@@ -1,5 +1,8 @@
 <template>
-  <view>
+ <view>
+	<!-- <view class="example-body">
+	  	<uni-nav-bar left-icon="arrowleft" title="个人主页"  @clickLeft="back" />
+	</view>	 -->
     <view class="person-head">
       <cmd-avatar src="https://avatar.bbs.miui.com/images/noavatar_small.gif" @click="fnInfoWin" size="lg" :make="{'background-color': '#fff'}"></cmd-avatar>
       <view class="person-head-box">
@@ -8,16 +11,19 @@
       </view>
     </view>
     <view class="person-list">
-      <cmd-cell-item title="地图" slot-left @click="fnClick('map')" arrow>
+      <cmd-cell-item title="导航" slot-left @click="fnClick('map')" arrow>
         <cmd-icon type="bullet-list" size="24" color="#000000"></cmd-icon>
       </cmd-cell-item>
       <cmd-cell-item title="餐卷" slot-left @click="fnClick('dinningCode')"arrow>
         <cmd-icon type="message" size="24" color="#000000"></cmd-icon>
       </cmd-cell-item>
-      <cmd-cell-item title="支付" slot-left @click="fnClick('pay')"arrow>
+      <cmd-cell-item title="新闻" slot-left @click="fnClick('new')"arrow>
         <cmd-icon type="settings" size="24" color="#000000"></cmd-icon>
       </cmd-cell-item>
-      <cmd-cell-item title="检查版本" addon="v1.0" slot-left arrow>
+	  <cmd-cell-item title="购物" slot-left @click="fnClick('shop')" arrow>
+	    <cmd-icon type="bullet-list" size="24" color="#000000"></cmd-icon>
+	  </cmd-cell-item>
+      <cmd-cell-item title="检查版本" addon="v1.1" slot-left arrow>
         <cmd-icon type="alert-circle" size="24" color="#000000"></cmd-icon>
       </cmd-cell-item>
     </view>
@@ -28,12 +34,13 @@
   import cmdAvatar from "@/components/cmd-avatar/cmd-avatar.vue"
   import cmdIcon from "@/components/cmd-icon/cmd-icon.vue"
   import cmdCellItem from "@/components/cmd-cell-item/cmd-cell-item.vue"
-
+  import uniNavBar from "@/components/uni-nav-bar/uni-nav-bar.vue"
   export default {
     components: {
       cmdAvatar,
       cmdCellItem,
-      cmdIcon
+      cmdIcon,
+	  uniNavBar
     },
     data() {
       return {};
@@ -42,6 +49,11 @@
       /**
        * 打开用户信息页
        */
+	  back() {
+	  	uni.navigateBack({
+	  		delta: 1
+	  	})
+	  },
       fnInfoWin() {
         uni.navigateTo({
           url: 'info'
@@ -50,18 +62,23 @@
 	  fnClick(type){
 	    if(type == 'map'){
 	      uni.navigateTo({
-	        url:'map'
+	        url:'./map'
 	      })
 	    }
 		if(type == 'dinningCode'){
 		  uni.navigateTo({
-		    url:'dinningCode'
+		    url:'./dinningCode'
 		  })
 		}
-		if(type == 'pay'){
+		if(type == 'new'){
 		  uni.navigateTo({
-		    url:'pay'
+		    url:'../index/index'
 		  })
+		}
+		if(type == 'shop'){
+			uni.navigate({
+				url:'../index/index'
+			})
 		}
     }
   },

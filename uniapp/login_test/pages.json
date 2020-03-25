@@ -1,6 +1,6 @@
 {
     "pages": [ //pages数组中第一项表示应用启动页,
-        {
+		{
             "path": "pages/login/login",
             "style": {}
         }, 
@@ -38,9 +38,53 @@
 		}
 		,
 		{
-		    "path" : "pages/login/pay",
+		    "path" : "pages/login/first",
 		    "style" : {}
-		}
+		},
+		{
+				    "path" : "pages/index/index",
+				    "style" : {
+				    	"navigationBarTitleText" : "首页",
+				    	"app-plus": {
+				    		"bounce": "none"
+				    	}
+				    }
+				}
+			    ,
+				{
+				    "path" : "pages/details/details",
+				    "style" : {
+						"navigationBarTitleText" : "详情",
+						"app-plus": {
+							"navigationBarTextStyle": "white",
+							"bounce": "none"
+						}
+					}
+				},
+				{
+				    "path" : "pages/details/videoDetails",
+				    "style" : {
+						"navigationBarTitleText" : "",
+						"app-plus": {
+							"titleNView": false,
+							"navigationBarTextStyle": "white",
+							"bounce": "none"
+						}
+					}
+				}
+		        ,{
+		            "path" : "pages/nvue/nvue",
+		            "style" : {
+		            	"navigationBarTitleText" : "首页",
+		            	"app-plus": {
+		            		// #ifdef APP-PLUS
+		            		"titleNView": false,
+		            		"navigationBarTextStyle": "white",
+		            		// #endif
+		            		"bounce": "none"
+		            	}
+		            }
+		        }
     ],
     "globalStyle": {
     	"navigationBarTextStyle": "black",
