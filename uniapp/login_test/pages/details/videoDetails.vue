@@ -102,7 +102,7 @@
 </template>
 
 <script>
-	import json from '@/json';
+	import json from '@/components/json.js';
 	import mixLoading from '@/components/mix-loading/mix-loading';
 	export default {
 		components: {

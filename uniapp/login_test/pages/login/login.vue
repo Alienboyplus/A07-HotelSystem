@@ -1,51 +1,53 @@
 <template>
-	<view class="login">
-		<view class="content">
-			<!-- 头部logo -->
-			<view class="header">
-				<image :src="logoImage"></image>
-			</view>
-			<!-- 主体表单 -->
-			<view class="main">
-				<wInput
-					v-model="phoneData"
-					type="text"
-					maxlength="11"
-					placeholder="用户名/电话"
-				></wInput>
-				<wInput
-					v-model="passData"
-					type="password"
-					maxlength="11"
-					placeholder="密码"
-				></wInput>
-			</view>
-			<wButton 
-				text="登 录"
-				:rotate="isRotate" 
-				@click.native="startLogin()"
-			></wButton>
-			
-			<!-- 其他登录 -->
-			<view class="other_login cuIcon">
-				<view class="login_icon">
-					<view class="cuIcon-weixin" @tap="login_weixin"></view>
+	<view>
+		<view class="login">
+				<view class="content">
+					<!-- 头部logo -->
+					<view class="header">
+						<image :src="logoImage"></image>
+					</view>
+					<!-- 主体表单 -->
+					<view class="main">
+						<wInput
+							v-model="phoneData"
+							type="text"
+							maxlength="11"
+							placeholder="用户名/电话"
+						></wInput>
+						<wInput
+							v-model="passData"
+							type="password"
+							maxlength="11"
+							placeholder="密码"
+						></wInput>
+					</view>
+					<wButton 
+						text="登 录"
+						:rotate="isRotate" 
+						@click.native="startLogin()"
+					></wButton>
+					
+					<!-- 其他登录 -->
+					<view class="other_login cuIcon">
+						<view class="login_icon">
+							<view class="cuIcon-weixin" @tap="login_weixin"></view>
+						</view>
+						<view class="login_icon">
+							<view class="cuIcon-weibo" @tap="login_weibo"></view>
+						</view>
+		<!-- 				<view class="login_icon">
+							<view class="cuIcon-github" @tap="login_github"></view>
+						</view> -->
+					</view>
+					
+					<!-- 底部信息 -->
+					<view class="footer">
+						<navigator url="forget" open-type="navigate">找回密码</navigator>
+						<text>|</text>
+						<navigator url="register" open-type="navigate">注册账号</navigator>
+					</view>
 				</view>
-				<view class="login_icon">
-					<view class="cuIcon-weibo" @tap="login_weibo"></view>
-				</view>
-<!-- 				<view class="login_icon">
-					<view class="cuIcon-github" @tap="login_github"></view>
-				</view> -->
 			</view>
-			
-			<!-- 底部信息 -->
-			<view class="footer">
-				<navigator url="forget" open-type="navigate">找回密码</navigator>
-				<text>|</text>
-				<navigator url="register" open-type="navigate">注册账号</navigator>
-			</view>
-		</view>
 	</view>
 </template>
 
@@ -53,7 +55,6 @@
 	var _this;
 	import wInput from '../../components/watch-login/watch-input.vue' //input
 	import wButton from '../../components/watch-login/watch-button.vue' //button
-	
 	export default {
 		data() {
 			return {
@@ -127,7 +128,7 @@
 						if(res.data.code == 0){
 							console.log("登录成功")
 							uni.navigateTo({
-								url:"infor"
+								url:"./first"
 							})
 						}
 						else if(res.data.code == 1){

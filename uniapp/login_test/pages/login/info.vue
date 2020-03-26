@@ -14,7 +14,7 @@
           <cmd-cel-item title="证件号码" addon="450112xxxxxxxx2017" arrow></cmd-cel-item>
           <cmd-cel-item title="我的地址" addon="杭州电子科技大学" arrow></cmd-cel-item>
           <cmd-cel-item title="修改密码" @click="fnClick('modify')" arrow></cmd-cel-item>
-          <button class="btn-logout">"退出登录"</button>
+          <button class="btn-logout">退出登录</button>
         </view>
       </cmd-transition>
     </cmd-page-body>

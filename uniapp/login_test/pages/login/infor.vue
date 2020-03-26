@@ -72,12 +72,12 @@
 		}
 		if(type == 'new'){
 		  uni.navigateTo({
-		    url:'../index/index'
+			url:'../index/index'
 		  })
 		}
 		if(type == 'shop'){
-			uni.navigate({
-				url:'../index/index'
+			uni.navigateTo({
+			url:'../tabBar/home/home'	
 			})
 		}
     }

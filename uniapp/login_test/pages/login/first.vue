@@ -21,7 +21,7 @@
     </cmd-page-body>
     <!-- 内容区 end -->
     <!-- 底部导航栏组件 -->
-    <cmd-bottom-nav background-color="#ffffff" font-color="#3665ff" active-font-color="#3669ff" @click="getBottomNavCurrent"
+    <cmd-bottom-nav background-color="#ffffff" font-color="#000000" active-font-color="#000000" @click="getBottomNavCurrent"
       :current="current" :list="list"></cmd-bottom-nav>
   </view>
 </template>
@@ -47,7 +47,7 @@
     data() {
       return {
         bodyHeight: 0,
-        title: '首页',
+        title: '欢迎登录',
         // 底部导航栏的默认选中
         current: 0,
         // 底部导航栏的菜单项

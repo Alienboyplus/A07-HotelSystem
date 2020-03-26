@@ -1,45 +1,53 @@
 <template>
-
-	<view class="content" >
-	<view class="top"></view>
-	<view class="banner">
-		<dl>
-			<dt><image src="../../static/img/icon.png" mode=""></image></dt>
-			<dd>我的餐券</dd>
-		</dl>
-		<view class="canvas">
-			<canvas canvas-id="qrcode" style="width: 215px; height: 215px;" />
+	<view>
+		<view class="example-body">
+			<uni-nav-bar left-icon="arrowleft" title="餐卷" @clickLeft="back" />
 		</view>
-		<view class="tgtit">使用日期：<text class="tugurl">2020.3.7 - 2020.3.8</text></view>
-		<view class="sharbuttn">
-			<view class="btn" @click="save">保存二维码</view>
-<!-- 			<view class="btn" @click="sharurl">复制推广链接</view> -->
-		</view>
-		
-		<!-- <button class="btn" @click="share">分享</button> -->
-		<view class="shartitle"><view>注意事项</view></view>
-		<view class="sharapk" @click="share">
-			<!-- <view><image src="../../static/img/weact.png"></image></view>
-			<view><image src="../../static/img/shar.png"></image></view>
-			<view><image src="../../static/img/qq.png"></image></view> -->
-		</view>
-		
-		<view class="bottom">
-			<ul>
-				<li>1、请在用餐时于前台出示此二维码</li>
-				<li>2、请保管好该二维码</li>
-				<li>3、最终解释权归本酒店所有</li>
-			</ul>
-		</view>
+		<view class="content" >
+			<view class="top"></view>
+			<view class="banner">
+				<dl>
+					<dt><image src="../../static/img/icon.png" mode=""></image></dt>
+					<dd>我的餐券</dd>
+				</dl>
+				<view class="canvas">
+					<canvas canvas-id="qrcode" style="width: 215px; height: 215px;" />
+				</view>
+				<view class="tgtit">使用日期：<text class="tugurl">2020.3.7 - 2020.3.8</text></view>
+				<view class="sharbuttn">
+					<view class="btn" @click="save">保存二维码</view>
+		<!-- 			<view class="btn" @click="sharurl">复制推广链接</view> -->
+				</view>
+				
+				<!-- <button class="btn" @click="share">分享</button> -->
+				<view class="shartitle"><view>注意事项</view></view>
+				<view class="sharapk" @click="share">
+					<!-- <view><image src="../../static/img/weact.png"></image></view>
+					<view><image src="../../static/img/shar.png"></image></view>
+					<view><image src="../../static/img/qq.png"></image></view> -->
+				</view>
+				
+				<view class="bottom">
+					<ul>
+						<li>1、请在用餐时于前台出示此二维码</li>
+						<li>2、请保管好该二维码</li>
+						<li>3、最终解释权归本酒店所有</li>
+					</ul>
+				</view>
+			</view>
+			
+			</view>
 	</view>
 	
-	</view>
 </template>
 
 <script>
 	import uQRCode from '@/common/uqrcode.js'
-	
+	import uniNavBar from '@/components/uni-nav-bar/uni-nav-bar.vue'
 	export default {
+		components: {
+			uniNavBar,
+		},
 		data(){
 			return {
 				// providerList:[],				
@@ -91,6 +99,11 @@
 
 		},
 		methods:{
+			back() {
+				uni.navigateTo({
+					url:'infor'
+				})
+			},
 			initialize() {
 				uni.request({
 					url:'http://127.0.0.1:8000/do_qrcode/',

@@ -2,7 +2,7 @@
 	<view>
 		<view class="example-body">
 			<uni-nav-bar left-icon="arrowleft" title="标题"  @clickLeft="back" />
-		</view>		
+		</view>	
 		<view class="page-body">
 		    <view class="page-section page-section-gap">
 		       <map style="width: 100%; height: 600px;" :controls="controls" :circles="circles" :polyline='polyline' :scale="scale" :latitude="latitude" :longitude="longitude" :markers="covers">
@@ -13,7 +13,11 @@
 </template>
  
 <script>
+	import uniNavBar from '@/components/uni-nav-bar/uni-nav-bar.vue'
 	export default {
+		components: {
+			
+		},
 		data() {
 			return {
 				title: 'map',
@@ -118,10 +122,13 @@
 		    /**
 		     * 打开用户信息页
 		     */
-			  back() {
-			  	uni.navigateTo({url: 'register'});
+			 back() {
+			 	uni.navigateBack({
+			 		delta: 1
+			 	})
+			 },
 		  }
-		}
+		
 	}
 </script>
 
