@@ -1,0 +1,54 @@
+
+page {
+	background: #f2f2f2;
+}
+.keyboard-container {
+	position: absolute;
+	top:0;
+	height: 100%;
+	width: 100%;
+}
+uni-button[type=primary] {background: #00C456!important;}
+/* 选项卡 */
+.tab{padding:0;}
+.tab-title{white-space:nowrap; text-align:center; background:#FFFFFF;}
+.tab-title view{width:auto; padding:0 12px; margin:0 8px; line-height:42px; display: inline-block; text-align:center; border-bottom:2px solid #FFFFFF; font-size:30rpx;}
+.tab-title view:first-child{margin-left: 0;}
+.tab-title view:last-child{margin-right: 0;}
+.tab-current{border-bottom:4rpx solid #00C777 !important; color:#00C777;}
+.tab-swiper{width:100%; height:350rpx; padding:0;}
+.tab-swiper swiper-item{width:100%;}
+.tab-swiper swiper-item navigator{line-height:70rpx; width:100%; display:block;}
+.tab-swiper-full{width:100%; height:auto;}
+.tab-swiper-full swiper-item{width:100%;}
+.tab-swiper-full scroll-view{width:100%; height:100%;}
+.center {text-align: center;}
+.mt-10 {margin-top: 10px;}
+.pt-10 {paddint-top: 10px;}
+.content {text-align: center;height: 400rpx;}
+.payment-container {border-top: 1px solid #e2e2e2;height: calc(100%-44px);overflow: hidden;}
+.payment-container .payment {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	padding: 10px;
+	background: #fff;
+}
+.payment-container .payment view:nth-child(2) {-webkit-box-flex:1;-webkit-flex:1;flex:1;}
+.payment-container .payment-active {background: #E2E2E2;}
+.payment-container .payment image {width: 30px; height: 30px;margin-right: 10px;}
+.money-container {background: #fff;padding: 10px;}
+.money-container .money-box {padding:10px 0;border-bottom: 1px solid #efefef;display: -webkit-box;display: -webkit-flex;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;flex-direction: row; -webkit-box-align: center; -webkit-align-items: center; align-items: center;}
+.money-container .money-box .button {font-size: 12px;color: #cf9f41;}
+.money-container .money-box view:nth-child(1) {font-size: 25px;}
+.money-container .money-box view:nth-child(2) {-webkit-box-flex: 1;-webkit-flex: 1;flex: 1;font-size: 30px;padding: 0 5px;}
+.money-container .tips {color:#222;padding-top: 10px; font-size: 12px;}
+.button-box {padding: 0 10px;}
+

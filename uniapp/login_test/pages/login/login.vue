@@ -55,6 +55,12 @@
 	var _this;
 	import wInput from '../../components/watch-login/watch-input.vue' //input
 	import wButton from '../../components/watch-login/watch-button.vue' //button
+<<<<<<< Updated upstream
+=======
+	import {
+		request
+	} from '../../untils/request.js'
+>>>>>>> Stashed changes
 	export default {
 		data() {
 			return {
@@ -63,7 +69,51 @@
 				phoneData:'', //用户/电话
 				passData:'', //密码
 				isRotate: false, //是否加载旋转
+				userInfo: {},
+				isLogin: false
 			};
+		},
+		onLoad() {
+			request({
+				api: "http://127.0.0.1:8000/do_login/",
+				method: "POST",
+				self: this,
+				data: {
+					'phoneNumber': '15989584526',
+					'password': '123456'
+				},
+				then: function(res) {
+					
+				},
+				err: function(res) {
+					
+				}
+			})
+			// uni.request({
+			// 	url:"http://127.0.0.1:8000/do_login/",
+			// 	method:"POST",
+			// 	header:{
+			// 		'Content-Type': 'application/x-www-form-urlencoded'
+			// 	},
+			// 	data: {
+			// 		'phoneNumber': '15989584526',
+			// 		'password': '123456'
+			// 	},
+			// 	success: (res) => {
+			// 		uni.showToast({
+			// 			icon: "none",
+			// 			title: res.data.msg,
+			// 			duration:2000
+			// 		})
+			// 	},
+			// 	fail: (res) => {
+			// 		uni.showToast({
+			// 			icon: "none",
+			// 			title: 'fail',
+			// 			duration:2000
+			// 		})
+			// 	}
+			// })
 		},
 		components:{
 			wInput,
@@ -74,22 +124,22 @@
 			//this.isLogin();
 		},
 		methods: {
-			isLogin(){
-				//判断缓存中是否登录过，直接登录
-				try {
-					const value = uni.getStorageSync('setUserData');
-					if (value) {
-						//有登录信息
-						console.log("已登录用户：",value);
-						_this.$store.dispatch("setUserData",value); //存入状态
-						uni.reLaunch({
-							url: '../../../pages/index',
-						});
-					}
-				} catch (e) {
-					// error
-				}
-			},
+			// isLogin(){
+			// 	//判断缓存中是否登录过，直接登录
+			// 	try {
+			// 		const value = uni.getStorageSync('setUserData');
+			// 		if (value) {
+			// 			//有登录信息
+			// 			console.log("已登录用户：",value);
+			// 			_this.$store.dispatch("setUserData",value); //存入状态
+			// 			uni.reLaunch({
+			// 				url: '../../../pages/index',
+			// 			});
+			// 		}
+			// 	} catch (e) {
+			// 		// error
+			// 	}
+			// },
 		    startLogin(){
 				//登录
 				if(this.isRotate){
@@ -113,8 +163,8 @@
 		            return;
 		        }
 				uni.request({
-					//url:'http://127.0.0.1:8000/do_login/',
-					url:'http://39.106.209.123:8000/do_login/',
+					url:'http://127.0.0.1:8000/do_login/',
+					//url:'http://39.106.209.123:8000/do_login/',
 					data:{
 						phoneNumber:this.phoneData,
 						password:this.passData
@@ -147,6 +197,7 @@
 								title: '用户名或密码有误'
 							})
 						}
+						//else 
 						// if(res.data.text == 0){
 						// 	uni.navigateTo({
 								
@@ -154,7 +205,6 @@
 						// }
 					}
 				})
-				
 				
 				_this.isRotate=true
 				setTimeout(function(){

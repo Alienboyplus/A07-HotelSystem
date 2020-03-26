@@ -1,10 +1,14 @@
 {
   "pages": [
-    "pages/login/zhiwen-share",
     "pages/login/login",
+    "pages/login/dinningCode",
     "pages/login/forget",
     "pages/login/register",
-    "pages/login/success"
+    "pages/login/map",
+    "pages/login/infor",
+    "pages/login/info",
+    "pages/login/modify",
+    "pages/login/pay"
   ],
   "window": {
     "navigationBarTextStyle": "black",

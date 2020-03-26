@@ -102,8 +102,8 @@
 					})
 					uni.request({
 						/*服务器端*/
-						url:"http://127.0.0.1:8080/faceAdd",
-						//url:"http://39.106.209.123:8089/faceAdd",
+						//url:"http://127.0.0.1:8080/faceAdd",
+						url:"http://39.106.209.123:8089/faceAdd",
 						header: {
 							'content-type': 'application/x-www-form-urlencoded', 
 						},
@@ -135,6 +135,7 @@
 							}
 						},
 						fail: (res) => {
+							uni.hideLoading();
 							console.log("fail");
 							console.log(res.data)
 						}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "uni-password": "/components/uni-password/uni-password",
+    "uni-icon": "/components/i-icon/i-icon",
+    "uni-keyboard": "/components/uni-keyboard"
+  }
+}
