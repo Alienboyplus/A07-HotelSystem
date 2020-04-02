@@ -134,8 +134,8 @@ A07——酒店视觉AI解决方案
     * 然后是喜闻乐见的合并数据库，在`backend`目录下启动cmd，输入：
 
       ```shell
-      python manage.py runserver
       python manage.py makemigrations
+      python manage.py migrate
       ```
 
     * 用的是网易云的网易易盾api<https://dun.163.com/>
