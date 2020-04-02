@@ -130,3 +130,6 @@ getVerCode(){
 │   │   ├── register.vue    //注册页
 │   │   ├── forget.vue    //忘记密码页
 ```
+
+## 多语言版本更新说明
+可以通过language.js下language的真值改变login.vue的中英文版本
