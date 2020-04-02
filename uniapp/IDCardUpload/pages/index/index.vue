@@ -1,10 +1,10 @@
 <template>
 	<view>
 		<view class="grace-idcard-main">
-			<view class="grace-idcard-desc">
+<!-- 			<view class="grace-idcard-desc">
 				描述示例文本 : graceUI  极速开发之旅 ! 基于 uni-app 的优秀前端框架，大幅度提高布局效率!
 				<text>\n http://grace.hcoder.net</text>
-			</view>
+			</view> -->
 			<view class="grace-idcard-text">
 				身份证照片 ( 正面 )
 			</view>
@@ -75,16 +75,16 @@ export default {
 				sizeType: ['compressed'], 
 				success:function(res){
 					_self.idCard2 = res.tempFilePaths[0];
-					// _self.imgPath = res.tempFilePaths.toString()
-					// //_self.filePath = res.tempFilePaths[0]
-					// pathToBase64(_self.imgPath)
-					//   .then(base64 => {
-					//     _self.idCard2base64 = base64;
-					// 	console.log(_self.idCard2base64)
-					//   })
-					//   .catch(error => {
-					//     console.error(error)
-					//   })
+					_self.imgPath = res.tempFilePaths.toString()
+					//_self.filePath = res.tempFilePaths[0]
+					pathToBase64(_self.imgPath)
+					  .then(base64 => {
+					    _self.idCard2base64 = base64;
+						console.log(_self.idCard2base64)
+					  })
+					  .catch(error => {
+					    console.error(error)
+					  })
 				}
 			})
 		},
@@ -99,36 +99,36 @@ export default {
 			});
 		},
 		uploadCards : function(){
-			// if(this.idCard1 == '../../static/imgs/idcard1.png' || this.idCard2 == '../../static/imgs/idcard2.png'){
-			// 	uni.showToast({title:"请选择身份证照片", icon:"none"});
-			// 	return;
-			// }
-			// // 因底层限制一次上传一个
-			// uni.showLoading({title:"上传中"});
-			// // 上传正面
-			// var uploadTask1 = uni.uploadFile({
-			// 	url: 'http://39.106.209.123:8000/uploadimage/',
-			// 	filePath: _self.idCard1,
-			// 	fileType: 'image',
-			// 	name: 'img',
-			// 	success: function (uploadFileRes) {
-			// 		// 上传成功后返回服务器端保存的路径
-			// 		console.log(uploadFileRes.data);
-			// 		// 上传背面
-			// 		var uploadTask2 = uni.uploadFile({
-			// 			url: 'http://39.106.209.123:8000/uploadimage/',
-			// 			filePath: _self.idCard2,
-			// 			fileType: 'image',
-			// 			name: 'img',
-			// 			success: function (uploadFileRes) {
-			// 				// 上传成功后返回服务器端保存的路径
-			// 				console.log(uploadFileRes.data);
-			// 				// 至此2张照片上传完毕
-			// 				uni.hideLoading();
-			// 			}
-			// 		 });
-			// 	}
-			//  });
+			if(this.idCard1 == '../../static/imgs/idcard1.png' || this.idCard2 == '../../static/imgs/idcard2.png'){
+				uni.showToast({title:"请选择身份证照片", icon:"none"});
+				return;
+			}
+			// 因底层限制一次上传一个
+			uni.showLoading({title:"上传中"});
+			// 上传正面
+			var uploadTask1 = uni.uploadFile({
+				url: 'http://39.106.209.123:8000/uploadimage/',
+				filePath: _self.idCard1,
+				fileType: 'image',
+				name: 'img',
+				success: function (uploadFileRes) {
+					// 上传成功后返回服务器端保存的路径
+					console.log(uploadFileRes.data);
+					// 上传背面
+					var uploadTask2 = uni.uploadFile({
+						url: 'http://39.106.209.123:8000/uploadimage/',
+						filePath: _self.idCard2,
+						fileType: 'image',
+						name: 'img',
+						success: function (uploadFileRes) {
+							// 上传成功后返回服务器端保存的路径
+							console.log(uploadFileRes.data);
+							// 至此2张照片上传完毕
+							uni.hideLoading();
+						}
+					 });
+				}
+			 });
 			uni.showLoading({
 				title:'加载中...'
 			})
