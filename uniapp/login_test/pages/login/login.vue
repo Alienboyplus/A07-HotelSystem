@@ -55,12 +55,12 @@
 	var _this;
 	import wInput from '../../components/watch-login/watch-input.vue' //input
 	import wButton from '../../components/watch-login/watch-button.vue' //button
-// <<<<<<< Updated upstream
-// =======
-	import {
-		request
-	} from '../../untils/request.js'
-// >>>>>>> Stashed changes
+// // <<<<<<< Updated upstream
+// // =======
+// 	import {
+// 		request
+// 	} from '../../untils/request.js'
+// // >>>>>>> Stashed changes
 	export default {
 		data() {
 			return {

@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="795eb750-d6e8-40e3-9082-7867767a647f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../uniapp/IDCardUpload/unpackage/dist/dev/.tmp/app-plus/common/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/IDCardUpload/unpackage/dist/dev/.tmp/app-plus/common/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../uniapp/IDCardUpload/unpackage/dist/dev/.tmp/app-plus/common/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/IDCardUpload/unpackage/dist/dev/.tmp/app-plus/common/vendor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../uniapp/IDCardUpload/unpackage/dist/dev/.tmp/app-plus/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/IDCardUpload/unpackage/dist/dev/.tmp/app-plus/pages/index/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../uniapp/IDCardUpload/unpackage/dist/dev/app-plus/app-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/IDCardUpload/unpackage/dist/dev/app-plus/app-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../uniapp/IDCardUpload/unpackage/dist/dev/app-plus/app-view.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/IDCardUpload/unpackage/dist/dev/app-plus/app-view.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/pages/login/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/pages/login/login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/pages/login/register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/pages/login/register.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +57,7 @@
     <session id="558650507">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.19" value="1" />
@@ -78,10 +71,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="py" value="2518" />
+          <entry key="txt" value="52" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="PLAIN_TEXT" value="52" />
           <entry key="Python" value="2518" />
         </counts>
       </usages-collector>
@@ -125,7 +120,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/view.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
+            <state relative-caret-position="149">
               <caret line="35" column="41" lean-forward="true" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
             </state>
           </provider>
@@ -369,6 +364,14 @@
       <option name="presentableId" value="Default" />
       <updated>1582270586087</updated>
     </task>
+    <task id="LOCAL-00001" summary="引入了数据库，进行了动作识别结果模拟，在识别完后删除了原视频，以腾出空间">
+      <created>1585752936139</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585752936140</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -384,7 +387,7 @@
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2707775" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2707775" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -395,7 +398,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32931727" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.3297587" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32931727" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.29088473" />
@@ -415,6 +418,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="引入了数据库，进行了动作识别结果模拟，在识别完后删除了原视频，以腾出空间" />
+    <option name="LAST_COMMIT_MESSAGE" value="引入了数据库，进行了动作识别结果模拟，在识别完后删除了原视频，以腾出空间" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/mysql/base.py">
@@ -690,7 +697,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/view.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
+        <state relative-caret-position="149">
           <caret line="35" column="41" lean-forward="true" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
         </state>
       </provider>
