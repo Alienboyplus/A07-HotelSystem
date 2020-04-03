@@ -1,16 +1,18 @@
 <template>
 	<div class="content">
+		<div ></div>
+		<canvas canvas-id="mycanvas" style="height: 900rpx;"></canvas>
 		<div class="text-area">
 			<input class="uni-input" focus placeholder="输入名字" v-model="name"/>
 		</div>
 		<button class="mini-btn" type="primary" size="mini" @click="uploadPics()">读取图片</button>
 		<button class="mini-btn" type="primary" size="mini" @click="register">提交注册</button>
-		<canvas canvas-id="mycanvas" style="height: 1000rpx;"></canvas>
-		<div class="result">
+		
+<!-- 		<div class="result">
 			<label>age:{{this.age}}</label><br/>
 			<label>gender:{{this.gender}}</label><br/>
 			<label>is_alive:{{this.liveness}}</label>
-		</div>
+		</div> -->
 	</div>
 </template>
 
@@ -170,5 +172,9 @@
 	.title {
 		font-size: 36rpx;
 		color: #8f8f94;
+	}
+	
+	.mini-btn{
+		margin-top: 20rpx;
 	}
 </style>

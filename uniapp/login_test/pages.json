@@ -1,6 +1,11 @@
 {
     "pages": [ //pages数组中第一项表示应用启动页,
 		{
+			"path":"pages/identify/identify",
+			"style": {}
+		}
+		,
+		{
             "path": "pages/login/login",
             "style": {}
         }, 
@@ -21,7 +26,7 @@
             "path" : "pages/login/map",
             "style" : {}
         }
-		,  
+		, 
 		{
 		    "path" : "pages/login/infor",
 		    "style" : {}

@@ -1,0 +1,14 @@
+{
+  "enablePullDownRefresh": true,
+  "navigationBarTextStyle": "black",
+  "titleNView": false,
+  "softinputNavBar": "none",
+  "subNVues": [
+    {
+      "id": "cartTitleNvue",
+      "path": "pages/tabBar/cart/subNvue/cartTitleNvue",
+      "type": "navigationBar"
+    }
+  ],
+  "usingComponents": {}
+}

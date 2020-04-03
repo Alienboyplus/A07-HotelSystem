@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/identify/identify",
     "pages/login/login",
     "pages/login/dinningCode",
     "pages/login/forget",
@@ -8,7 +9,27 @@
     "pages/login/infor",
     "pages/login/info",
     "pages/login/modify",
-    "pages/login/pay"
+    "pages/login/first",
+    "pages/index/index",
+    "pages/details/details",
+    "pages/details/videoDetails",
+    "pages/tabBar/home/home",
+    "pages/tabBar/cart/cart",
+    "pages/tabBar/user/user",
+    "pages/goods/goods",
+    "pages/order/confirmation",
+    "pages/user/setting/setting",
+    "pages/user/myQR/myQR",
+    "pages/msg/msg",
+    "pages/msg/chat/chat",
+    "pages/user/coupon/coupon",
+    "pages/user/keep/keep",
+    "pages/user/address/address",
+    "pages/user/address/edit/edit",
+    "pages/user/deposit/deposit",
+    "pages/pay/payment/payment",
+    "pages/pay/success/success",
+    "pages/goods/ratings/ratings"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -16,6 +37,28 @@
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8",
     "navigationStyle": "custom"
+  },
+  "nvue": {
+    "pages": {
+      "pages/tabBar/category/category.html": {
+        "window": {
+          "usingComponents": {},
+          "navigationBarTextStyle": "black",
+          "titleNView": false,
+          "bounce": "none"
+        },
+        "nvue": true
+      },
+      "pages/goods/goods-list/goods-list.html": {
+        "window": {
+          "usingComponents": {},
+          "navigationBarTitleText": "",
+          "enablePullDownRefresh": true,
+          "bounce": "none"
+        },
+        "nvue": true
+      }
+    }
   },
   "nvueCompiler": "uni-app",
   "renderer": "auto",

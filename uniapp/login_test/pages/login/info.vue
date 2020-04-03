@@ -14,6 +14,7 @@
           <cmd-cel-item title="证件号码" addon="450112xxxxxxxx2017" arrow></cmd-cel-item>
           <cmd-cel-item title="我的地址" addon="杭州电子科技大学" arrow></cmd-cel-item>
           <cmd-cel-item title="修改密码" @click="fnClick('modify')" arrow></cmd-cel-item>
+		  <cmd-cel-item title="人证核验" @click="fnClick('identify')" addon="尚未进行人证核验" arrow></cmd-cel-item>
           <button class="btn-logout">退出登录</button>
         </view>
       </cmd-transition>
@@ -54,6 +55,11 @@
             url:'modify'
           })
         }
+		else if(type == 'identify'){
+			uni.navigateTo({
+				url:'../identify/identify'
+			})
+		}
 
       }
     }
