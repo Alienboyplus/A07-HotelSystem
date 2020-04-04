@@ -14,7 +14,7 @@
 			:url="advertNavUrl"
 		></mix-advert> -->
 		<!-- #endif -->
-		
+	<uni-nav-bar color="#000000" background-color="#ffffff" :status-bar="true" left-icon="arrowleft" left-text="返回" title="新闻" @clickLeft="back" />	
 		<!-- 顶部选项卡 -->
 		<scroll-view id="nav-bar" class="nav-bar" scroll-x scroll-with-animation :scroll-left="scrollLeft">
 			<view 
@@ -83,9 +83,11 @@
 	import json from '@/json'
 	import mixPulldownRefresh from '@/components/mix-pulldown-refresh/mix-pulldown-refresh';
 	import mixLoadMore from '@/components/mix-load-more/mix-load-more';
+	import uniNavBar from '@/components/uni-nav-bar/uni-nav-bar.vue'
 	let windowWidth = 0, scrollTimer = false, tabBar;
 	export default {
 		components: {
+			uniNavBar,
 			mixPulldownRefresh,
 			mixLoadMore,
 			mixAdvert
@@ -142,6 +144,11 @@
 			 * mixin使用方法看index.nuve
 			 */
 			//获取分类
+			back() {
+				uni.navigateTo({
+					url:'../login/infor'
+				})
+			},
 			loadTabbars(){
 				let tabList = json.tabList;
 				tabList.forEach(item=>{

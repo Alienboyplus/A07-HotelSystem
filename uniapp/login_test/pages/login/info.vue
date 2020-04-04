@@ -5,7 +5,7 @@
       <cmd-transition name="fade-up">
         <view>
           <cmd-cel-item title="头像" slot-right arrow>
-            <cmd-avatar src="https://avatar.bbs.miui.com/images/noavatar_small.gif"></cmd-avatar>
+            <cmd-avatar src="../../static/img/logo.jpg"></cmd-avatar>
           </cmd-cel-item>
           <cmd-cel-item title="积分" addon="666" arrow></cmd-cel-item>
           <cmd-cel-item title="昵称" addon="Macle" arrow></cmd-cel-item>

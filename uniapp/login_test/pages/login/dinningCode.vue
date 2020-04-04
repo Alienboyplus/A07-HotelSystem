@@ -1,8 +1,6 @@
 <template>
 	<view>
-		<view class="example-body">
-			<uni-nav-bar left-icon="arrowleft" title="餐卷" @clickLeft="back" />
-		</view>
+		<uni-nav-bar color="#000000" background-color="#ffffff" :status-bar="true" left-icon="arrowleft" left-text="返回" title="餐卷" @clickLeft="back" />
 		<view class="content" >
 			<view class="top"></view>
 			<view class="banner">
@@ -288,7 +286,7 @@
 	}
 	.top{
 		width: 100%;
-		height:400upx;
+		height:95upx;
 		background: url(~@/static/img/banner2.png) no-repeat ;
 		background-size:100% ;
 		background-position:center center;

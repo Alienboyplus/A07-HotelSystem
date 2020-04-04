@@ -95,17 +95,6 @@
 					}
 				},
 				{
-					"path": "pages/tabBar/category/category",
-					"style": {
-						"navigationBarTextStyle":"black",
-						"app-plus": {
-							"titleNView": false ,//禁用原生导航栏
-							"bounce":"none"
-							
-						}
-					}
-				},
-				{
 					"path": "pages/tabBar/cart/cart",
 					"style": {
 						"enablePullDownRefresh": true,
@@ -178,15 +167,6 @@
 						"navigationBarTitleText":"我的设置",
 						"backgroundColorTop":"#ffffff",
 						"backgroundColorBottom":"#f3f3f3"
-					}
-				}
-				,{
-				    "path" : "pages/user/myQR/myQR",
-				    "style" : {
-						"navigationBarTitleText":"我的二维码",
-						"app-plus":{
-							"bounce":"none"
-						}
 					}
 				}
 				,{

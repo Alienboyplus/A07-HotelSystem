@@ -1,11 +1,8 @@
 <template>
 	<view>
-		<view class="example-body">
-			<uni-nav-bar left-icon="arrowleft" title="标题"  @clickLeft="back" />
-		</view>	
 		<view class="page-body">
 		    <view class="page-section page-section-gap">
-		       <map style="width: 100%; height: 600px;" :controls="controls" :circles="circles" :polyline='polyline' :scale="scale" :latitude="latitude" :longitude="longitude" :markers="covers">
+		       <map style="width: 100%; height: 600px;" :controls="controls"  :polyline='polyline' :scale="scale" :latitude="latitude" :longitude="longitude" :markers="covers">
 		        </map>
 		    </view>
 		</view>
@@ -13,11 +10,7 @@
 </template>
  
 <script>
-	import uniNavBar from '@/components/uni-nav-bar/uni-nav-bar.vue'
 	export default {
-		components: {
-			
-		},
 		data() {
 			return {
 				title: 'map',
@@ -53,7 +46,6 @@
 				{
 				    latitude: 39.90,
 				    longitude: 116.39,
-				    iconPath: '@/static/img/logo.jpg',
 					title:'阿迪达斯',
 					x:39.90,
 					y:116.399,
@@ -73,12 +65,11 @@
 				scale:15,//地图层级
 				controls:[{//在地图上显示控件，控件不随着地图移动
 					id:1,//控件id
-					iconPath:'@/static/img/logo.jpg',//显示的图标	
 					position:{//控件在地图的位置
 						left:15,
 						top:15,
-						width:50,
-						height:50
+						width:40,
+						height:40
 					},	
 				}],
 				// circles:[{//在地图上显示圆
@@ -115,20 +106,17 @@
 					console.log('详细地址：' + res.address);
 					console.log('纬度：' + res.latitude);
 					console.log('经度：' + res.longitude);
+					
+				},
+				fail:function(res){
+				},
+				complete:function(){
+					uni.navigateBack({
+						delta:1
+					})
 				}
 			});
-		},
-		methods: {
-		    /**
-		     * 打开用户信息页
-		     */
-			 back() {
-			 	uni.navigateBack({
-			 		delta: 1
-			 	})
-			 },
-		  }
-		
+		},	
 	}
 </script>
 

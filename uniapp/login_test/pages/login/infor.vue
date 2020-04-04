@@ -4,10 +4,10 @@
 	  	<uni-nav-bar left-icon="arrowleft" title="个人主页"  @clickLeft="back" />
 	</view>	 -->
     <view class="person-head">
-      <cmd-avatar src="https://avatar.bbs.miui.com/images/noavatar_small.gif" @click="fnInfoWin" size="lg" :make="{'background-color': '#fff'}"></cmd-avatar>
+      <cmd-avatar src="../../static/img/logo.jpg" @click="fnInfoWin" size="lg" :make="{'background-color': '#ffffff'}"></cmd-avatar>
       <view class="person-head-box">
-        <view class="person-head-nickname">访客</view>
-        <view class="person-head-username">ID：000001</view>
+        <view class="person-head-nickname">游客</view>
+        <view class="person-head-username">ID:0</view>
       </view>
     </view>
     <view class="person-list">
@@ -90,9 +90,9 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 150px;
+    height: 140px;
     padding-left: 20px;
-    background: linear-gradient(to right, #000000, #000000);
+    background: linear-gradient(to right, #ffffff, #565656);
   }
 
   .person-head-box {
@@ -105,14 +105,14 @@
 
   .person-head-nickname {
     font-size: 18px;
-    font-weight: 500;
-    color: #fff;
+    font-weight: 550;
+    color: #000000;
   }
 
   .person-head-username {
-    font-size: 14px;
-    font-weight: 500;
-    color: #fff;
+    font-size: 16px;
+    font-weight: 550;
+    color: #000000;
   }
 
   .person-list {

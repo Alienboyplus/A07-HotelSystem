@@ -24,18 +24,6 @@
 				<view class="username" @tap="toLogin">{{user.username}}</view>
 				<view class="signature" @tap="toSetting">{{user.signature}}</view>
 			</view>
-			<!-- 二维码按钮 -->
-			<view class="erweima" @tap="toMyQR">
-				<view class="icon qr"></view>
-			</view>
-		</view>
-		<!-- VIP banner -->
-		<view class="VIP">
-			<view class="img">
-				<image src="/static/img/VIP.png"></image>
-			</view>
-			<view class="title">开通VIP会员</view>
-			<view class="tis">会员特权</view>
 		</view>
 		<!-- 订单-余额 -->
 		<view class="order">
@@ -102,9 +90,9 @@
 				showHeader:true,
 				//个人信息,
 				user:{
-					username:'访客000001',
-					face:'/static/img/face.jpg',
-					signature:'点击昵称修改信息',
+					username:'游客',
+					face:'/static/img/logo.jpg',
+					signature:'ID:01',
 					integral:0,
 					balance:0,
 					envelope:0
@@ -183,11 +171,6 @@
 		},
 		methods: {
 			//消息列表
-			toMsg(){
-				uni.navigateTo({
-					url:'../../msg/msg'
-				})
-			},
 			toOrderList(index){
 				uni.setStorageSync('tbIndex',index);
 				uni.navigateTo({url:'../../user/order_list/order_list?tbIndex='+index}) 
@@ -195,11 +178,6 @@
 			toSetting(){
 				uni.navigateTo({
 					url:'../../user/setting/setting'
-				})
-			},
-			toMyQR(){
-				uni.navigateTo({
-					url:'../../user/myQR/myQR'
 				})
 			},
 			toLogin(){
@@ -222,25 +200,17 @@
 					url:'../../user/deposit/deposit'
 				})
 			},
-			toPage(url){
-				if(!url){
-					uni.showToast({title: '模板未包含此页面',icon:"none"});return;
-				}
-				uni.navigateTo({
-					url:url
-				})
-			}
 		}
 	} 
 </script>
 <style lang="scss">
-	page{position: relative;background-color: #fff;}
+	page{position: relative;background-color: #000000;}
 	.status {
 		width: 100%;
 		height: 0;
 		position: fixed;
 		z-index: 10;
-		background-color: #f06c7a;
+		background-color: #000000;
 		top: 0;
 		/*  #ifdef  APP-PLUS  */
 		height: var(--status-bar-height);//覆盖样式
@@ -258,7 +228,7 @@
 		position: fixed;
 		top: 0;
 		z-index: 10;
-		background-color: #f06c7a;
+		background-color: #eee;
 		/*  #ifdef  APP-PLUS  */
 		top: var(--status-bar-height);
 		/*  #endif  */
@@ -268,7 +238,7 @@
 			flex-shrink: 0;
 			display: flex;
 			.icon{
-				color: #fff;
+				color: #eee;
 				width: 60upx;
 				height: 60upx;
 				display: flex;
@@ -279,7 +249,7 @@
 		}
 	}
 	.place{
-		background-color: #f06c7a;
+		background-color: #000000;
 		height: 100upx;
 		/*  #ifdef  APP-PLUS  */
 		margin-top: var(--status-bar-height);
@@ -294,14 +264,14 @@
 		display: flex;
 		align-items: center;
 		// position: relative;
-		background-color: #f06c7a;
+		background-color: #eee;
 		padding-bottom: 120upx;
 		.left{
 			width: 20vw;
 			height: 20vw;
 			flex-shrink: 0;
 			margin-right: 20upx;
-			border: solid 1upx #fff;
+			border: solid 1upx #000000;
 			border-radius: 100%;
 			image{
 				width: 20vw;
@@ -314,10 +284,10 @@
 			width: 100%;
 			.username{
 				font-size: 36upx;
-				color: #fff;
+				color: #000000;
 			}
 			.signature{
-				color: #eee;
+				color: #000000;
 				font-size: 28upx;
 			}
 		}
@@ -347,7 +317,7 @@
 		border-radius: 15upx;
 		.list{
 			display: flex;
-			border-bottom: solid 1upx #17e6a1;
+			border-bottom: solid 1upx #000000;
 			padding-bottom: 10upx;
 			.box{
 				width: 20%;
@@ -397,7 +367,7 @@
 				}
 			}
 			.right{
-				border-left: solid 1upx #17e6a1;
+				border-left: solid 1upx #000000;
 				width: 25%;
 				.box{
 					

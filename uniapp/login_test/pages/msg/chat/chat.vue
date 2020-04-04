@@ -1,5 +1,6 @@
 <template>
 	<view>
+		<uni-nav-bar color="#000000" background-color="#ffffff" :status-bar="true" left-icon="arrowleft" left-text="返回" title="聊天" @clickLeft="back" />	
 		<view class="content" @touchstart="hideEmoji">
 			<scroll-view class="msg-list" scroll-y="true" :scroll-with-animation="scrollAnimation" :scroll-top="scrollTop" :scroll-into-view="scrollToView">
 				<view class="row" v-for="(row,index) in msgList" :key="index" :id="'msg'+row.id">
@@ -102,7 +103,11 @@
 </template>
 
 <script>
+	import uniNavBar from '@/components/uni-nav-bar/uni-nav-bar.vue'
 	export default {
+		components: {
+			uniNavBar,
+		},
 		data() {
 			return {
 				//文字消息

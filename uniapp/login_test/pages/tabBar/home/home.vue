@@ -1,31 +1,9 @@
 <template>
 	<view>
-		<!-- 状态栏 -->
-		<view v-if="showHeader" class="status" :style="{ position: headerPosition,top:statusTop,opacity: afterHeaderOpacity}"></view>
+		<!-- 状态栏 -->	
 		<!-- 顶部导航栏 -->
-		<view v-if="showHeader" class="header" :style="{ position: headerPosition,top:headerTop,opacity: afterHeaderOpacity }">
-			<!-- 定位城市 -->
-			<view class="addr">
-				<view class="icon location"></view>
-				{{ city }}
-			</view>
-			<!-- 搜索框 -->
-			<view class="input-box">
-				<input
-					placeholder="默认关键字"
-					placeholder-style="color:#c0c0c0;"
-					@tap="toSearch()"
-				/>
-				<view class="icon search"></view>
-			</view>
-			<!-- 右侧图标按钮 -->
-			<view class="icon-btn">
-				<view class="icon yuyin-home"></view>
-				<view class="icon tongzhi" @tap="toMsg"></view>
-			</view>
-		</view>
 		<!-- 占位 -->
-		<view v-if="showHeader" class="place"></view>
+		<uni-nav-bar color="#000000" background-color="#ffffff" :status-bar="true" left-icon="arrowleft" left-text="返回" title="商场" @clickLeft="back" />	
 		<!-- 轮播图 -->
 		<view class="swiper">
 			<view class="swiper-box">
@@ -117,7 +95,11 @@
 var ttt = 0;
 //高德SDK
 import amap from '@/common/SDK/amap-wx.js';
+import uniNavBar from '@/components/uni-nav-bar/uni-nav-bar.vue'
 export default {
+	components: {
+		uniNavBar,
+	},
 	data() {
 		return {
 			showHeader:true,
@@ -236,7 +218,6 @@ export default {
 	},
 	//上拉加载，需要自己在page.json文件中配置"onReachBottomDistance"
 	onReachBottom() {
-		uni.showToast({ title: '触发上拉加载' });
 		let len = this.productList.length;
 		if (len >= 40) {
 			this.loadingText = '到底了';
@@ -290,6 +271,11 @@ export default {
 	},
 	methods: {
 		//加载Promotion 并设定倒计时,,实际应用中应该是ajax加载此数据。
+		back() {
+			uni.navigateTo({
+				url:'../../login/infor'
+			})
+		},
 		loadPromotion() {
 			let cutTime = new Date();
 			let yy = cutTime.getFullYear(),
@@ -384,14 +370,6 @@ export default {
 				url:'../../msg/msg'
 			})
 		},
-		//搜索跳转
-		toSearch() {
-			uni.showToast({ title: '建议跳转到新页面做搜索功能' });
-		},
-		//轮播图跳转
-		toSwiper(e) {
-			uni.showToast({ title: e.src, icon: 'none' });
-		},
 		//分类跳转
 		toCategory(e) {
 			//uni.showToast({title: e.name,icon:"none"});
@@ -399,10 +377,6 @@ export default {
 			uni.navigateTo({
 				url: '../../goods/goods-list/goods-list?cid='+e.id+'&name='+e.name
 			});
-		},
-		//推荐商品跳转
-		toPromotion(e) {
-			uni.showToast({ title: e.title, icon: 'none' });
 		},
 		//商品跳转
 		toGoods(e) {
