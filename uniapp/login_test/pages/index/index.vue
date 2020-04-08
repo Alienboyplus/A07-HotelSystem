@@ -14,7 +14,7 @@
 			:url="advertNavUrl"
 		></mix-advert> -->
 		<!-- #endif -->
-	<uni-nav-bar color="#000000" background-color="#ffffff" :status-bar="true" left-icon="arrowleft" left-text="返回" title="新闻" @clickLeft="back" />	
+	<uni-nav-bar color="#000000" background-color="#ffffff" :status-bar="true" left-icon="arrowleft" left-text="返回" title="酒店资讯" @clickLeft="back" />	
 		<!-- 顶部选项卡 -->
 		<scroll-view id="nav-bar" class="nav-bar" scroll-x scroll-with-animation :scroll-left="scrollLeft">
 			<view 
