@@ -1,0 +1,15 @@
+
+.btn-logout {
+  margin-top: 100rpx;
+  width: 80%;
+  border-radius: 50rpx;
+  font-size: 16px;
+  color: #fff;
+  background: -webkit-linear-gradient(left, #000000, #000000);
+  background: linear-gradient(to right, #000000, #000000);
+}
+.btn-logout-hover {
+  background: -webkit-linear-gradient(left, #000000, #000000);
+  background: linear-gradient(to right, #000000, #000000);
+}
+

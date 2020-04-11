@@ -1,7 +1,9 @@
 {
   "pages": [
-    "pages/identify/identify",
+    "pages/index/index",
     "pages/login/login",
+    "pages/appointment/conference",
+    "pages/identify/identify",
     "pages/login/dinningCode",
     "pages/login/forget",
     "pages/login/register",
@@ -10,7 +12,6 @@
     "pages/login/info",
     "pages/login/modify",
     "pages/login/first",
-    "pages/index/index",
     "pages/details/details",
     "pages/details/videoDetails",
     "pages/tabBar/home/home",
@@ -19,7 +20,6 @@
     "pages/goods/goods",
     "pages/order/confirmation",
     "pages/user/setting/setting",
-    "pages/user/myQR/myQR",
     "pages/msg/msg",
     "pages/msg/chat/chat",
     "pages/user/coupon/coupon",
@@ -40,15 +40,6 @@
   },
   "nvue": {
     "pages": {
-      "pages/tabBar/category/category.html": {
-        "window": {
-          "usingComponents": {},
-          "navigationBarTextStyle": "black",
-          "titleNView": false,
-          "bounce": "none"
-        },
-        "nvue": true
-      },
       "pages/goods/goods-list/goods-list.html": {
         "window": {
           "usingComponents": {},

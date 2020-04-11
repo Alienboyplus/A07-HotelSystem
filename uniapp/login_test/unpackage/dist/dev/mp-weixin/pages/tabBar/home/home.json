@@ -1,0 +1,8 @@
+{
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "usingComponents": {
+    "uni-nav-bar": "/components/uni-nav-bar/uni-nav-bar"
+  }
+}

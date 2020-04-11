@@ -54,7 +54,7 @@
 				qrcodeText: 'example text message.',
 				qrcodeSize: 215,
 				qrcodeSrc: '',
-				phoneData: '15989584538'
+				phoneData: '15989584526'
 				
 			}
 		},
@@ -104,7 +104,8 @@
 			},
 			initialize() {
 				uni.request({
-					url:'http://127.0.0.1:8000/do_qrcode/',
+					//url:'http://127.0.0.1:8000/do_qrcode/',
+					url:'http://39.106.209.123:8000/do_qrcode/',
 					data:{
 						phoneNumber:this.phoneData,
 					},

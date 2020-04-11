@@ -3,6 +3,7 @@
   "navigationBarTextStyle": "white",
   "bounce": "none",
   "usingComponents": {
+    "uni-nav-bar": "/components/uni-nav-bar/uni-nav-bar",
     "mix-loading": "/components/mix-loading/mix-loading"
   }
 }

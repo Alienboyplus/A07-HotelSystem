@@ -26,14 +26,14 @@
 /* 文章场景相关 */
 page {
   position: relative;
-  background-color: #fff;
+  background-color: #000000;
 }
 .status {
   width: 100%;
   height: 0;
   position: fixed;
   z-index: 10;
-  background-color: #f06c7a;
+  background-color: #000000;
   top: 0;
   height: var(--status-bar-height);
 }
@@ -53,7 +53,7 @@ page {
   position: fixed;
   top: 0;
   z-index: 10;
-  background-color: #f06c7a;
+  background-color: #eee;
   top: var(--status-bar-height);
 }
 .header .icon-btn {
@@ -66,7 +66,7 @@ page {
     display: flex;
 }
 .header .icon-btn .icon {
-      color: #fff;
+      color: #eee;
       width: 60rpx;
       height: 60rpx;
       display: -webkit-box;
@@ -81,7 +81,7 @@ page {
       font-size: 42rpx;
 }
 .place {
-  background-color: #f06c7a;
+  background-color: #000000;
   height: 100rpx;
   margin-top: var(--status-bar-height);
 }
@@ -97,7 +97,7 @@ page {
   -webkit-box-align: center;
   -webkit-align-items: center;
           align-items: center;
-  background-color: #f06c7a;
+  background-color: #eee;
   padding-bottom: 120rpx;
 }
 .user .left {
@@ -106,7 +106,7 @@ page {
     -webkit-flex-shrink: 0;
             flex-shrink: 0;
     margin-right: 20rpx;
-    border: solid 1rpx #fff;
+    border: solid 1rpx #000000;
     border-radius: 100%;
 }
 .user .left image {
@@ -119,10 +119,10 @@ page {
 }
 .user .right .username {
       font-size: 36rpx;
-      color: #fff;
+      color: #000000;
 }
 .user .right .signature {
-      color: #eee;
+      color: #000000;
       font-size: 28rpx;
 }
 .user .erweima {
@@ -160,7 +160,7 @@ page {
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
-    border-bottom: solid 1rpx #17e6a1;
+    border-bottom: solid 1rpx #000000;
     padding-bottom: 10rpx;
 }
 .order .list .box {
@@ -232,7 +232,7 @@ page {
           font-size: 28rpx;
 }
 .order .balance-info .right {
-      border-left: solid 1rpx #17e6a1;
+      border-left: solid 1rpx #000000;
       width: 25%;
 }
 .order .balance-info .right .box .img {
