@@ -93,10 +93,9 @@
 					
 					<!-- 底部信息 -->
 					<view class="footer">
-						<navigator url="forget" open-type="navigate">找回密码</navigator>
+						<navigator url="forget" open-type="navigate">forget password</navigator>
 						<text>|</text>
-						<navigator url="register" open-type="navigate">注册账号</navigator>
-						<button size=mini type="primary" @tap="change">切换语言</button>
+						<navigator url="register" open-type="navigate">register</navigator>
 					</view>
 				</view>
 			</view>
