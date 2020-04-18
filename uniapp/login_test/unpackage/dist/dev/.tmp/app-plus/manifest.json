@@ -46,6 +46,7 @@
       "background": "#F8F8F8"
     },
     "usingComponents": true,
+    "nvueCompiler": "weex",
     "distribute": {
       "google": {
         "permissions": [
@@ -82,16 +83,13 @@
         }
       }
     },
-    "arguments": "{\"name\":\"\",\"path\":\"\",\"query\":\"\",\"id\":0}",
+    "arguments": "{\"id\":1,\"name\":\"pages/infor/infor\",\"pathName\":\"pages/infor/infor\",\"query\":\"\"}",
     "allowsInlineMediaPlayback": true,
     "uni-app": {
       "compilerVersion": "2.5.1",
       "control": "v8",
-      "nvueCompiler": "uni-app",
-      "renderer": "auto",
-      "nvue": {
-        "flex-direction": "column"
-      }
+      "nvueCompiler": "weex",
+      "renderer": "auto"
     }
   }
 }

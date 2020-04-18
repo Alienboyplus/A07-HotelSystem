@@ -1,35 +1,35 @@
 {
   "pages": [
-    "pages/identify/identify",
     "pages/login/login",
-    "pages/login/dinningCode",
+    "pages/appointment/conference",
+    "pages/identify/identify",
+    "pages/infor/dinningCode",
     "pages/login/forget",
     "pages/login/register",
-    "pages/login/map",
-    "pages/login/infor",
-    "pages/login/info",
-    "pages/login/modify",
-    "pages/login/first",
-    "pages/index/index",
-    "pages/details/details",
-    "pages/details/videoDetails",
-    "pages/tabBar/home/home",
-    "pages/tabBar/cart/cart",
-    "pages/tabBar/user/user",
-    "pages/goods/goods",
-    "pages/order/confirmation",
-    "pages/user/setting/setting",
-    "pages/user/myQR/myQR",
-    "pages/msg/msg",
-    "pages/msg/chat/chat",
-    "pages/user/coupon/coupon",
-    "pages/user/keep/keep",
-    "pages/user/address/address",
-    "pages/user/address/edit/edit",
-    "pages/user/deposit/deposit",
-    "pages/pay/payment/payment",
-    "pages/pay/success/success",
-    "pages/goods/ratings/ratings"
+    "pages/infor/map",
+    "pages/infor/infor",
+    "pages/infor/info",
+    "pages/infor/modify",
+    "pages/infor/first",
+    "pages/new/index",
+    "pages/new/details",
+    "pages/new/videoDetails",
+    "pages/shop/tabBar/home/home",
+    "pages/shop/tabBar/cart/cart",
+    "pages/shop/tabBar/user/user",
+    "pages/shop/goods/goods",
+    "pages/shop/order/confirmation",
+    "pages/shop/user/setting/setting",
+    "pages/shop/msg/msg",
+    "pages/shop/msg/chat/chat",
+    "pages/shop/user/coupon/coupon",
+    "pages/shop/user/keep/keep",
+    "pages/shop/user/address/address",
+    "pages/shop/user/address/edit/edit",
+    "pages/shop/user/deposit/deposit",
+    "pages/shop/pay/payment/payment",
+    "pages/shop/pay/success/success",
+    "pages/shop/goods/ratings/ratings"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -40,16 +40,7 @@
   },
   "nvue": {
     "pages": {
-      "pages/tabBar/category/category.html": {
-        "window": {
-          "usingComponents": {},
-          "navigationBarTextStyle": "black",
-          "titleNView": false,
-          "bounce": "none"
-        },
-        "nvue": true
-      },
-      "pages/goods/goods-list/goods-list.html": {
+      "pages/shop/goods/goods-list/goods-list.html": {
         "window": {
           "usingComponents": {},
           "navigationBarTitleText": "",
@@ -60,7 +51,7 @@
       }
     }
   },
-  "nvueCompiler": "uni-app",
+  "nvueCompiler": "weex",
   "renderer": "auto",
   "splashscreen": {
     "alwaysShowBeforeRender": true,

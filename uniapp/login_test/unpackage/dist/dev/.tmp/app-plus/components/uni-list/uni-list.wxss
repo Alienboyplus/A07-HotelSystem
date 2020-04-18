@@ -24,7 +24,7 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.uni-list.data-v-6a2e98c4 {
+.uni-list.data-v-567d6635 {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -35,10 +35,10 @@
   -webkit-flex-direction: column;
           flex-direction: column;
 }
-.uni-list.data-v-6a2e98c4:before {
+.uni-list.data-v-567d6635:before {
   height: 0;
 }
-.uni-list.data-v-6a2e98c4:after {
+.uni-list.data-v-567d6635:after {
   height: 0;
 }
 

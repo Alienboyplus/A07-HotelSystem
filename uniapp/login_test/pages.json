@@ -1,6 +1,10 @@
 {
     "pages": [ //pages数组中第一项表示应用启动页,
 		{
+		    "path": "pages/login/login",
+		    "style": {}
+		}, 
+		{
 			"path":"pages/appointment/conference",
 			"style": {}
 		}
@@ -11,11 +15,7 @@
 		}
 		,
 		{
-            "path": "pages/login/login",
-            "style": {}
-        }, 
-		{
-        	"path":"pages/login/dinningCode",
+        	"path":"pages/infor/dinningCode",
         	"style": {} 
         },
 		{
@@ -28,31 +28,31 @@
         } 
         ,  
 		{
-            "path" : "pages/login/map",
+            "path" : "pages/infor/map",
             "style" : {}
         }
 		, 
 		{
-		    "path" : "pages/login/infor",
+		    "path" : "pages/infor/infor",
 		    "style" : {}
 		}
 		,	
 		{
-		    "path" : "pages/login/info",
+		    "path" : "pages/infor/info",
 		    "style" : {}
 		}
 		,	
 		{
-		    "path" : "pages/login/modify",
+		    "path" : "pages/infor/modify",
 		    "style" : {}
 		}
 		,
 		{
-		    "path" : "pages/login/first",
+		    "path" : "pages/infor/first",
 		    "style" : {}
 		},
 		{
-				    "path" : "pages/index/index",
+				    "path" : "pages/new/index",
 				    "style" : {
 				    	"navigationBarTitleText" : "首页",
 				    	"app-plus": {
@@ -62,7 +62,7 @@
 				}
 			    ,
 				{
-				    "path" : "pages/details/details",
+				    "path" : "pages/new/details",
 				    "style" : {
 						"navigationBarTitleText" : "详情",
 						"app-plus": {
@@ -72,7 +72,7 @@
 					}
 				},
 				{
-				    "path" : "pages/details/videoDetails",
+				    "path" : "pages/new/videoDetails",
 				    "style" : {
 						"navigationBarTitleText" : "",
 						"app-plus": {
@@ -83,7 +83,7 @@
 					}
 				},
 				{
-					"path": "pages/tabBar/home/home",
+					"path": "pages/shop/tabBar/home/home",
 					"style": {
 						"navigationBarTextStyle":"black",
 						"enablePullDownRefresh": true,
@@ -93,14 +93,14 @@
 							"softinputNavBar":"none",
 							"subNVues":[{  
 								"id": "homeTitleNvue", // 唯一标识  
-								"path": "pages/tabBar/home/subNvue/homeTitleNvue", // 页面路径  
+								"path": "pages/shop/tabBar/home/subNvue/homeTitleNvue", // 页面路径  
 								"type":"navigationBar"
 							}]
 						}
 					}
 				},
 				{
-					"path": "pages/tabBar/cart/cart",
+					"path": "pages/shop/tabBar/cart/cart",
 					"style": {
 						"enablePullDownRefresh": true,
 						"navigationBarTextStyle":"black",
@@ -109,32 +109,32 @@
 							"softinputNavBar":"none",
 							"subNVues":[{  
 								"id": "cartTitleNvue", // 唯一标识  
-								"path": "pages/tabBar/cart/subNvue/cartTitleNvue", // 页面路径  
+								"path": "pages/shop/tabBar/cart/subNvue/cartTitleNvue", // 页面路径  
 								"type":"navigationBar"
 							}]
 						}
 					}
 				},
+		{
+			"path": "pages/shop/tabBar/user/user",
+			"style": {
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle":"light",
+				"navigationBarBackgroundColor":"#4c4c4c",
+				"backgroundColorTop":"#4c4c4c",
+				"navigationBarTextStyle":"white",
+				"app-plus": {
+					"titleNView": false ,//禁用原生导航栏
+					"subNVues":[{  
+						"id": "userTitleNvue", // 唯一标识  
+						"path": "pages/shop/tabBar/user/subNvue/userTitleNvue", // 页面路径  
+						"type":"navigationBar"
+					}]
+				}
+			}
+		},
 				{
-					"path": "pages/tabBar/user/user",
-					"style": {
-						"enablePullDownRefresh": true,
-						"backgroundTextStyle":"light",
-						"navigationBarBackgroundColor":"#f06c7a",
-						"backgroundColorTop":"#f06c7a",
-						"navigationBarTextStyle":"white",
-						"app-plus": {
-							"titleNView": false ,//禁用原生导航栏
-							"subNVues":[{  
-								"id": "userTitleNvue", // 唯一标识  
-								"path": "pages/tabBar/user/subNvue/userTitleNvue", // 页面路径  
-								"type":"navigationBar"
-							}]
-						}
-					}
-				},
-				{
-				    "path" : "pages/goods/goods-list/goods-list",
+				    "path" : "pages/shop/goods/goods-list/goods-list",
 				    "style" : {
 						"navigationBarTitleText" : "",
 						"enablePullDownRefresh": true,
@@ -144,7 +144,7 @@
 					}
 				},
 				{
-				    "path" : "pages/goods/goods",
+				    "path" : "pages/shop/goods/goods",
 				    "style" : {
 						"navigationBarTitleText" : "",
 						"navigationBarBackgroundColor":"#f1f1f1",
@@ -159,14 +159,14 @@
 					}
 				},
 				{
-				    "path" : "pages/order/confirmation",
+				    "path" : "pages/shop/order/confirmation",
 				    "style": {
 				    	"navigationBarTitleText": "确认订单",
 						"softinputNavBar":"none"
 				    }
 				}
 				,{
-				    "path" : "pages/user/setting/setting",
+				    "path" : "pages/shop/user/setting/setting",
 				    "style" : {
 						"navigationBarBackgroundColor":"#f8f8f8",
 						"navigationBarTitleText":"我的设置",
@@ -175,7 +175,7 @@
 					}
 				}
 				,{
-				    "path" : "pages/msg/msg",
+				    "path" : "pages/shop/msg/msg",
 				    "style" : {
 						"enablePullDownRefresh": true,
 						"navigationBarTitleText": "消息列表",
@@ -184,7 +184,7 @@
 					}
 				}
 				,{
-				    "path" : "pages/msg/chat/chat",
+				    "path" : "pages/shop/msg/chat/chat",
 				    "style" : {
 						"navigationBarBackgroundColor":"#f2f2f2",
 						"backgroundColorTop":"#e5e5e5",
@@ -196,7 +196,7 @@
 					}
 				}
 				,{
-				    "path" : "pages/user/coupon/coupon",
+				    "path" : "pages/shop/user/coupon/coupon",
 				    "style" : {
 						"navigationBarTitleText": "优惠券",
 						"navigationBarBackgroundColor":"#f06c7a",
@@ -207,7 +207,7 @@
 					}
 				}
 				,{
-				    "path" : "pages/user/keep/keep",
+				    "path" : "pages/shop/user/keep/keep",
 				    "style" : {
 						"navigationBarTitleText": "我的收藏",
 						"navigationBarBackgroundColor":"#f06c7a",
@@ -218,7 +218,7 @@
 					}
 				}
 				,{
-				    "path" : "pages/user/address/address",
+				    "path" : "pages/shop/user/address/address",
 				    "style" : {
 						"navigationBarBackgroundColor":"#ffffff",
 						"navigationBarTitleText":"地址管理",
@@ -227,7 +227,7 @@
 					}
 				}
 				,{
-				    "path" : "pages/user/address/edit/edit",
+				    "path" : "pages/shop/user/address/edit/edit",
 				    "style" : {
 						"navigationBarBackgroundColor":"#ffffff",
 						"navigationBarTitleText":"编辑收件人地址",
@@ -236,7 +236,7 @@
 					}
 				}
 				,{
-				    "path" : "pages/user/deposit/deposit",
+				    "path" : "pages/shop/user/deposit/deposit",
 				    "style" : {
 						"navigationBarBackgroundColor":"#ffffff",
 						"navigationBarTitleText":"充值",
@@ -245,7 +245,7 @@
 					}
 				}
 				,{
-				    "path" : "pages/pay/payment/payment",
+				    "path" : "pages/shop/pay/payment/payment",
 				    "style" : {
 						"navigationBarBackgroundColor":"#ffffff",
 						"navigationBarTitleText":"订单支付",
@@ -254,7 +254,7 @@
 					}
 				}
 				,{
-				    "path" : "pages/pay/success/success",
+				    "path" : "pages/shop/pay/success/success",
 				    "style" : {
 						"navigationBarBackgroundColor":"#ffffff",
 						"navigationBarTitleText":"支付成功",
@@ -263,7 +263,7 @@
 					}
 				}
 				,{
-				    "path" : "pages/goods/ratings/ratings",
+				    "path" : "pages/shop/goods/ratings/ratings",
 				    "style" : {
 						"navigationBarTitleText":"商品评论",
 						"enablePullDownRefresh": true,

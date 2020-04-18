@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "详情",
-  "navigationBarTextStyle": "white",
-  "bounce": "none",
-  "usingComponents": {
-    "mix-loading": "/components/mix-loading/mix-loading"
-  }
-}
