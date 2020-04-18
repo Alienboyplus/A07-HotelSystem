@@ -1,5 +1,6 @@
 <template>
 	<view class="content">
+		<uni-nav-bar color="#000000" background-color="#ffffff" :status-bar="true" left-icon="arrowleft" left-text="返回" title="人证核验" @clickLeft="back" />
 		<uni-section title="基本信息" type="line"></uni-section>
 		<uni-list>
 			<uni-list-item :show-arrow="false">
@@ -48,13 +49,15 @@
 	import uniSection from '@/components/uni-section/uni-section.vue'
 	import uniList from '@/components/uni-list/uni-list.vue'
 	import uniListItem from '@/components/uni-list-item/uni-list-item.vue'
+	import uniNavBar from '@/components/uni-nav-bar/uni-nav-bar.vue'
 	import { pathToBase64, base64ToPath } from '@/js_sdk/gsq-image-tools/image-tools/index.js'
 	var _self
 	export default {
 		components: {
 			uniSection,
 			uniList,
-			uniListItem
+			uniListItem,
+			uniNavBar
 		},
 		data() {
 			return {
@@ -338,10 +341,14 @@
 				}
 				
 				// ②:进行人脸注册
-				
-				
-			}
+			},
+			back() {
+				uni.navigateTo({
+					url:'../login/info'
+				})
+			},
 		}
+
 	}
 </script>
 
@@ -454,9 +461,9 @@
 	.grace-idcard-preview{width:50%; margin:0 30upx;}
 	.grace-idcard-preview image{width:100%;}
 	
-	.content{
+/* 	.content{
 		margin-top: 20upx;
-	}
+	} */
 	
 	button {width: 90%;margin-bottom: 20upx;}
 </style>

@@ -17,8 +17,8 @@
 					<wInput
 						v-model="passData"
 						type="password"
-						maxlength="11"
-						placeholder="登录密码"
+						maxlength="16"
+						placeholder="登录密码(16位以内)"
 						isShowPass
 					></wInput>
 					<wInput

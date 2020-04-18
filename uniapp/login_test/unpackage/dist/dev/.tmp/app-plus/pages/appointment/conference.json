@@ -2,6 +2,11 @@
   "usingComponents": {
     "uni-section": "/components/uni-section/uni-section",
     "uni-list": "/components/uni-list/uni-list",
+<<<<<<< HEAD
     "uni-list-item": "/components/uni-list-item/uni-list-item"
+=======
+    "uni-list-item": "/components/uni-list-item/uni-list-item",
+    "uni-nav-bar": "/components/uni-nav-bar/uni-nav-bar"
+>>>>>>> 7396cdf115fecdfaf641b77e24a2b783a0061dee
   }
 }

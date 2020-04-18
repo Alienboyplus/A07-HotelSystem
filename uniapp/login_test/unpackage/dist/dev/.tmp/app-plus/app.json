@@ -1,5 +1,6 @@
 {
   "pages": [
+<<<<<<< HEAD
     "pages/login/login",
     "pages/appointment/conference",
     "pages/identify/identify",
@@ -30,6 +31,38 @@
     "pages/shop/pay/payment/payment",
     "pages/shop/pay/success/success",
     "pages/shop/goods/ratings/ratings"
+=======
+    "pages/index/index",
+    "pages/login/login",
+    "pages/appointment/conference",
+    "pages/identify/identify",
+    "pages/login/dinningCode",
+    "pages/login/forget",
+    "pages/login/register",
+    "pages/login/map",
+    "pages/login/infor",
+    "pages/login/info",
+    "pages/login/modify",
+    "pages/login/first",
+    "pages/details/details",
+    "pages/details/videoDetails",
+    "pages/tabBar/home/home",
+    "pages/tabBar/cart/cart",
+    "pages/tabBar/user/user",
+    "pages/goods/goods",
+    "pages/order/confirmation",
+    "pages/user/setting/setting",
+    "pages/msg/msg",
+    "pages/msg/chat/chat",
+    "pages/user/coupon/coupon",
+    "pages/user/keep/keep",
+    "pages/user/address/address",
+    "pages/user/address/edit/edit",
+    "pages/user/deposit/deposit",
+    "pages/pay/payment/payment",
+    "pages/pay/success/success",
+    "pages/goods/ratings/ratings"
+>>>>>>> 7396cdf115fecdfaf641b77e24a2b783a0061dee
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -40,7 +73,11 @@
   },
   "nvue": {
     "pages": {
+<<<<<<< HEAD
       "pages/shop/goods/goods-list/goods-list.html": {
+=======
+      "pages/goods/goods-list/goods-list.html": {
+>>>>>>> 7396cdf115fecdfaf641b77e24a2b783a0061dee
         "window": {
           "usingComponents": {},
           "navigationBarTitleText": "",

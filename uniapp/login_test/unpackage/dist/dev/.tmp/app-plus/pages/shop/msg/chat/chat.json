@@ -4,5 +4,7 @@
   "backgroundColorBottom": "#e5e5e5",
   "softinputNavBar": "none",
   "bounce": "none",
-  "usingComponents": {}
+  "usingComponents": {
+    "uni-nav-bar": "/components/uni-nav-bar/uni-nav-bar"
+  }
 }

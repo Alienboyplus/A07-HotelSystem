@@ -1,9 +1,26 @@
 {
     "pages": [ //pages数组中第一项表示应用启动页,
 		{
+<<<<<<< HEAD
 		    "path": "pages/login/login",
 		    "style": {}
 		}, 
+=======
+				    "path" : "pages/index/index",
+				    "style" : {
+				    	"navigationBarTitleText" : "首页",
+				    	"app-plus": {
+				    		"bounce": "none"
+				    	}
+				    }
+				}
+			    ,
+		{
+		    "path": "pages/login/login",
+		    "style": {}
+		}
+		, 
+>>>>>>> 7396cdf115fecdfaf641b77e24a2b783a0061dee
 		{
 			"path":"pages/appointment/conference",
 			"style": {}
@@ -15,7 +32,11 @@
 		}
 		,
 		{
+<<<<<<< HEAD
         	"path":"pages/infor/dinningCode",
+=======
+        	"path":"pages/login/dinningCode",
+>>>>>>> 7396cdf115fecdfaf641b77e24a2b783a0061dee
         	"style": {} 
         },
 		{
@@ -51,6 +72,7 @@
 		    "path" : "pages/infor/first",
 		    "style" : {}
 		},
+<<<<<<< HEAD
 		{
 				    "path" : "pages/new/index",
 				    "style" : {
@@ -61,6 +83,9 @@
 				    }
 				}
 			    ,
+=======
+
+>>>>>>> 7396cdf115fecdfaf641b77e24a2b783a0061dee
 				{
 				    "path" : "pages/new/details",
 				    "style" : {

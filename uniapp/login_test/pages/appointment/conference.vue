@@ -1,5 +1,6 @@
 <template>
 	<view class="content">
+		<uni-nav-bar color="#000000" background-color="#ffffff" :status-bar="true" left-icon="arrowleft" left-text="返回" title="人证核验" @clickLeft="back" />
 		<uni-section title="基本信息" type="line"></uni-section>
 		<uni-list>
 			<uni-list-item :show-arrow="false">
@@ -50,11 +51,13 @@
 	import uniSection from '@/components/uni-section/uni-section.vue'
 	import uniList from '@/components/uni-list/uni-list.vue'
 	import uniListItem from '@/components/uni-list-item/uni-list-item.vue'
+	import uniNavBar from '@/components/uni-nav-bar/uni-nav-bar.vue'
 	export default {
 		components: {
 			uniSection,
 			uniList,
-			uniListItem
+			uniListItem,
+			uniNavBar
 		},
 		data() {
 	        const currentDate = this.getDate({

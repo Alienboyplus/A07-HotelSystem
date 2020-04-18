@@ -14,8 +14,13 @@
       <cmd-cell-item title="导航" slot-left @click="fnClick('map')" arrow>
         <cmd-icon type="bullet-list" size="24" color="#000000"></cmd-icon>
       </cmd-cell-item>
+<<<<<<< HEAD:uniapp/login_test/pages/infor/infor.vue
       <cmd-cell-item title="餐卷" slot-left @click="fnClick('dinningCode')"arrow>
         <cmd-icon type="credit-card" size="24" color="#000000"></cmd-icon>
+=======
+      <cmd-cell-item title="餐券" slot-left @click="fnClick('dinningCode')"arrow>
+        <cmd-icon type="message" size="24" color="#000000"></cmd-icon>
+>>>>>>> 7396cdf115fecdfaf641b77e24a2b783a0061dee:uniapp/login_test/pages/login/infor.vue
       </cmd-cell-item>
       <cmd-cell-item title="新闻" slot-left @click="fnClick('new')"arrow>
         <cmd-icon type="message" size="24" color="#000000"></cmd-icon>
@@ -23,8 +28,13 @@
 	  <cmd-cell-item title="购物" slot-left @click="fnClick('shop')" arrow>
 	    <cmd-icon type="shopping-cart" size="24" color="#000000"></cmd-icon>
 	  </cmd-cell-item>
+<<<<<<< HEAD:uniapp/login_test/pages/infor/infor.vue
       <cmd-cell-item title="检查版本" addon="v1.1" slot-left arrow>
         <cmd-icon type="settings" size="24" color="#000000"></cmd-icon>
+=======
+      <cmd-cell-item title="检查版本" addon="v1.1" @click="checkVersion()" slot-left arrow>
+        <cmd-icon type="alert-circle" size="24" color="#000000"></cmd-icon>
+>>>>>>> 7396cdf115fecdfaf641b77e24a2b783a0061dee:uniapp/login_test/pages/login/infor.vue
       </cmd-cell-item>
     </view>
   </view>
@@ -80,7 +90,19 @@
 			url:'../shop/tabBar/home/home'	
 			})
 		}
-    }
+		if(type == 'identify'){
+			uni.navigateTo({
+				url:"../identify/identify"
+			})
+		}
+    },
+	checkVersion(){
+		uni.showToast({
+			icon:"none",
+			duration:3000,
+			title:"当前已是最新版本!"
+		})
+	}
   },
   }
 </script>

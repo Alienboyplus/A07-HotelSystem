@@ -17,7 +17,7 @@
 						<wInput
 							v-model="passData"
 							type="password"
-							maxlength="11"
+							maxlength="16"
 							placeholder="密码"
 						></wInput>
 					</view>
@@ -74,21 +74,21 @@
 			};
 		},
 		onLoad() {
-			request({
-				api: "http://127.0.0.1:8000/do_login/",
-				method: "POST",
-				self: this,
-				data: {
-					'phoneNumber': '15989584526',
-					'password': '123456'
-				},
-				then: function(res) {
+			// request({
+			// 	api: "http://127.0.0.1:8000/do_login/",
+			// 	method: "POST",
+			// 	self: this,
+			// 	data: {
+			// 		'phoneNumber': this.phoneData,
+			// 		'password': this.passData
+			// 	},
+			// 	then: function(res) {
 					
-				},
-				err: function(res) {
+			// 	},
+			// 	err: function(res) {
 					
-				}
-			})
+			// 	}
+			// })
 			// uni.request({
 			// 	url:"http://127.0.0.1:8000/do_login/",
 			// 	method:"POST",
