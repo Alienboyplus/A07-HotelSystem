@@ -12,17 +12,17 @@
 							v-model="phoneData"
 							type="text"
 							maxlength="11"
-							placeholder="用户名/电话"
+							placeholder="username/phone number"
 						></wInput>
 						<wInput
 							v-model="passData"
 							type="password"
 							maxlength="16"
-							placeholder="密码"
+							placeholder="password"
 						></wInput>
 					</view>
 					<wButton 
-						text="登 录"
+						text="login"
 						:rotate="isRotate" 
 						@click.native="startLogin()"
 					></wButton>
@@ -42,11 +42,11 @@
 					
 					<!-- 底部信息 -->
 					<view class="footer">
-						<navigator url="forget" open-type="navigate">找回密码</navigator>
+						<navigator url="forget_en" open-type="navigate">Retrieve password</navigator>
 						<text>|</text>
-						<navigator url="register" open-type="navigate">注册账号</navigator>
+						<navigator url="register_en" open-type="navigate">Sign up</navigator>
 						<text>|</text>
-						<navigator url="login_en" open-type="navigate">English</navigator>
+						<navigator url="login" open-type="navigate">简体中文</navigator>
 					</view>
 				</view>
 			</view>
@@ -152,7 +152,7 @@
 				     uni.showToast({
 				        icon: 'none',
 						position: 'bottom',
-				        title: '用户名不能为空'
+				        title: 'Username can not be empty'
 				    });
 				    return;
 				}
@@ -160,7 +160,7 @@
 		            uni.showToast({
 		                icon: 'none',
 						position: 'bottom',
-		                title: '密码不正确'
+		                title: 'The password is incorrect'
 		            });
 		            return;
 		        }
@@ -178,17 +178,17 @@
 					success: (res) => {
 						console.log(res.data)
 						if(res.data.code == 0){
-							console.log("登录成功")
+							console.log("login successful")
 							uni.navigateTo({
-								url:"../infor/first"
+								url:"../infor/first_en"
 							})
 						}
 						else if(res.data.code == 1){
-							console.log("用户身份过期")
+							console.log("User identity expired")
 							uni.showToast({
 								icon: 'none',
 								position: 'bottom',
-								title: '用户身份过期，请重新登录'
+								title: 'User ID expired, please log in again'
 							})
 						}
 						else if(res.data.code == 2){
@@ -196,7 +196,7 @@
 							uni.showToast({
 								icon: 'none',
 								position: 'bottom',
-								title: '用户名或密码有误'
+								title: 'Incorrect username or password'
 							})
 						}
 						//else 
@@ -213,7 +213,7 @@
 					_this.isRotate=false
 				},3000)
 				uni.showLoading({
-					title: '登录中'
+					title: 'logging in'
 				});
 				// getLogin()
 				// .then(res => {

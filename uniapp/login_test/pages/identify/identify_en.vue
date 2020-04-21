@@ -1,29 +1,29 @@
 <template>
 	<view class="content">
-		<uni-nav-bar color="#000000" background-color="#ffffff" :status-bar="true" left-icon="arrowleft" left-text="返回" title="人证核验" @clickLeft="back" />
-		<uni-section title="基本信息" type="line"></uni-section>
+		<uni-nav-bar color="#000000" background-color="#ffffff" :status-bar="true" left-icon="arrowleft" left-text="back" title="Witness verification" @clickLeft="back" />
+		<uni-section title="Basic Information" type="line"></uni-section>
 		<uni-list>
 			<uni-list-item :show-arrow="false">
-				<input class="uni-input" placeholder="请输入姓名" v-model="name"/>
+				<input class="uni-input" placeholder="name" v-model="name"/>
 			</uni-list-item>
 			<uni-list-item :show-arrow="false">
-				<input class="uni-input" type="idcard" placeholder="请输入身份证号码" v-model="idCardNum"/>
+				<input class="uni-input" type="idcard" placeholder="identification number" v-model="idCardNum"/>
 			</uni-list-item>
-			<uni-list-item :disabled="true" :show-arrow="false" title="手机号码"/>
+			<uni-list-item :disabled="true" :show-arrow="false" title="phone number"/>
 		</uni-list>
-		<uni-section title="上传照片" type="line"></uni-section>
+		<uni-section title="upload photos" type="line"></uni-section>
 		<uni-list>
-			<uni-list-item title="点击拍摄/上传人脸照片" :showArrow="false" @click="uploadPics()">
+			<uni-list-item title="Click to take / upload face photos" :showArrow="false" @click="uploadPics()">
 				<template v-slot:right="">
 					<image style="width: 80px;height: 80px;" :src="filePath" mode="widthFix"></image>
 				</template>
 			</uni-list-item>
 		</uni-list>
-		<uni-section title="上传身份证照片(正面/背面)" type="line"></uni-section>
+		<uni-section title="Upload ID photo (front / back)" type="line"></uni-section>
 		<view class="grace-idcard-items">
 			<view class="grace-idcard-uper-btn" @tap="selectImg1">
 				<view class="img"><image src="../../static/imgs/camera.png" mode="widthFix" /></view>
-				<view class="text">拍摄或选择照片</view>
+				<view class="text">Take or select a photo</view>
 			</view>
 			<view class="grace-idcard-preview">
 				<image :src="idCard1"  @tap="previewImg1" mode="widthFix"></image>
@@ -32,14 +32,14 @@
 		<view class="grace-idcard-items">
 			<view class="grace-idcard-uper-btn" @tap="selectImg2">
 				<view class="img"><image src="../../static/imgs/camera.png" mode="widthFix" /></view>
-				<view class="text">拍摄或选择照片</view>
+				<view class="text">Take or select a photo</view>
 			</view>
 			<view class="grace-idcard-preview">
 				<image :src="idCard2" @tap="previewImg2" mode="widthFix" />
 			</view>
 		</view>
 		<view style="margin-top:38upx;">
-			<button type="primary" @tap="upload">上传</button>
+			<button type="primary" @tap="upload">upload</button>
 		</view>
 		
 	</view>
@@ -165,42 +165,42 @@
 				
 				if(this.name == ""){
 					uni.showToast({
-						title:"请输入姓名！",
+						title:"Please type in your name!",
 						duration:3000,
 						icon:'none'
 					});
 				}
 				else if(this.idCardNum.length != 18){
 					uni.showToast({
-						title:"身份证信息有误！",
+						title:"The ID card information is incorrect!",
 						duration:3000,
 						icon:'none'
 					});
 				}
 				else if(this.filePath == "../../static/imgs/camera.png"){
 					uni.showToast({
-						title:"请先上传人脸照片！",
+						title:"Please upload a face photo first!",
 						duration:3000,
 						icon:'none'
 					});
 				}
 				else if(this.idCard1 == '../../static/imgs/idcard1.png'){
 					uni.showToast({
-						title:"请上传身份证正面照片！",
+						title:"Please upload a photo of the front of the ID card!",
 						duration:3000,
 						icon:'none'
 					});
 				}
 				else if(this.idCard2 == '../../static/imgs/idcard2.png'){
 					uni.showToast({
-						title:"请上传身份证背面照片！",
+						title:"Please upload the photo on the back of the ID card!",
 						duration:3000,
 						icon:'none'
 					});
 				}
 				else {
 					uni.showLoading({
-						title:'正在上传人脸信息...'
+						title:'Uploading face information ...'
 					})
 					
 					uni.request({
@@ -223,7 +223,7 @@
 							if(res.data.code == 0){
 								
 								uni.showLoading({
-									title:'正在上传人脸图片...',
+									title:'Uploading face image ...',
 								});
 								
 								uni.uploadFile({
@@ -239,7 +239,7 @@
 										console.log(res.data)
 										uni.hideLoading();
 										uni.showLoading({
-											title:"正在上传身份证信息"
+											title:"Uploading ID card information"
 										})
 										// 上传正面
 										var uploadTask1 = uni.uploadFile({
@@ -273,7 +273,7 @@
 										 });
 										 
 										uni.showLoading({
-											title:'正在进行人脸比对...'
+											title:'Face matching is in progress ...'
 										})
 										 uni.request({
 										 	//url:'http://127.0.0.1:8080/faceSearch',
@@ -290,14 +290,14 @@
 												if(res.data.code == 0){
 													uni.showToast({
 														icon:"none",
-														title:"验证成功！",
+														title:"Successful verification!",
 														duration:3000,
 													})
 												}
 												else if(res.data.code == 15){
 													uni.showToast({
 														icon:"none",
-														title:"人脸比对失败！请重新选择图片！",
+														title:"Face comparison failed! Please reselect a picture!",
 														duration:3000,
 													})
 												}
@@ -309,7 +309,7 @@
 												uni.hideLoading();
 												uni.showToast({
 													icon:"none",
-													title:"上传失败！请确保图片大小不要过大！",
+													title:"upload failed! Please make sure the picture size is not too big!",
 													duration:3000,
 												})
 										
@@ -326,7 +326,7 @@
 							else{
 								uni.showToast({
 									icon:'none',
-									title:'未检测出人脸，请重试',
+									title:'No face detected, please try again',
 									duration:3000
 								});
 							}
@@ -344,7 +344,7 @@
 			},
 			back() {
 				uni.navigateTo({
-					url:'../infor/info'
+					url:'../infor/info_en'
 				})
 			},
 		}

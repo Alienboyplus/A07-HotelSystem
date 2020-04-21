@@ -1,24 +1,24 @@
 <template>
 	<view>
-		<uni-nav-bar color="#000000" background-color="#ffffff" :status-bar="true" left-icon="arrowleft" left-text="返回" title="餐券" @clickLeft="back" />
+		<uni-nav-bar color="#000000" background-color="#ffffff" :status-bar="true" left-icon="arrowleft" left-text="back" title="meal coupon" @clickLeft="back" />
 		<view class="content" >
 			<view class="top"></view>
 			<view class="banner">
 				<dl>
 					<dt><image src="../../static/img/icon.png" mode=""></image></dt>
-					<dd>我的餐券</dd>
+					<dd>my meal coupon</dd>
 				</dl>
 				<view class="canvas">
 					<canvas canvas-id="qrcode" style="width: 215px; height: 215px;" />
 				</view>
-				<view class="tgtit">使用日期：<text class="tugurl">2020.3.7 - 2020.3.8</text></view>
+				<view class="tgtit">EXP：<text class="tugurl">2020.3.7 - 2020.3.8</text></view>
 				<view class="sharbuttn">
-					<view class="btn" @click="save">保存二维码</view>
+					<view class="btn" @click="save">Save QR code</view>
 		<!-- 			<view class="btn" @click="sharurl">复制推广链接</view> -->
 				</view>
 				
 				<!-- <button class="btn" @click="share">分享</button> -->
-				<view class="shartitle"><view>注意事项</view></view>
+				<view class="shartitle"><view>Precautions</view></view>
 				<view class="sharapk" @click="share">
 					<!-- <view><image src="../../static/img/weact.png"></image></view>
 					<view><image src="../../static/img/shar.png"></image></view>
@@ -27,9 +27,10 @@
 				
 				<view class="bottom">
 					<ul>
-						<li>1、请在用餐时于前台出示此二维码</li>
-						<li>2、请保管好该二维码</li>
-						<li>3、最终解释权归本酒店所有</li>
+						<li>1、Please present this QR code at the front desk when dining</li>
+						<li></li>
+						<li>2、Please keep the QR code</li>
+						<li>3、The ultimate power of interpretation using personal influence originally time belongs to hotel</li>
 					</ul>
 				</view>
 			</view>
@@ -69,18 +70,18 @@
 						switch (e.provider[i]) {
 							case 'weixin':
 								data.push({
-									name: '分享到微信好友',
+									name: 'Share to WeChat friends',
 									id: 'weixin'
 								})
 								data.push({
-									name: '分享到微信朋友圈',
+									name: 'Share to WeChat Moments',
 									id: 'weixin',
 									type: 'WXSenceTimeline'
 								})
 								break;
 							case 'qq':
 								data.push({
-									name: '分享到QQ',
+									name: 'Share to QQ',
 									id: 'qq'
 								})
 								break;
@@ -99,7 +100,7 @@
 		methods:{
 			back() {
 				uni.navigateTo({
-					url:'infor'
+					url:'infor_en'
 				})
 			},
 			initialize() {
@@ -127,7 +128,7 @@
 						uni.showToast({
 							icon:'none',
 							duration:3000,
-							title:'请检查网络链接！'
+							title:'Please check the web link！'
 						})
 					}
 				});
@@ -150,8 +151,8 @@
 					success: function () {
 						console.log('success');
 						uni.showModal({
-							title: '复制成功',
-							content: '内容已复制到粘贴板，可前往其他应用粘贴查看。', 
+							title: 'Copy successful',
+							content: 'The content has been copied to the clipboard, you can go to other applications to paste and view.', 
 							showCancel:false,
 							success: function(res) {
 								if (res.confirm) {											 
@@ -167,16 +168,16 @@
 			//保存图片到相册
 			save(){
 				uni.showActionSheet({
-					itemList:['保存图片到相册'],
+					itemList:['Save picture to album'],
 					success: () => {
 						plus.gallery.save(this.qrcodeSrc, function() {
 							uni.showToast({
-								title:'保存成功',
+								title:'Saved successfully',
 								icon:'none'
 							})
 						}, function() {
 							uni.showToast({
-								title:'保存失败，请重试！',
+								title:'Failed to save, please try again!',
 								icon:'none'
 							})
 						});
@@ -186,7 +187,7 @@
 			share(e) {
 				if (this.providerList.length === 0) {
 					uni.showModal({
-						title: '当前环境无分享渠道!',
+						title: 'There are no sharing channels in the current environment!',
 						showCancel: false
 					})
 					return;
@@ -211,7 +212,7 @@
 						 	scene: this.providerList[res.tapIndex].type && this.providerList[res.tapIndex].type === 'WXSenceTimeline' ? 'WXSenceTimeline' : "WXSceneSession",
 						 	type: this.type,
 						 	title:'耘助教',
-						 	summary: '耘助教是一个在线教育应用平台',
+						 	summary: '耘助教 is an online education application platform',
 						 	imageUrl:'http://pds.jyt123.com/wxtest/logo.png',
 						 	href:"https://m3w.cn/uniapp",
 						 	success: (res) => {

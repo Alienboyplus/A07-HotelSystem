@@ -1,26 +1,13 @@
 {
     "pages": [ //pages数组中第一项表示应用启动页,
 		{
-<<<<<<< HEAD
 		    "path": "pages/login/login",
 		    "style": {}
-		}, 
-=======
-				    "path" : "pages/index/index",
-				    "style" : {
-				    	"navigationBarTitleText" : "首页",
-				    	"app-plus": {
-				    		"bounce": "none"
-				    	}
-				    }
-				}
-			    ,
+		},
 		{
-		    "path": "pages/login/login",
+		    "path": "pages/login/login_en",
 		    "style": {}
-		}
-		, 
->>>>>>> 7396cdf115fecdfaf641b77e24a2b783a0061dee
+		},
 		{
 			"path":"pages/appointment/conference",
 			"style": {}
@@ -32,39 +19,67 @@
 		}
 		,
 		{
-<<<<<<< HEAD
+			"path":"pages/identify/identify_en",
+			"style": {}
+		}
+		,
+		{
         	"path":"pages/infor/dinningCode",
-=======
-        	"path":"pages/login/dinningCode",
->>>>>>> 7396cdf115fecdfaf641b77e24a2b783a0061dee
-        	"style": {} 
+        	"style": {}
         },
+		{
+			"path":"pages/infor/dinningCode_en",
+			"style": {}
+		},
 		{
             "path": "pages/login/forget",
             "style": {}
-        }, 
+        },
+		{
+		    "path": "pages/login/forget_en",
+		    "style": {}
+		},
 		{
             "path": "pages/login/register",
             "style": {}
-        } 
-        ,  
+        }
+        ,
+		{
+		    "path": "pages/login/register_en",
+		    "style": {}
+		}
+		,
 		{
             "path" : "pages/infor/map",
             "style" : {}
         }
-		, 
+		,
 		{
 		    "path" : "pages/infor/infor",
 		    "style" : {}
 		}
-		,	
+		,
+		{
+		    "path" : "pages/infor/infor_en",
+		    "style" : {}
+		}
+		,
 		{
 		    "path" : "pages/infor/info",
 		    "style" : {}
+		},
+		{
+		    "path" : "pages/infor/info_en",
+		    "style" : {}
 		}
-		,	
+		,
 		{
 		    "path" : "pages/infor/modify",
+		    "style" : {}
+		}
+		,
+		{
+		    "path" : "pages/infor/modify_en",
 		    "style" : {}
 		}
 		,
@@ -72,7 +87,10 @@
 		    "path" : "pages/infor/first",
 		    "style" : {}
 		},
-<<<<<<< HEAD
+		{
+		    "path" : "pages/infor/first_en",
+		    "style" : {}
+		},
 		{
 				    "path" : "pages/new/index",
 				    "style" : {
@@ -83,9 +101,16 @@
 				    }
 				}
 			    ,
-=======
-
->>>>>>> 7396cdf115fecdfaf641b77e24a2b783a0061dee
+				{
+					"path" : "pages/new/index_en",
+					"style" : {
+						"navigationBarTitleText" : "Home",
+						"app-plus": {
+							"bounce": "none"
+						}
+					}
+				}
+				,
 				{
 				    "path" : "pages/new/details",
 				    "style" : {
@@ -116,9 +141,9 @@
 						"app-plus": {
 							"titleNView": false ,//禁用原生导航栏
 							"softinputNavBar":"none",
-							"subNVues":[{  
-								"id": "homeTitleNvue", // 唯一标识  
-								"path": "pages/shop/tabBar/home/subNvue/homeTitleNvue", // 页面路径  
+							"subNVues":[{
+								"id": "homeTitleNvue", // 唯一标识
+								"path": "pages/shop/tabBar/home/subNvue/homeTitleNvue", // 页面路径
 								"type":"navigationBar"
 							}]
 						}
@@ -132,9 +157,9 @@
 						"app-plus": {
 							"titleNView": false ,//禁用原生导航栏
 							"softinputNavBar":"none",
-							"subNVues":[{  
-								"id": "cartTitleNvue", // 唯一标识  
-								"path": "pages/shop/tabBar/cart/subNvue/cartTitleNvue", // 页面路径  
+							"subNVues":[{
+								"id": "cartTitleNvue", // 唯一标识
+								"path": "pages/shop/tabBar/cart/subNvue/cartTitleNvue", // 页面路径
 								"type":"navigationBar"
 							}]
 						}
@@ -150,9 +175,9 @@
 				"navigationBarTextStyle":"white",
 				"app-plus": {
 					"titleNView": false ,//禁用原生导航栏
-					"subNVues":[{  
-						"id": "userTitleNvue", // 唯一标识  
-						"path": "pages/shop/tabBar/user/subNvue/userTitleNvue", // 页面路径  
+					"subNVues":[{
+						"id": "userTitleNvue", // 唯一标识
+						"path": "pages/shop/tabBar/user/subNvue/userTitleNvue", // 页面路径
 						"type":"navigationBar"
 					}]
 				}
@@ -297,7 +322,7 @@
 						"backgroundColorBottom":"#ffffff"
 					}
 				}
-		        
+
     ],
     "globalStyle": {
     	"navigationBarTextStyle": "black",

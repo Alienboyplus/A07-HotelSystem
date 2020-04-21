@@ -6,24 +6,24 @@
     <view class="person-head">
       <cmd-avatar src="../../static/img/logo.jpg" @click="fnInfoWin" size="lg" :make="{'background-color': '#ffffff'}"></cmd-avatar>
       <view class="person-head-box">
-        <view class="person-head-nickname">游客</view>
+        <view class="person-head-nickname">Visitor</view>
         <view class="person-head-username">ID:0</view>
       </view>
     </view>
     <view class="person-list">
-      <cmd-cell-item title="导航" slot-left @click="fnClick('map')" arrow>
+      <cmd-cell-item title="Map" slot-left @click="fnClick('map')" arrow>
         <cmd-icon type="bullet-list" size="24" color="#000000"></cmd-icon>
       </cmd-cell-item>
-      <cmd-cell-item title="餐券" slot-left @click="fnClick('dinningCode')"arrow>
+      <cmd-cell-item title="Meal coupon" slot-left @click="fnClick('dinningCode')"arrow>
         <cmd-icon type="credit-card" size="24" color="#000000"></cmd-icon>
       </cmd-cell-item>
-      <cmd-cell-item title="新闻" slot-left @click="fnClick('new')"arrow>
+      <cmd-cell-item title="News" slot-left @click="fnClick('new')"arrow>
         <cmd-icon type="message" size="24" color="#000000"></cmd-icon>
       </cmd-cell-item>
-	  <cmd-cell-item title="购物" slot-left @click="fnClick('shop')" arrow>
+	  <cmd-cell-item title="Shopping" slot-left @click="fnClick('shop')" arrow>
 	    <cmd-icon type="shopping-cart" size="24" color="#000000"></cmd-icon>
 	  </cmd-cell-item>
-      <cmd-cell-item title="检查版本" addon="v1.1" slot-left arrow>
+      <cmd-cell-item title="Version" addon="v1.1" slot-left arrow>
         <cmd-icon type="settings" size="24" color="#000000"></cmd-icon>
       </cmd-cell-item>
     </view>
@@ -56,7 +56,7 @@
 	  },
       fnInfoWin() {
         uni.navigateTo({
-          url: 'info'
+          url: 'info_en'
         })
       },
 	  fnClick(type){
@@ -67,12 +67,12 @@
 	    }
 		if(type == 'dinningCode'){
 		  uni.navigateTo({
-		    url:'./dinningCode'
+		    url:'./dinningCode_en'
 		  })
 		}
 		if(type == 'new'){
 		  uni.navigateTo({
-			url:'../new/index'
+			url:'../new/index_en'
 		  })
 		}
 		if(type == 'shop'){
@@ -90,7 +90,7 @@
 		uni.showToast({
 			icon:"none",
 			duration:3000,
-			title:"当前已是最新版本!"
+			title:"It is the latest version!"
 		})
 	}
   },
