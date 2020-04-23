@@ -23,6 +23,9 @@
 	  <cmd-cell-item title="Shopping" slot-left @click="fnClick('shop')" arrow>
 	    <cmd-icon type="shopping-cart" size="24" color="#000000"></cmd-icon>
 	  </cmd-cell-item>
+	  <cmd-cell-item title="conferenece room" slot-left @click="fnClick('conference')" arrow>
+	    <cmd-icon type="calendar" size="24" color="#000000"></cmd-icon>
+	  </cmd-cell-item>
       <cmd-cell-item title="Version" addon="v1.1" slot-left arrow>
         <cmd-icon type="settings" size="24" color="#000000"></cmd-icon>
       </cmd-cell-item>

@@ -9,7 +9,7 @@
 			<uni-list-item :show-arrow="false">
 				<input class="uni-input" type="idcard" placeholder="请输入身份证号码" v-model="idCardNum"/>
 			</uni-list-item>
-			<uni-list-item :disabled="true" :show-arrow="false" title="手机号码"/>
+			<uni-list-item :disabled="true" :show-arrow="false" title="15989584526"/>
 		</uni-list>
 		<uni-section title="上传照片" type="line"></uni-section>
 		<uni-list>
@@ -295,6 +295,7 @@
 													})
 												}
 												else if(res.data.code == 15){
+													console.log(res.code)
 													uni.showToast({
 														icon:"none",
 														title:"人脸比对失败！请重新选择图片！",

@@ -115,7 +115,7 @@
 					但是我暂时没研究清楚该怎么写，就先写死了电话QAQ
 					*/
 					head:{
-						'content-type': 'application/json'
+						'content-type': 'application/x-www-form-urlencoded'
 					},
 					method:'POST',
 					success: (res) => {
@@ -124,6 +124,7 @@
 						this.make();
 					},
 					fail: () => {
+						console.log(res.data);
 						uni.showToast({
 							icon:'none',
 							duration:3000,

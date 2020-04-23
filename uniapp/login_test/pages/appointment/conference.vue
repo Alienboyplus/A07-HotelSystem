@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<uni-nav-bar color="#000000" background-color="#ffffff" :status-bar="true" left-icon="arrowleft" left-text="返回" title="人证核验" @clickLeft="back" />
+		<uni-nav-bar color="#000000" background-color="#ffffff" :status-bar="true" left-icon="arrowleft" left-text="返回" title="会议室预约" @clickLeft="back" />
 		<uni-section title="基本信息" type="line"></uni-section>
 		<uni-list>
 			<uni-list-item :show-arrow="false">
@@ -102,7 +102,14 @@
 	            month = month > 9 ? month : '0' + month;;
 	            day = day > 9 ? day : '0' + day;
 	            return `${year}-${month}-${day}`;
-	        }
+	        },
+			upload(){
+				uni.showToast({
+					duration:3000,
+					title:"预约成功！",
+					icon:'none'
+				})
+			}
 		}
 	}
 </script>

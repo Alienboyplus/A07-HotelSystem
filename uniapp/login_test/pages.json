@@ -1,11 +1,19 @@
 {
     "pages": [ //pages数组中第一项表示应用启动页,
 		{
-		    "path": "pages/login/login",
+		    "path": "pages/login/login_en",
 		    "style": {}
 		},
 		{
-		    "path": "pages/login/login_en",
+		    "path" : "pages/infor/first_en",
+		    "style" : {}
+		},
+		{
+		    "path" : "pages/infor/first",
+		    "style" : {}
+		},
+		{
+		    "path": "pages/login/login",
 		    "style": {}
 		},
 		{
@@ -85,10 +93,6 @@
 		,
 		{
 		    "path" : "pages/infor/first",
-		    "style" : {}
-		},
-		{
-		    "path" : "pages/infor/first_en",
 		    "style" : {}
 		},
 		{
@@ -323,6 +327,10 @@
 					}
 				}
 
+        ,{
+            "path" : "pages/translate/translation",
+            "style" : {}
+        }
     ],
     "globalStyle": {
     	"navigationBarTextStyle": "black",

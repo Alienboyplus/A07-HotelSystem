@@ -83,7 +83,7 @@
         }
       }
     },
-    "arguments": "{\"id\":1,\"name\":\"pages/infor/infor\",\"pathName\":\"pages/infor/infor\",\"query\":\"\"}",
+    "arguments": "{\"name\":\"\",\"path\":\"\",\"query\":\"\",\"id\":0}",
     "allowsInlineMediaPlayback": true,
     "uni-app": {
       "compilerVersion": "2.5.1",

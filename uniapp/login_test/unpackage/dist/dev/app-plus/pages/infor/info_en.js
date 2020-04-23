@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"btn-logout { margin-top: ",[0,100],"; width: 80%; border-radius: ",[0,50],"; font-size: 16px; color: #fff; background: -webkit-linear-gradient(left, #000000, #000000); background: linear-gradient(to right, #000000, #000000); }\n.",[1],"btn-logout-hover { background: -webkit-linear-gradient(left, #000000, #000000); background: linear-gradient(to right, #000000, #000000); }\n",],undefined,{path:"./pages/infor/info_en.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/infor/info_en.wxml') } }));
