@@ -2,11 +2,11 @@
 	<view>
 		<uni-list>
 			<uni-list-item :show-arrow="false">
-				<textarea v-model="remarks" auto-height placeholder="可以留下相关的备注"/>
+				<textarea v-model="remarks" auto-height placeholder="输入需要翻译的内容"/>
 			</uni-list-item>
 		</uni-list>
 		<view style="margin-top:38upx;">
-			<button type="primary" @tap="upload">确认预约</button>
+			<button type="primary" @tap="upload">翻译</button>
 		</view>
 	</view>
 </template>
@@ -37,6 +37,8 @@
 					},
 					success: (res) => {
 						console.log(res.data)
+						var s = JSON.parse(res.data.rsp)
+						console.log(s.translation)
 					},
 					fail: (res) => {
 						console.log(res.data)

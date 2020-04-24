@@ -83,8 +83,9 @@ class do_translate(APIView):
             fo.write(response.content)
             fo.close()
         else:
-            print(response.content)
-            #TODO:翻译已经测试通了，编码问题待解决
+            s = response.content.decode('utf-8')
+            print(response.text)
 
 
-        return JsonResponse({"code":"0", "msg":"success!"})
+
+        return JsonResponse({"code":"0", "msg":"success!", "rsp":response.text})
