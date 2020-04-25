@@ -1,0 +1,1 @@
+<view><button type="primary" data-event-opts="{{[['tap',[['upload',['$event']]]]]}}" bindtap="__e">翻译</button></view>

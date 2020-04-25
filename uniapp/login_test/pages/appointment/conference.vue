@@ -109,6 +109,11 @@
 					title:"预约成功！",
 					icon:'none'
 				})
+			},
+			back(){
+				uni.navigateTo({
+					url:"../infor/infor"
+				})
 			}
 		}
 	}

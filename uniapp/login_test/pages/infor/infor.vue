@@ -26,6 +26,9 @@
 	  <cmd-cell-item title="会议室预约" slot-left @click="fnClick('conference')" arrow>
 	    <cmd-icon type="calendar" size="24" color="#000000"></cmd-icon>
 	  </cmd-cell-item>
+	  <cmd-cell-item title="自主申报" slot-left @click="fnClick('declare')" arrow>
+	    <cmd-icon type="alert-circle" size="24" color="#000000"></cmd-icon>
+	  </cmd-cell-item>
       <cmd-cell-item title="检查版本" addon="v1.1" slot-left arrow>
         <cmd-icon type="settings" size="24" color="#000000"></cmd-icon>
       </cmd-cell-item>
@@ -91,6 +94,11 @@
 		if(type == 'conference'){
 			uni.navigateTo({
 				url:"../appointment/conference"
+			})
+		}
+		if(type == 'declare'){
+			uni.navigateTo({
+				url:"../declare/declare-incomplete"
 			})
 		}
     },

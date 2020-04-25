@@ -1,6 +1,15 @@
 {
     "pages": [ //pages数组中第一项表示应用启动页,
 		{
+		    "path" : "pages/infor/infor",
+		    "style" : {}
+		}
+		,
+		{
+		    "path" : "pages/declare/declare-incomplete",
+		    "style" : {}
+		},
+		{
 		    "path": "pages/login/login_en",
 		    "style": {}
 		},
@@ -61,11 +70,6 @@
             "path" : "pages/infor/map",
             "style" : {}
         }
-		,
-		{
-		    "path" : "pages/infor/infor",
-		    "style" : {}
-		}
 		,
 		{
 		    "path" : "pages/infor/infor_en",
@@ -329,6 +333,15 @@
 
         ,{
             "path" : "pages/translate/translation",
+            "style" : {}
+        }
+        
+        ,{
+            "path" : "pages/declare/declare-form",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/declare/declare-safecomplete",
             "style" : {}
         }
     ],

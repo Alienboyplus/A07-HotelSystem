@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<uni-nav-bar color="#000000" background-color="#ffffff" :status-bar="true" left-icon="arrowleft" left-text="返回" title="内容" @clickLeft="back" />
+		<uni-nav-bar color="#000000" background-color="#ffffff" :status-bar="true" left-icon="arrowleft" left-text="返回" title="内容" @clickLeft="back()" />
 		<scroll-view class="scroll" scroll-y>
 			<view class="scroll-content">
 				<view class="introduce-section">

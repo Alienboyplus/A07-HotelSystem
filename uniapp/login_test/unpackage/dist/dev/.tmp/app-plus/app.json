@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/infor/infor",
+    "pages/declare/declare-incomplete",
     "pages/login/login_en",
     "pages/infor/first_en",
     "pages/infor/first",
@@ -14,7 +16,6 @@
     "pages/login/register",
     "pages/login/register_en",
     "pages/infor/map",
-    "pages/infor/infor",
     "pages/infor/infor_en",
     "pages/infor/info",
     "pages/infor/info_en",
@@ -40,7 +41,10 @@
     "pages/shop/user/deposit/deposit",
     "pages/shop/pay/payment/payment",
     "pages/shop/pay/success/success",
-    "pages/shop/goods/ratings/ratings"
+    "pages/shop/goods/ratings/ratings",
+    "pages/translate/translation",
+    "pages/declare/declare-form",
+    "pages/declare/declare-safecomplete"
   ],
   "window": {
     "navigationBarTextStyle": "black",

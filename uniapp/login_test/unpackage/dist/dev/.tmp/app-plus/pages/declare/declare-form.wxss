@@ -1,0 +1,6 @@
+
+button{
+	width: 90%;
+	margin-bottom: 10rpx;
+}
+
