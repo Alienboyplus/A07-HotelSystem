@@ -12,7 +12,7 @@
     </view>
     <view class="person-list">
       <cmd-cell-item title="导航" slot-left @click="fnClick('map')" arrow>
-        <cmd-icon type="bullet-list" size="24" color="#000000"></cmd-icon>
+        <cmd-icon type="map-pin" size="24" color="#000000"></cmd-icon>
       </cmd-cell-item>
       <cmd-cell-item title="餐券" slot-left @click="fnClick('dinningCode')"arrow>
         <cmd-icon type="credit-card" size="24" color="#000000"></cmd-icon>
@@ -27,7 +27,10 @@
 	    <cmd-icon type="calendar" size="24" color="#000000"></cmd-icon>
 	  </cmd-cell-item>
 	  <cmd-cell-item title="自主申报" slot-left @click="fnClick('declare')" arrow>
-	    <cmd-icon type="alert-circle" size="24" color="#000000"></cmd-icon>
+	    <cmd-icon type="bullet-list" size="24" color="#000000"></cmd-icon>
+	  </cmd-cell-item>
+	  <cmd-cell-item title="意见反馈" slot-left @click="fnClick('feedback')" arrow>
+	    <cmd-icon type="mail" size="24" color="#000000"></cmd-icon>
 	  </cmd-cell-item>
       <cmd-cell-item title="检查版本" addon="v1.1" slot-left arrow>
         <cmd-icon type="settings" size="24" color="#000000"></cmd-icon>
@@ -99,6 +102,11 @@
 		if(type == 'declare'){
 			uni.navigateTo({
 				url:"../declare/declare-incomplete"
+			})
+		}
+		if(type == 'feedback'){
+			uni.navigateTo({
+				url:"./feedback"
 			})
 		}
     },
