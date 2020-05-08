@@ -8,6 +8,11 @@
 		{
 		    "path" : "pages/declare/declare-incomplete",
 		    "style" : {}
+		}
+		,
+		{
+		    "path" : "pages/declare/declare-incomplete_en",
+		    "style" : {}
 		},
 		{
 		    "path": "pages/login/login_en",
@@ -344,8 +349,15 @@
             "path" : "pages/declare/declare-form",
             "style" : {}
         }
+		,{
+		    "path" : "pages/declare/declare-form_en",
+		    "style" : {}
+		}
         ,{
             "path" : "pages/declare/declare-safecomplete",
+            "style" : {}
+        },{
+            "path" : "pages/declare/declare-safecomplete_en",
             "style" : {}
         }
     ],

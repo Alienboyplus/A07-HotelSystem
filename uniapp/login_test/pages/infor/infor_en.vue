@@ -26,6 +26,9 @@
 	  <cmd-cell-item title="conferenece room" slot-left @click="fnClick('conference')" arrow>
 	    <cmd-icon type="calendar" size="24" color="#000000"></cmd-icon>
 	  </cmd-cell-item>
+	  <cmd-cell-item title="Self-declaration" slot-left @click="fnClick('declare')" arrow>
+	    <cmd-icon type="bullet-list" size="24" color="#000000"></cmd-icon>
+	  </cmd-cell-item>
       <cmd-cell-item title="Version" addon="v1.1" slot-left arrow>
         <cmd-icon type="settings" size="24" color="#000000"></cmd-icon>
       </cmd-cell-item>
@@ -86,6 +89,11 @@
 		if(type == 'identify'){
 			uni.navigateTo({
 				url:"../identify/identify"
+			})
+		}
+		if(type == 'declare'){
+			uni.navigateTo({
+				url:"../declare/declare-incomplete_en"
 			})
 		}
     },
