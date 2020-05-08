@@ -1,14 +1,41 @@
 <template>
-	<view>
-		<uni-list>
-			<uni-list-item :show-arrow="false">
-				<textarea v-model="remarks" auto-height placeholder="输入需要翻译的内容"/>
-			</uni-list-item>
-		</uni-list>
-		<view style="margin-top:38upx;">
-			<button type="primary" @tap="upload">翻译</button>
+    <view>
+        <view class="uni-title uni-common-pl">翻译</view>
+        <view class="uni-list">
+            <view class="uni-list-cell">
+                <view class="uni-list-cell-left">
+                    当前语言
+                </view>
+                <view class="uni-list-cell-db">
+                    <picker @change="bindPickerChange" :value="index" :range="array">
+                        <view class="uni-input">{{array[index]}}</view>
+                    </picker>
+                </view>
+            </view>
+        </view>
+
+        <view class="uni-list">
+            <view class="uni-list-cell">
+                <view class="uni-list-cell-left">
+                    目标语言
+                </view>
+                <view class="uni-list-cell-db">
+                    <picker @change="bindLanguageChange" :value="index_into" :range="array_into">
+                        <view class="uni-input">{{array_into[index_into]}}</view>
+                    </picker>
+                </view>
+            </view>
+        </view>
+		
+		<button type="primary"  size="mini">翻译</button>
+		
+		<view class="uni-padding-wrap uni-common-mt">
+			<view class="text-box" scroll-y="true">
+				<text>{{text}}</text>
+			</view>
 		</view>
-	</view>
+
+    </view>
 </template>
 
 <script>
@@ -17,18 +44,19 @@
 	import uniListItem from '@/components/uni-list-item/uni-list-item.vue'
 	import uniNavBar from '@/components/uni-nav-bar/uni-nav-bar.vue'
 	export default {
-		components: {
-			uniSection,
-			uniList,
-			uniListItem,
-			uniNavBar
-		},
-		data() {
-			return {
-				remarks:''
-			}
-		},
-		methods: {
+	    data() {
+	        return {
+				text: '123',
+	            title: 'picker',
+	            array: ['中文', 'English'],
+	            index: 0,
+	            array_into:['中文','English'],
+				index_into: 0
+	        }
+	    },
+	    computed: {
+	    },
+	    methods: {
 			upload(){
 				uni.request({
 					url:"http://127.0.0.1:8000/translate/",
@@ -45,8 +73,15 @@
 					},
 					method:'POST'
 				})
-			}
-		}
+			},
+	        bindPickerChange: function(e) {
+	            console.log('picker发送选择改变，携带值为', e.target.value)
+	            this.index = e.target.value
+	        },
+	        bindLanguageChange: function(e) {
+	            this.index_into = e.target.value
+	        }
+	    }
 	}
 </script>
 
