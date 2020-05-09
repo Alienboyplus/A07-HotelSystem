@@ -27,11 +27,11 @@
             </view>
         </view>
 		
-		<button type="primary"  size="mini">翻译</button>
+		<button type="primary" size="mini" @click="upload()">翻译</button>
 		
 		<view class="uni-padding-wrap uni-common-mt">
 			<view class="text-box" scroll-y="true">
-				<text>{{text}}</text>
+				<text>{{remarks}}</text>
 			</view>
 		</view>
 
@@ -46,11 +46,13 @@
 	export default {
 	    data() {
 	        return {
-				text: '123',
+				remarks: '我，无所不知',
 	            title: 'picker',
 	            array: ['中文', 'English'],
+				array_encode:['zh-CHS', 'en'],
 	            index: 0,
 	            array_into:['中文','English'],
+				array_into_encode:['zh-CHS', 'en'],
 				index_into: 0
 	        }
 	    },
@@ -61,7 +63,9 @@
 				uni.request({
 					url:"http://127.0.0.1:8000/translate/",
 					data:{
-						input_text:this.remarks
+						input_text:this.remarks,
+						language_from:this.array_encode[this.index],
+						language_to:this.array_into_encode[this.index_into]
 					},
 					success: (res) => {
 						console.log(res.data)
