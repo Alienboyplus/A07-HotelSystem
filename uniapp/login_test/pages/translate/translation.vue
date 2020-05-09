@@ -1,44 +1,46 @@
 <template>
     <view>
-        <view class="uni-title uni-common-pl">翻译</view>
-        <view class="uni-list">
-            <view class="uni-list-cell">
-                <view class="uni-list-cell-left">
-                    当前语言
-                </view>
-                <view class="uni-list-cell-db">
-                    <picker @change="bindPickerChange" :value="index" :range="array">
-                        <view class="uni-input">{{array[index]}}</view>
-                    </picker>
-                </view>
-            </view>
-        </view>
-
-        <view class="uni-list">
-            <view class="uni-list-cell">
-                <view class="uni-list-cell-left">
-                    目标语言
-                </view>
-                <view class="uni-list-cell-db">
-                    <picker @change="bindLanguageChange" :value="index_into" :range="array_into">
-                        <view class="uni-input">{{array_into[index_into]}}</view>
-                    </picker>
-                </view>
-            </view>
-        </view>
+        <view style="width: 80%; margin: auto; margin-bottom: 20px;">
+			<xfl-select 
+				:list="first_language"
+				:clearable="false"
+				:showItemNum="5" 
+				:listShow="true"
+				:isCanInput="true"  
+				:style_Container="'height: 50px; font-size: 16px;'"
+				:placeholder = "'placeholder'"
+				:initValue="'请选择源语言'"
+				:selectHideType="'hideAll'"
+			>
+			</xfl-select>
+		</view>
 		
-		<button type="primary" size="mini" @click="upload()">翻译</button>
+		<view style="width: 80%; margin: auto; margin-bottom: 20px;">
+			<xfl-select 
+				:list="second_language"
+				:clearable="false"
+				:showItemNum="5" 
+				:listShow="true"
+				:isCanInput="true"  
+				:style_Container="'height: 50px; font-size: 16px;'"
+				:placeholder = "'placeholder'"
+				:initValue="'请选择目标语言'"
+				:selectHideType="'hideAll'"
+			>
+			</xfl-select>
+		</view>
 		
-		<view class="uni-padding-wrap uni-common-mt">
-			<view class="text-box" scroll-y="true">
-				<text>{{remarks}}</text>
-			</view>
+		<button type="primary" @click="upload()">翻译</button>
+		
+		<view class="text-box" scroll-y="true">
+			<text>{{text}}</text>
 		</view>
 
     </view>
 </template>
 
 <script>
+	import xflSelect from '../../components/xfl-select/xfl-select.vue'; 
 	import uniSection from '@/components/uni-section/uni-section.vue'
 	import uniList from '@/components/uni-list/uni-list.vue'
 	import uniListItem from '@/components/uni-list-item/uni-list-item.vue'
@@ -46,18 +48,20 @@
 	export default {
 	    data() {
 	        return {
-				remarks: '我，无所不知',
-	            title: 'picker',
-	            array: ['中文', 'English'],
-				array_encode:['zh-CHS', 'en'],
-	            index: 0,
-	            array_into:['中文','English'],
-				array_into_encode:['zh-CHS', 'en'],
-				index_into: 0
-	        }
+				first_language: [       //要展示的数据
+					{value: '请选择源语言', disabled: true},
+					'English',
+					'中文',
+				],
+				second_language: [       //要展示的数据
+					{value: '请选择目标语言', disabled: true},
+					'English',
+					'中文',
+				],
+				text:'123'
+			}
 	    },
-	    computed: {
-	    },
+		components: { xflSelect },  //注册为子组件
 	    methods: {
 			upload(){
 				uni.request({
@@ -78,17 +82,17 @@
 					method:'POST'
 				})
 			},
-	        bindPickerChange: function(e) {
-	            console.log('picker发送选择改变，携带值为', e.target.value)
-	            this.index = e.target.value
-	        },
-	        bindLanguageChange: function(e) {
-	            this.index_into = e.target.value
-	        }
+			change({newVal, oldVal, index, orignItem}){ 
+				console.log(newVal, oldVal, index, orignItem);
+			}
 	    }
 	}
+	
 </script>
 
 <style>
-
 </style>
+
+<!--
+*插件链接：https://ext.dcloud.net.cn/plugin?id=518
+-->

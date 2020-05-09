@@ -33,8 +33,11 @@
 		{
 			"path":"pages/appointment/conference",
 			"style": {}
-		}
-		,
+		},
+		{
+			"path":"pages/appointment/conference_en",
+			"style": {}
+		},
 		{
 			"path":"pages/identify/identify",
 			"style": {}
