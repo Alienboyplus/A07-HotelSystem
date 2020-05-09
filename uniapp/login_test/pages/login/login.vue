@@ -45,8 +45,16 @@
 						<navigator url="forget" open-type="navigate">找回密码</navigator>
 						<text>|</text>
 						<navigator url="register" open-type="navigate">注册账号</navigator>
-						<text>|</text>
+					</view>
+					
+					<view class="footer">
 						<navigator url="login_en" open-type="navigate">English</navigator>
+						<text>|</text>
+						<navigator url="login_hk" open-type="navigate">繁體中文</navigator>
+						<text>|</text>
+						<navigator url="login_korean" open-type="navigate">한국어</navigator>
+						<text>|</text>
+						<navigator url="login_jpn" open-type="navigate">にほんご</navigator>
 					</view>
 				</view>
 			</view>

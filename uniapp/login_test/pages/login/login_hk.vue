@@ -12,17 +12,17 @@
 							v-model="phoneData"
 							type="text"
 							maxlength="11"
-							placeholder="username/phone number"
+							placeholder="用戶名/電話"
 						></wInput>
 						<wInput
 							v-model="passData"
 							type="password"
 							maxlength="16"
-							placeholder="password"
+							placeholder="密碼"
 						></wInput>
 					</view>
 					<wButton 
-						text="login"
+						text="登 錄"
 						:rotate="isRotate" 
 						@click.native="startLogin()"
 					></wButton>
@@ -42,21 +42,20 @@
 					
 					<!-- 底部信息 -->
 					<view class="footer">
-						<navigator url="forget_en" open-type="navigate">Retrieve password</navigator>
+						<navigator url="forget" open-type="navigate">找回密碼</navigator>
 						<text>|</text>
-						<navigator url="register_en" open-type="navigate">Sign up</navigator>
+						<navigator url="register" open-type="navigate">註冊賬號</navigator>
 					</view>
 					
 					<view class="footer">
-						<navigator url="login" open-type="navigate">简体中文</navigator>
+						<navigator url="login_en" open-type="navigate">English</navigator>
 						<text>|</text>
-						<navigator url="login_hk" open-type="navigate">繁體中文</navigator>
+						<navigator url="login" open-type="navigate">简体中文</navigator>
 						<text>|</text>
 						<navigator url="login_korean" open-type="navigate">한국어</navigator>
 						<text>|</text>
 						<navigator url="login_jpn" open-type="navigate">にほんご</navigator>
 					</view>
-					
 				</view>
 			</view>
 	</view>

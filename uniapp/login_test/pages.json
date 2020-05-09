@@ -19,6 +19,18 @@
 		    "style": {}
 		},
 		{
+		    "path": "pages/login/login_jpn",
+		    "style": {}
+		},
+		{
+		    "path": "pages/login/login_korean",
+		    "style": {}
+		},
+		{
+		    "path": "pages/login/login_hk",
+		    "style": {}
+		},
+		{
 		    "path" : "pages/infor/first_en",
 		    "style" : {}
 		},
