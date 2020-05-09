@@ -61,7 +61,7 @@
 	    methods: {
 			upload(){
 				uni.request({
-					url:"http://127.0.0.1:8000/translate/",
+					url:"http://39.106.209.123:8000/translate/",
 					data:{
 						input_text:this.remarks,
 						language_from:this.array_encode[this.index],
