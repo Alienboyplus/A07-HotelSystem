@@ -38,7 +38,7 @@
 						type:"input",
 						title:"2. 输入手机号信息",
 						subTitle:"",
-						maxSelect:10,
+						maxSelect:11,
 						defaultValue:"请输入您的手机号"
 					},
 					{

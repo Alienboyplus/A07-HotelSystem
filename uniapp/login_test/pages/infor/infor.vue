@@ -26,13 +26,16 @@
 	  <cmd-cell-item title="会议室预约" slot-left @click="fnClick('conference')" arrow>
 	    <cmd-icon type="calendar" size="24" color="#000000"></cmd-icon>
 	  </cmd-cell-item>
+	  <cmd-cell-item title="翻译助手" slot-left @click="fnClick('translation')" arrow>
+	    <cmd-icon type="streaming" size="24" color="#000000"></cmd-icon>
+	  </cmd-cell-item>
 	  <cmd-cell-item title="自主申报" slot-left @click="fnClick('declare')" arrow>
 	    <cmd-icon type="bullet-list" size="24" color="#000000"></cmd-icon>
 	  </cmd-cell-item>
 	  <cmd-cell-item title="意见反馈" slot-left @click="fnClick('feedback')" arrow>
 	    <cmd-icon type="mail" size="24" color="#000000"></cmd-icon>
 	  </cmd-cell-item>
-      <cmd-cell-item title="检查版本" addon="v1.1" slot-left arrow>
+      <cmd-cell-item title="检查版本" addon="v1.1" @click="checkVersion()" slot-left arrow>
         <cmd-icon type="settings" size="24" color="#000000"></cmd-icon>
       </cmd-cell-item>
     </view>
@@ -107,6 +110,11 @@
 		if(type == 'feedback'){
 			uni.navigateTo({
 				url:"./feedback"
+			})
+		}
+		if(type == 'translation'){
+			uni.navigateTo({
+				url:"../translate/translation"
 			})
 		}
     },

@@ -115,38 +115,52 @@
                 });
             },
             send() { //发送反馈
-                console.log(JSON.stringify(this.sendDate));
-                let imgs = this.imageList.map((value, index) => {
-                    return {
-                        name: "image" + index,
-                        uri: value
-                    }
-                })
-                uni.uploadFile({
-                    url: "https://service.dcloud.net.cn/feedback",
-                    files: imgs,
-                    formData: this.sendDate,
-                    success: (res) => {
-                        if (res.statusCode === 200) {
-                            uni.showToast({
-                                title: "反馈成功!"
-                            });
-                            this.imageList = [];
-                            this.sendDate = {
-                                score: 0,
-                                content: "",
-                                contact: ""
-                            }
-                        }
-                    },
-                    fail: (res) => {
-                        uni.showToast({
-                            title: "失败",
-                            icon:"none"
-                        });
-                        console.log(res)
-                    }
-                });
+				
+				uni.showLoading({
+					duration:3000,
+					success() {
+						uni.hideLoading();
+						uni.showToast({
+							title:"提交成功！",
+							duration:3000
+						})
+					}
+				})
+				
+
+			
+                // console.log(JSON.stringify(this.sendDate));
+                // let imgs = this.imageList.map((value, index) => {
+                //     return {
+                //         name: "image" + index,
+                //         uri: value
+                //     }
+                // })
+                // uni.uploadFile({
+                //     url: "https://service.dcloud.net.cn/feedback",
+                //     files: imgs,
+                //     formData: this.sendDate,
+                //     success: (res) => {
+                //         if (res.statusCode === 200) {
+                //             uni.showToast({
+                //                 title: "反馈成功!"
+                //             });
+                //             this.imageList = [];
+                //             this.sendDate = {
+                //                 score: 0,
+                //                 content: "",
+                //                 contact: ""
+                //             }
+                //         }
+                //     },
+                //     fail: (res) => {
+                //         uni.showToast({
+                //             title: "失败",
+                //             icon:"none"
+                //         });
+                //         console.log(res)
+                //     }
+                // });
             }
         }
     }

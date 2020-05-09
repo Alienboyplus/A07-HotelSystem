@@ -38,12 +38,16 @@ class do_translate(APIView):
 
     def post(self, request):
 
-        print(request.method)
+        # print(request.method)
         YOUDAO_URL = 'https://openapi.youdao.com/api'
         APP_KEY = '42a590aaa4eec639'
         APP_SECRET = 'oWHprb3jlsf7g6wkvk2OK6YHTki0Oy5b'
         # q = "待输入的文字"
         q = request.data.get("input_text")
+        l_from = request.data.get("language_from")
+        l_to = request.data.get("language_to")
+        print(l_from)
+        print(l_to)
         mytruncate = q
         if q is not None:
             size = len(q)
@@ -52,8 +56,8 @@ class do_translate(APIView):
             else:
                 mytruncate = q[0:10] + str(size) + q[size - 10:size]
         data = {}
-        data['from'] = 'en'
-        data['to'] = 'zh-CHS'
+        data['from'] = l_from
+        data['to'] = l_to
         data['signType'] = 'v3'
         curtime = str(int(time.time()))
         data['curtime'] = curtime

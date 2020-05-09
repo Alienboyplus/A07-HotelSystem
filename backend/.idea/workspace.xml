@@ -2,8 +2,87 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="795eb750-d6e8-40e3-9082-7867767a647f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/translation.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/translation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/pages/declare/declare-form.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/pages/declare/declare-form.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/pages/infor/feedback.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/pages/infor/feedback.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/pages/infor/info.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/pages/infor/info.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/pages/infor/infor.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/pages/infor/infor.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/common/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/common/vendor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/cmd-avatar/cmd-avatar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/cmd-avatar/cmd-avatar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/cmd-bottom-nav/cmd-bottom-nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/cmd-bottom-nav/cmd-bottom-nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/cmd-cell-item/cmd-cell-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/cmd-cell-item/cmd-cell-item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/cmd-icon/cmd-icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/cmd-icon/cmd-icon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/cmd-nav-bar/cmd-nav-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/cmd-nav-bar/cmd-nav-bar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/cmd-page-body/cmd-page-body.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/cmd-page-body/cmd-page-body.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/cmd-transition/cmd-transition.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/cmd-transition/cmd-transition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/gwh-wenjuan/gwh-wenjuan.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/gwh-wenjuan/gwh-wenjuan.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/gwh-wenjuan/gwh-wenjuan.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/gwh-wenjuan/gwh-wenjuan.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/mix-advert/vue/mix-advert.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/mix-advert/vue/mix-advert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/mix-load-more/mix-load-more.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/mix-load-more/mix-load-more.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/mix-loading/mix-loading.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/mix-loading/mix-loading.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/mix-pulldown-refresh/mix-pulldown-refresh.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/mix-pulldown-refresh/mix-pulldown-refresh.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/mpvue-citypicker/mpvueCityPicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/mpvue-citypicker/mpvueCityPicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/uni-badge/uni-badge.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/uni-badge/uni-badge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/uni-icons/uni-icons.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/uni-icons/uni-icons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/uni-list-item/uni-list-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/uni-list-item/uni-list-item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/uni-list/uni-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/uni-list/uni-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/uni-nav-bar/uni-nav-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/uni-nav-bar/uni-nav-bar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/uni-section/uni-section.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/uni-section/uni-section.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/uni-status-bar/uni-status-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/uni-status-bar/uni-status-bar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/watch-login/watch-button.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/watch-login/watch-button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/watch-login/watch-input.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/components/watch-login/watch-input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/appointment/conference.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/appointment/conference.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/declare/declare-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/declare/declare-form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/declare/declare-incomplete.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/declare/declare-incomplete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/declare/declare-safecomplete.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/declare/declare-safecomplete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/identify/identify.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/identify/identify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/identify/identify_en.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/identify/identify_en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/infor/dinningCode.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/infor/dinningCode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/infor/dinningCode_en.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/infor/dinningCode_en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/infor/first.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/infor/first.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/infor/first_en.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/infor/first_en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/infor/info.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/infor/info.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/infor/info.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/infor/info.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/infor/info_en.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/infor/info_en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/infor/infor.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/infor/infor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/infor/infor.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/infor/infor.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/infor/infor_en.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/infor/infor_en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/infor/modify.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/infor/modify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/infor/modify_en.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/infor/modify_en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/login/forget.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/login/forget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/login/forget_en.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/login/forget_en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/login/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/login/login_en.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/login/login_en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/login/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/login/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/login/register_en.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/login/register_en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/new/details.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/new/details.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/new/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/new/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/new/index_en.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/new/index_en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/new/videoDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/new/videoDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/goods/goods.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/goods/goods.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/goods/ratings/ratings.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/goods/ratings/ratings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/msg/chat/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/msg/chat/chat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/msg/msg.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/msg/msg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/order/confirmation.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/order/confirmation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/pay/payment/payment.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/pay/payment/payment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/pay/success/success.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/pay/success/success.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/tabBar/cart/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/tabBar/cart/cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/tabBar/home/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/tabBar/home/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/tabBar/user/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/tabBar/user/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/user/address/address.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/user/address/address.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/user/address/edit/edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/user/address/edit/edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/user/coupon/coupon.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/user/coupon/coupon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/user/deposit/deposit.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/user/deposit/deposit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/user/keep/keep.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/user/keep/keep.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/user/setting/setting.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/shop/user/setting/setting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/translate/translation.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/.tmp/app-plus/pages/translate/translation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/app-plus/__uniappview.html" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/app-plus/__uniappview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/app-plus/app-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/app-plus/app-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/app-plus/app-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/app-plus/app-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/app-plus/app-view.js" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/app-plus/app-view.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/app-plus/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../uniapp/login_test/unpackage/dist/dev/app-plus/manifest.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,20 +147,21 @@
           <entry key="project.open.time.22" value="2" />
           <entry key="project.open.time.23" value="3" />
           <entry key="project.open.time.26" value="2" />
+          <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.28" value="1" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="3063" />
+          <entry key="py" value="3170" />
           <entry key="txt" value="52" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="52" />
-          <entry key="Python" value="3063" />
+          <entry key="Python" value="3170" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -191,12 +271,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/translation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="579">
-              <caret line="90" column="78" selection-start-line="90" selection-start-column="78" selection-end-line="90" selection-end-column="78" />
+            <state relative-caret-position="477">
+              <caret line="59" column="25" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
               <folding>
                 <element signature="e#24#64#0" expanded="true" />
-                <marker date="1587695750921" expanded="true" signature="857:858" ph="..." />
-                <marker date="1587695750921" expanded="true" signature="887:888" ph="..." />
+                <marker date="1589006587880" expanded="true" signature="857:858" ph="..." />
+                <marker date="1589006587880" expanded="true" signature="887:888" ph="..." />
               </folding>
             </state>
           </provider>
@@ -271,7 +351,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="85" />
     <option name="y" value="80" />
     <option name="width" value="1750" />
@@ -391,16 +471,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21715818" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2196162" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32931727" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.452454" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.47855228" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.37006238" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32931727" />
@@ -704,12 +784,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/translation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="90" column="78" selection-start-line="90" selection-start-column="78" selection-end-line="90" selection-end-column="78" />
+        <state relative-caret-position="477">
+          <caret line="59" column="25" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
           <folding>
             <element signature="e#24#64#0" expanded="true" />
-            <marker date="1587695750921" expanded="true" signature="857:858" ph="..." />
-            <marker date="1587695750921" expanded="true" signature="887:888" ph="..." />
+            <marker date="1589006587880" expanded="true" signature="857:858" ph="..." />
+            <marker date="1589006587880" expanded="true" signature="887:888" ph="..." />
           </folding>
         </state>
       </provider>

@@ -111,6 +111,7 @@ input.data-v-87a1cf74 {
   padding-right: 10rpx;
   padding-top: 10rpx;
   padding-bottom: 10rpx;
+  font-size: 28rpx;
 }
 textarea.data-v-87a1cf74 {
   background-color: #F8F8F8;
