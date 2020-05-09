@@ -86,9 +86,14 @@
 			url:'../shop/tabBar/home/home'
 			})
 		}
+		if(type == 'conference'){
+			uni.navigateTo({
+				url:"../appointment/conference_en"
+			})
+		}
 		if(type == 'identify'){
 			uni.navigateTo({
-				url:"../identify/identify"
+				url:"../identify/identify_en"
 			})
 		}
 		if(type == 'declare'){
