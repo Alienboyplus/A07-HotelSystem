@@ -112,6 +112,10 @@
 		    "style" : {}
 		},
 		{
+		    "path" : "pages/infor/feedback_en",
+		    "style" : {}
+		},
+		{
 				    "path" : "pages/new/index",
 				    "style" : {
 				    	"navigationBarTitleText" : "首页",
@@ -142,7 +146,28 @@
 					}
 				},
 				{
+				    "path" : "pages/new/details_en",
+				    "style" : {
+						"navigationBarTitleText" : "Details",
+						"app-plus": {
+							"navigationBarTextStyle": "white",
+							"bounce": "none"
+						}
+					}
+				},
+				{
 				    "path" : "pages/new/videoDetails",
+				    "style" : {
+						"navigationBarTitleText" : "",
+						"app-plus": {
+							"titleNView": false,
+							"navigationBarTextStyle": "white",
+							"bounce": "none"
+						}
+					}
+				},
+				{
+				    "path" : "pages/new/videoDetails_en",
 				    "style" : {
 						"navigationBarTitleText" : "",
 						"app-plus": {

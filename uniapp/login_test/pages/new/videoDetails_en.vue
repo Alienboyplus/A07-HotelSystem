@@ -1,27 +1,50 @@
 <template>
 	<view class="content">
-		<uni-nav-bar color="#000000" background-color="#ffffff" :status-bar="true" left-icon="arrowleft" left-text="返回" title="内容" @clickLeft="back()" />
+		<uni-nav-bar color="#000000" background-color="#ffffff" :status-bar="true" left-icon="arrowleft" left-text="back" title="content" @clickLeft="back" />
+		<view class="video-wrapper">
+			<video 
+				class="video"
+				src="https://dcloud-img.oss-cn-hangzhou.aliyuncs.com/guide/uniapp/%E7%AC%AC1%E8%AE%B2%EF%BC%88uni-app%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D%EF%BC%89-%20DCloud%E5%AE%98%E6%96%B9%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B@20181126.mp4" 
+				controls
+				objectFit="fill"
+				:autoplay="false"
+			></video>
+		</view>
 		<scroll-view class="scroll" scroll-y>
 			<view class="scroll-content">
 				<view class="introduce-section">
 					<text class="title">{{detailData.title}}</text>
 					<view class="introduce">
-						<text>{{detailData.author}}</text>
-						<text>105阅读</text>
-						<text>{{detailData.time}}</text>
+						<text class="introduce">Introduction Introduction Introduction Introduction Introduction Introduction, Introduction Introduction Introduction Introduction Introduction Introduction Introduction, Introduction Introduction Introduction Introduction Introduction Introduction Introduction.</text>
+						<text class="yticon icon-xia show-icon"></text>
 					</view>
-					
-					<rich-text :nodes="detailData.flow"></rich-text>
-					
+					<view class="actions">
+						<view class="action-item">
+							<text class="yticon icon-dianzan-ash"></text>
+							<text>75</text>
+						</view>
+						<view class="action-item">
+							<text class="yticon icon-dianzan-ash reverse"></text>
+							<text>6</text>
+						</view>
+						<view class="action-item">
+							<text class="yticon icon-fenxiang2"></text>
+							<text>Share</text>
+						</view>
+						<view class="action-item">
+							<text class="yticon icon-shoucang active"></text>
+							<text>collect</text>
+						</view>
+					</view>
 				</view>
 				
 				<view class="container" v-show="loading === false">
 					<!-- 推荐 -->
 					<view class="s-header">
-						<text class="tit">相关推荐</text>
+						<text class="tit">related suggestion</text>
 					</view>
 					<view class="rec-section" v-for="item in newsList" :key="item.id">
-						<view class="rec-item">
+						<view class="rec-item" @click="redirectToDetail">
 							<view class="left">
 								<text class="title">{{item.title}}</text>
 								<view class="bot">
@@ -29,21 +52,24 @@
 									<text class="time">{{item.time}}</text>
 								</view>
 							</view>
-							<view class="right" v-if="item.images.length > 0">
+							<view class="right">
 								<image class="img" :src="item.images[0]" mode="aspectFill"></image>
+								<view class="video-tip">
+									<image class="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEC0lEQVRoQ+2ajVEVMRDHdzuwA6ACpQKxArECtQKxAqECoQKhAqECoQKxAqEDrWCdn7Nx8vJy+bp3T4YhM2+O8S7J/rO7//2IKo9k6CPBIU9Acpo0s10ReSkiPA8mtH0tIncicqOqPDcyZmvEhX8rIu8cQI9gtyJyKSIXc0ENA3EAnxxAj/BT356LyEdV/TWyWDcQM3smIgA4mtjwXkQ4aX4Mngj3QkSYy5PfTmb+laoeLg7EzBDga8aEEB4TOVfVAKAoj2sUc+QXQC0PxMzY8Esi3W8ROVbV05FTDHPMDC1AEBzEcqY1AeLMQQxtXANuZvjMa/cb/i6Oqo9kQKCFI1WtLl7bfOq9mUHd3/w9ND1F5f+WKAJxn/gebQiIg1Y/mAEEUsDX8J0zVZ0iljoQZydAYLuMrYCIwXOQrYc2qREzw4E/RAu/X9KcRrUX5mWBODX+jBY/UdXjuZuNznd5PnscepNjtikgODJpRzCp3VFaHBU+MTEOkSDMIJ0hFKyMNSAZbZA2NMUJn7ujqjebABDWyDDnXpqb5YDEvnGvqsHZi7I5CMgBxiHDxRx5bmSYGZlyyADWmCwHBN8IwjdRH5Im3B+En5UIJuYFBeMnjFtV3Y/frwDJmNV+K/1NAGEvIv+pqp7MUU1GthXzSoHE+VSzWRU0EsuOaUDhw+aWmNdKOEiBxOzQlYkWNJIqAiAI0V0dmhkZNvkXYyUkpEDYhFJ17cOaWXQACUtxaPhgc9JpZvFBr+Rg/xNI8B+0w0lXR0LDzUCIoE0bNPpISdC1uJD7uJQVlzTyEIFQgFGhMpo10pVfDfgIwlAiU9s0af4h+gglARkE8WURZ98G/V65Fhal3zgg3qnqXpVK/IMG0/rhAOYExDh9KgZEcqy4DtlEirKpTgutqLjsnk5RnEaLWeaUhiY0srFOS1KxrqVPtTS+2by8xsdsnkONNN5G0pDCQcVmtcaoLYVVV63e0zDo8L+0OVgvrNy84lIXemRiM022CtjynWsabVCwMdpKXQeSOlZXcGwRsPWbJAgyLZvOPOh2UKZWn6xYS0Dibl/IVF+1VoytJ15wbqyCtmkwKdIZGnZZE+9tmbLI4mC8VRuDAG8xpo00sQFDi2iRJrabU2jGBYVVmbMKxJ0/dzfSXeGVzM3ZiRZt2tGsgmDdJiAFMGiHNPxijk+YGV1NsuHgD82aCB82A4lomdohvf8jrQm3s61XbzgzAMJtVXwWOPZhD7F0AXEwnBrqjzv1sRCACnfp/HvIdsNlTbiDn+pgDuVn3UCCxN4wA1Bods+xrr8R26/yuuuULh8p8D0nSzsTE8ldOZcAhttgKsUhAEM+Ujty1xIm1PJfOK7nCh/LM2xaNVDbfv8EZNsnXtvvDyrmF1FIBKIwAAAAAElFTkSuQmCC"></image>
+								</view>
 							</view>
 						</view>
 					</view>
 					
 					<!-- 评论 -->
 					<view class="s-header">
-						<text class="tit">网友评论</text>
+						<text class="tit">Reviews</text>
 					</view>
 					<view class="evalution">
 						<view  v-for="(item, index) in evaList" :key="index"
 							class="eva-item"
 						>
-			
+							<image :src="item.src" mode="aspectFill"></image>
 							<view class="eva-right">
 								<text>{{item.nickname}}</text>
 								<text>{{item.time}}</text>
@@ -67,23 +93,23 @@
 				<input 
 					class="input"
 					type="text" 
-					placeholder="点评一下吧.." 
+					placeholder="Comment on it .." 
 					placeholder-style="color:#adb1b9;"
 				/>
 			</view>
-			<text class="confirm-btn">提交</text>
+			<text class="confirm-btn">submit</text>
 		</view>
 	</view>
 </template>
 
 <script>
-	import json from '@/json';
-	import mixLoading from '@/components/mix-loading/mix-loading';
 	import uniNavBar from '@/components/uni-nav-bar/uni-nav-bar.vue'
+	import json from '@/components/json.js';
+	import mixLoading from '@/components/mix-loading/mix-loading';
 	export default {
 		components: {
 			uniNavBar,
-			mixLoading
+			mixLoading,
 		},
 		data() {
 			return {
@@ -94,6 +120,7 @@
 			}
 		},
 		onLoad(options){
+			console.log(options.data);
 			this.detailData = JSON.parse(options.data);
 			this.loadNewsList();
 			this.loadEvaList();
@@ -102,7 +129,7 @@
 			//获取推荐列表
 			back() {
 				uni.navigateTo({
-					url:'../new/index'
+					url:'../new/index_en'
 				})
 			},
 			async loadNewsList(){
@@ -111,18 +138,22 @@
 					list.sort((a,b)=>{
 						return Math.random() > .5 ? -1 : 1; //静态数据打乱顺序
 					})
-					list.length = 5;
 					list.forEach(item=>{
-						this.newsList.push(item);
+						if(item.images.length > 0){
+							this.newsList.push(item);
+						}
 					})
-					
-					this.detailData.flow = `<div style="font-size:15px;color: #555;line-height: 25px"><h1 style="margin: 0px; font-weight: normal; font-size: 26px; font-family: 微软雅黑; text-align: center; line-height: 30px; white-space: normal; background-color: rgb(255, 255, 255);"><br/></h1><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-align: center;"></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-align: center;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-align: center;">市委常委、顺德区委书记郭文海赴勒流调研。<br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-align: center;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px;">　　昨日（4月13日），市委常委、顺德区委书记郭文海利用周末时间到勒流街道江村、黄连社区调研村级工业园改造、乡村振兴工作。郭文海表示，村级工业园改造和城乡形态提升是勒流目前面临的两大任务，要下定决心以城产人融合标准做好村级工业园连片改造的规划，健全生态体系建设；文化振兴是乡村振兴战略的源头活水，勒流要挖掘弘扬乡村民俗文化，为乡村振兴战略提供坚实的文化支撑，同时要充分发挥党建引领作用，广泛发动群众参与社区营造，自己家园自己建，打造美丽文明乡村。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px;">　　勒流今年以五金创新小镇·滨水生态区、中部产业园及富安工业区为着力点，重点推进龙眼、江村、新安三个村级工业园区的改造，吸引优质产业集聚，打造南、中、北三大产业集中布局组团，借助村级工业园改造的契机，让勒流的产业布局和城市面貌得到优化和提升。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px;">　　其中，江村工业区计划由改造方分单元进行连片改造，以绿色环保为导向，突出智能制造，打造“环境科技产业基地”；新安工业区初步划分为东、中、西三个改造区域，通过“退二进三”，建设集居住、商业、娱乐于一体的生活服务区，为富安工业区及周边村居提供配套设施服务。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px;">　　郭文海表示，勒流位于顺德的地理中心，是顺德的腹地，且工业基础雄厚，工业产值在顺德镇街中排名第三，发展潜力巨大，在村级工业园改造升级过程中，要下定决心做好连片改造的规划，腾出空间完善城市配套，以城产人融合标准健全生态体系建设，形成经济效益、生态效益、社会效益的三重丰收，为进驻企业提供优质的工作生活环境。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px;">　　古韵绵绵，河水潺潺，组成一幅优美的岭南水乡画卷。在千年古村黄连，文化营造和水乡生态修复、乡土美食推广、民宿建设构成了黄连振兴乡村，建设美丽文明村居的四大发展思路。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px;">　　郭文海参观了画家艺术村、藩侯何公祠、广绣坊。目前，黄连画家艺术村设有8个入驻画家工作室和10个流动流动艺术家创作驿站，画家村艺术活动非常活跃；黄连广绣作为顺德的传统文化和国家级非物质文化遗产，如今在黄连广绣坊开展有师资培训班、绣娘屋、亲子夏令营、广绣传承进校园等活动，激活、创新广绣技艺。值得一提的是，黄连社区把“厕所革命”与生态文明建设有机结合，优化提升人居环境和文旅公共服务水平。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px;">　　郭文海分别与画家村驻村画家及广绣坊学员亲切交流，并“点赞”黄连社区乡村振兴工作的开展成效。郭文海表示，文化振兴是乡村振兴战略的源头活水，千年古村黄连拥有深厚的民俗文化底蕴，需要挖掘、弘扬和发扬光大，将黄连的民俗文化做成黄连特色，必然会为乡村振兴提供坚实的文化支撑；同时，黄连的乡村振兴工作也离不开党建引领和社区营造，要充分发挥党建引领作用，广泛发动群众参与社区营造，自己家园自己建，打造“近者悦，远者来”的美丽文明乡村。（姚易　通讯员顺宣）</p><p><br/></p></div>`;
 					this.loading = false;
 				}, 1000)
 			},
 			//获取评论列表
 			async loadEvaList(){
 				this.evaList = await json.evaList;
+			},
+			redirectToDetail(){
+				uni.redirectTo({
+					url: 'details_en'
+				})
 			}
 		}
 	}
@@ -173,24 +204,27 @@
 			display: flex;
 			font-size: 26upx;
 			color: #909399;
-			text{
-				margin-right: 16upx;
+			
+			.show-icon{
+				font-size: 34upx;
+				padding-left: 10upx;
 			}
 		}
 	}
 	/* 点赞等操作 */
 	.actions{
 		display: flex;
-		justify-content: space-around;
 		align-items: center;
 		line-height: 1.3;
-		padding: 10upx 40upx 20upx;
+		padding-right: 44upx;
+		padding-top: 16upx;
 	
 		.action-item{
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
+			margin-right: 60upx;
 			font-size: 24upx;
 			color: #999;
 		}
@@ -219,7 +253,9 @@
 			font-size: 44upx;
 		}
 	}
-
+	.mix-loading{
+		transform: translateY(140upx);
+	}
 	.s-header{
 		padding: 20upx 30upx;
 		font-size: 30upx;
@@ -258,7 +294,6 @@
 			padding-right: 10upx;
 			overflow: hidden;
 			position: relative;
-			padding-bottom: 52upx;
 			.title{
 				display: -webkit-box;
 				-webkit-box-orient: vertical;
@@ -284,6 +319,25 @@
 			height: 140upx;
 			flex-shrink: 0;
 			position: relative;
+			.img{
+				width: 100%;
+				height: 100%;
+			}
+			.video-tip{
+				position: absolute;
+				left: 0;
+				top: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0,0,0,.3);
+				image{
+					width: 60upx;
+					height:60upx; 
+				}
+			}
 		}
 	}
 	/* 评论 */
@@ -298,6 +352,13 @@
 		display:flex;
 		padding: 20upx 30upx;
 		position: relative;
+		image{
+			width: 60upx;
+			height: 60upx;
+			border-radius: 50px;
+			flex-shrink: 0;
+			margin-right: 24upx;
+		}
 		&:after{
 			content: '';
 			position: absolute;

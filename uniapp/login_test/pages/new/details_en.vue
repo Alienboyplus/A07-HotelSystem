@@ -1,13 +1,13 @@
 <template>
 	<view class="content">
-		<uni-nav-bar color="#000000" background-color="#ffffff" :status-bar="true" left-icon="arrowleft" left-text="返回" title="内容" @clickLeft="back()" />
+		<uni-nav-bar color="#000000" background-color="#ffffff" :status-bar="true" left-icon="arrowleft" left-text="back" title="content" @clickLeft="back()" />
 		<scroll-view class="scroll" scroll-y>
 			<view class="scroll-content">
 				<view class="introduce-section">
 					<text class="title">{{detailData.title}}</text>
 					<view class="introduce">
 						<text>{{detailData.author}}</text>
-						<text>105阅读</text>
+						<text>105 views</text>
 						<text>{{detailData.time}}</text>
 					</view>
 					
@@ -18,7 +18,7 @@
 				<view class="container" v-show="loading === false">
 					<!-- 推荐 -->
 					<view class="s-header">
-						<text class="tit">相关推荐</text>
+						<text class="tit">related suggestion</text>
 					</view>
 					<view class="rec-section" v-for="item in newsList" :key="item.id">
 						<view class="rec-item">
@@ -37,7 +37,7 @@
 					
 					<!-- 评论 -->
 					<view class="s-header">
-						<text class="tit">网友评论</text>
+						<text class="tit">Reviews</text>
 					</view>
 					<view class="evalution">
 						<view  v-for="(item, index) in evaList" :key="index"
@@ -67,11 +67,11 @@
 				<input 
 					class="input"
 					type="text" 
-					placeholder="点评一下吧.." 
+					placeholder="Comment.." 
 					placeholder-style="color:#adb1b9;"
 				/>
 			</view>
-			<text class="confirm-btn">提交</text>
+			<text class="confirm-btn">submit</text>
 		</view>
 	</view>
 </template>
@@ -102,7 +102,7 @@
 			//获取推荐列表
 			back() {
 				uni.navigateTo({
-					url:'../new/index'
+					url:'../new/index_en'
 				})
 			},
 			async loadNewsList(){

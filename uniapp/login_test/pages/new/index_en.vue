@@ -107,7 +107,7 @@
 					author: 'Test author',
 					time: '2019-04-26 21:21'
 				}
-				return `/pages/details/details?data=${JSON.stringify(data)}`;
+				return `/pages/details_en/details?data=${JSON.stringify(data)}`;
 			} 
 		},
 		async onLoad() {
@@ -211,7 +211,7 @@
 					author: item.author,
 					time: item.time
 				}
-				let url = item.videoSrc ? 'videoDetails' : 'details'; 
+				let url = item.videoSrc ? 'videoDetails_en' : 'details_en'; 
 
 				uni.navigateTo({
 					url: `/pages/new/${url}?data=${JSON.stringify(data)}`

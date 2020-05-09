@@ -23,11 +23,14 @@
 	  <cmd-cell-item title="Shopping" slot-left @click="fnClick('shop')" arrow>
 	    <cmd-icon type="shopping-cart" size="24" color="#000000"></cmd-icon>
 	  </cmd-cell-item>
-	  <cmd-cell-item title="conferenece room" slot-left @click="fnClick('conference')" arrow>
+	  <cmd-cell-item title="Conferenece room" slot-left @click="fnClick('conference')" arrow>
 	    <cmd-icon type="calendar" size="24" color="#000000"></cmd-icon>
 	  </cmd-cell-item>
 	  <cmd-cell-item title="Self-declaration" slot-left @click="fnClick('declare')" arrow>
 	    <cmd-icon type="bullet-list" size="24" color="#000000"></cmd-icon>
+	  </cmd-cell-item>
+	  <cmd-cell-item title="Feedback" slot-left @click="fnClick('feedback')" arrow>
+	    <cmd-icon type="mail" size="24" color="#000000"></cmd-icon>
 	  </cmd-cell-item>
       <cmd-cell-item title="Version" addon="v1.1" slot-left arrow>
         <cmd-icon type="settings" size="24" color="#000000"></cmd-icon>
@@ -80,6 +83,11 @@
 		  uni.navigateTo({
 			url:'../new/index_en'
 		  })
+		}
+		if(type == 'feedback'){
+			uni.navigateTo({
+				url:"./feedback_en"
+			})
 		}
 		if(type == 'shop'){
 			uni.navigateTo({
