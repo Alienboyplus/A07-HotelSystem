@@ -4,3 +4,48 @@ page{
 }
 
 
+
+/* uni.css - 通用组件、模板样式库，可以当作一套ui库应用 */
+
+/* 以下样式用于 hello uni-app 演示所需 */
+page {
+        background-color: #F4F5F6;
+        height: 100%;
+        font-size: 28rpx;
+        line-height: 1.8;
+}
+.uni-header-logo {
+        padding: 30rpx;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+                justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+                align-items: center;
+        margin-top: 10rpx;
+}
+.uni-header-image {
+        width: 100px;
+        height: 100px;
+}
+.uni-hello-text {
+        color: #7A7E83;
+}
+.uni-hello-addfile {
+        text-align: center;
+        line-height: 300rpx;
+        background: #FFF;
+        padding: 50rpx;
+        margin-top: 10px;
+        font-size: 38rpx;
+        color: #808080;
+}
+
+
+
+
+

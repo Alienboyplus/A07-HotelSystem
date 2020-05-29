@@ -26,12 +26,18 @@
 	  <cmd-cell-item title="conferenece room" slot-left @click="fnClick('conference')" arrow>
 	    <cmd-icon type="calendar" size="24" color="#000000"></cmd-icon>
 	  </cmd-cell-item>
-	  <cmd-cell-item title="Self-declaration" slot-left @click="fnClick('declare')" arrow>
+	  <cmd-cell-item title="translation helper" slot-left @click="fnClick('translation')" arrow>
+	    <cmd-icon type="streaming" size="24" color="#000000"></cmd-icon>
+	  </cmd-cell-item>
+	  <cmd-cell-item title="COVID-19 declaration" slot-left @click="fnClick('declare')" arrow>
 	    <cmd-icon type="bullet-list" size="24" color="#000000"></cmd-icon>
 	  </cmd-cell-item>
-      <cmd-cell-item title="Version" addon="v1.1" slot-left arrow>
-        <cmd-icon type="settings" size="24" color="#000000"></cmd-icon>
-      </cmd-cell-item>
+	  <cmd-cell-item title="feedbacks" slot-left @click="fnClick('feedback')" arrow>
+	    <cmd-icon type="mail" size="24" color="#000000"></cmd-icon>
+	  </cmd-cell-item>
+	  <cmd-cell-item title="version check" addon="v1.1" @click="checkVersion()" slot-left arrow>
+	    <cmd-icon type="settings" size="24" color="#000000"></cmd-icon>
+	  </cmd-cell-item>
     </view>
   </view>
 </template>
@@ -88,7 +94,7 @@
 		}
 		if(type == 'conference'){
 			uni.navigateTo({
-				url:"../appointment/conference_en"
+				url:"../appointment/conference"
 			})
 		}
 		if(type == 'identify'){

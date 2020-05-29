@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "wenjuan": "/components/gwh-wenjuan/gwh-wenjuan",
+    "uni-nav-bar": "/components/uni-nav-bar/uni-nav-bar",
+    "uni-section": "/components/uni-section/uni-section"
+  }
+}

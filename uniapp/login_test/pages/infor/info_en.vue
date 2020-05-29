@@ -7,11 +7,11 @@
           <cmd-cel-item title="Avatar" slot-right arrow>
             <cmd-avatar src="../../static/img/logo.jpg"></cmd-avatar>
           </cmd-cel-item>
-          <cmd-cel-item title="hotel name" addon="里兹卡尔顿酒店" arrow></cmd-cel-item>
-          <cmd-cel-item title="room number" addon="3601" arrow></cmd-cel-item>
-          <cmd-cel-item title="name" addon="马浩男" arrow></cmd-cel-item>
-          <cmd-cel-item title="contact" addon="15989584526" arrow></cmd-cel-item>
-          <cmd-cel-item title="ID number" addon="440305199812288216" arrow></cmd-cel-item>
+          <cmd-cel-item title="hotel name" addon=" " arrow></cmd-cel-item>
+          <cmd-cel-item title="room number" addon=" " arrow></cmd-cel-item>
+          <cmd-cel-item title="name" addon=" " arrow></cmd-cel-item>
+          <cmd-cel-item title="contact" addon=" " arrow></cmd-cel-item>
+          <cmd-cel-item title="ID number" addon=" " arrow></cmd-cel-item>
           <cmd-cel-item title="address" addon=" " arrow></cmd-cel-item>
           <cmd-cel-item title="change password" @click="fnClick('modify')" arrow></cmd-cel-item>
 		  <cmd-cel-item title="verification" @click="fnClick('identify')" addon="No witness verification yet" arrow></cmd-cel-item>

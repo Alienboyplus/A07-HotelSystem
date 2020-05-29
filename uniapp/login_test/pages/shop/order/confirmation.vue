@@ -3,7 +3,7 @@
 		<!-- 收货地址 -->
 		<view class="addr" @tap="selectAddress">
 			<view class="icon">
-				<image src="../../static/img/addricon.png" mode=""></image>
+				<image src="../../../static/img/addricon.png" mode=""></image>
 			</view>
 			<view class="right">
 				<view class="tel-name">

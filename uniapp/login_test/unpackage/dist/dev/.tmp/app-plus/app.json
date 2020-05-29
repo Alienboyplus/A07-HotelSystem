@@ -2,11 +2,13 @@
   "pages": [
     "pages/infor/infor",
     "pages/declare/declare-incomplete",
+    "pages/declare/declare-incomplete_en",
     "pages/login/login_en",
     "pages/infor/first_en",
     "pages/infor/first",
     "pages/login/login",
     "pages/appointment/conference",
+    "pages/appointment/conference_en",
     "pages/identify/identify",
     "pages/identify/identify_en",
     "pages/infor/dinningCode",
@@ -45,7 +47,9 @@
     "pages/shop/goods/ratings/ratings",
     "pages/translate/translation",
     "pages/declare/declare-form",
-    "pages/declare/declare-safecomplete"
+    "pages/declare/declare-form_en",
+    "pages/declare/declare-safecomplete",
+    "pages/declare/declare-safecomplete_en"
   ],
   "window": {
     "navigationBarTextStyle": "black",

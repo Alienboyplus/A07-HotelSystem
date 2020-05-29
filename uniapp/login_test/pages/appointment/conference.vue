@@ -1,6 +1,6 @@
 +<template>
 	<view class="content">
-		<uni-nav-bar color="#000000" background-color="#ffffff" :status-bar="true" left-icon="arrowleft" left-text="back" title="Meeting room reservation" @clickLeft="back" />
+		<uni-nav-bar color="#000000" background-color="#ffffff" :status-bar="true" left-icon="arrowleft" left-text="back" title="Meeting room" @clickLeft="back" />
 		<uni-section title="Basic Information" type="line"></uni-section>
 		<uni-list>
 			<uni-list-item :show-arrow="false">
