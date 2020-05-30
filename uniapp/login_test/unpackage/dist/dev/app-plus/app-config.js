@@ -1,1 +1,153 @@
-"use weex:vue";var __wxConfig = {"debug":false,"appname":"login_test","entryPagePath":"pages/infor/infor.html","page":{"pages/infor/infor.html":{"window":{"usingComponents":{"cmd-avatar":"/components/cmd-avatar/cmd-avatar","cmd-cell-item":"/components/cmd-cell-item/cmd-cell-item","cmd-icon":"/components/cmd-icon/cmd-icon","uni-nav-bar":"/components/uni-nav-bar/uni-nav-bar"}}},"pages/declare/declare-incomplete.html":{"window":{"usingComponents":{"uni-nav-bar":"/components/uni-nav-bar/uni-nav-bar"}}},"pages/declare/declare-incomplete_en.html":{"window":{"usingComponents":{"uni-nav-bar":"/components/uni-nav-bar/uni-nav-bar"}}},"pages/login/login_en.html":{"window":{"usingComponents":{"w-input":"/components/watch-login/watch-input","w-button":"/components/watch-login/watch-button"}}},"pages/infor/first_en.html":{"window":{"usingComponents":{"home":"/pages/infor/map","person":"/pages/infor/infor_en","cmd-bottom-nav":"/components/cmd-bottom-nav/cmd-bottom-nav","cmd-nav-bar":"/components/cmd-nav-bar/cmd-nav-bar","cmd-page-body":"/components/cmd-page-body/cmd-page-body","cmd-transition":"/components/cmd-transition/cmd-transition"}}},"pages/infor/first.html":{"window":{"usingComponents":{"home":"/pages/infor/map","person":"/pages/infor/infor","cmd-bottom-nav":"/components/cmd-bottom-nav/cmd-bottom-nav","cmd-nav-bar":"/components/cmd-nav-bar/cmd-nav-bar","cmd-page-body":"/components/cmd-page-body/cmd-page-body","cmd-transition":"/components/cmd-transition/cmd-transition"}}},"pages/login/login.html":{"window":{"usingComponents":{"w-input":"/components/watch-login/watch-input","w-button":"/components/watch-login/watch-button"}}},"pages/appointment/conference.html":{"window":{"usingComponents":{"uni-section":"/components/uni-section/uni-section","uni-list":"/components/uni-list/uni-list","uni-list-item":"/components/uni-list-item/uni-list-item","uni-nav-bar":"/components/uni-nav-bar/uni-nav-bar"}}},"pages/appointment/conference_en.html":{"window":{"usingComponents":{"uni-section":"/components/uni-section/uni-section","uni-list":"/components/uni-list/uni-list","uni-list-item":"/components/uni-list-item/uni-list-item","uni-nav-bar":"/components/uni-nav-bar/uni-nav-bar"}}},"pages/identify/identify.html":{"window":{"usingComponents":{"uni-section":"/components/uni-section/uni-section","uni-list":"/components/uni-list/uni-list","uni-list-item":"/components/uni-list-item/uni-list-item","uni-nav-bar":"/components/uni-nav-bar/uni-nav-bar"}}},"pages/identify/identify_en.html":{"window":{"usingComponents":{"uni-section":"/components/uni-section/uni-section","uni-list":"/components/uni-list/uni-list","uni-list-item":"/components/uni-list-item/uni-list-item","uni-nav-bar":"/components/uni-nav-bar/uni-nav-bar"}}},"pages/infor/dinningCode.html":{"window":{"usingComponents":{"uni-nav-bar":"/components/uni-nav-bar/uni-nav-bar"}}},"pages/infor/dinningCode_en.html":{"window":{"usingComponents":{"uni-nav-bar":"/components/uni-nav-bar/uni-nav-bar"}}},"pages/login/forget.html":{"window":{"usingComponents":{"w-input":"/components/watch-login/watch-input","w-button":"/components/watch-login/watch-button"}}},"pages/login/forget_en.html":{"window":{"usingComponents":{"w-input":"/components/watch-login/watch-input","w-button":"/components/watch-login/watch-button"}}},"pages/login/register.html":{"window":{"usingComponents":{"w-input":"/components/watch-login/watch-input","w-button":"/components/watch-login/watch-button"}}},"pages/login/register_en.html":{"window":{"usingComponents":{"w-input":"/components/watch-login/watch-input","w-button":"/components/watch-login/watch-button"}}},"pages/infor/map.html":{"window":{"usingComponents":{}}},"pages/infor/infor_en.html":{"window":{"usingComponents":{"cmd-avatar":"/components/cmd-avatar/cmd-avatar","cmd-cell-item":"/components/cmd-cell-item/cmd-cell-item","cmd-icon":"/components/cmd-icon/cmd-icon","uni-nav-bar":"/components/uni-nav-bar/uni-nav-bar"}}},"pages/infor/info.html":{"window":{"usingComponents":{"cmd-nav-bar":"/components/cmd-nav-bar/cmd-nav-bar","cmd-page-body":"/components/cmd-page-body/cmd-page-body","cmd-transition":"/components/cmd-transition/cmd-transition","cmd-cel-item":"/components/cmd-cell-item/cmd-cell-item","cmd-avatar":"/components/cmd-avatar/cmd-avatar"}}},"pages/infor/info_en.html":{"window":{"usingComponents":{"cmd-nav-bar":"/components/cmd-nav-bar/cmd-nav-bar","cmd-page-body":"/components/cmd-page-body/cmd-page-body","cmd-transition":"/components/cmd-transition/cmd-transition","cmd-cel-item":"/components/cmd-cell-item/cmd-cell-item","cmd-avatar":"/components/cmd-avatar/cmd-avatar"}}},"pages/infor/modify.html":{"window":{"usingComponents":{"w-input":"/components/watch-login/watch-input","w-button":"/components/watch-login/watch-button"}}},"pages/infor/modify_en.html":{"window":{"usingComponents":{"w-input":"/components/watch-login/watch-input","w-button":"/components/watch-login/watch-button"}}},"pages/infor/feedback.html":{"window":{"usingComponents":{"uni-nav-bar":"/components/uni-nav-bar/uni-nav-bar"}}},"pages/new/index.html":{"window":{"navigationBarTitleText":"首页","bounce":"none","usingComponents":{"uni-nav-bar":"/components/uni-nav-bar/uni-nav-bar","mix-pulldown-refresh":"/components/mix-pulldown-refresh/mix-pulldown-refresh","mix-load-more":"/components/mix-load-more/mix-load-more","mix-advert":"/components/mix-advert/vue/mix-advert"}}},"pages/new/index_en.html":{"window":{"navigationBarTitleText":"Home","bounce":"none","usingComponents":{"uni-nav-bar":"/components/uni-nav-bar/uni-nav-bar","mix-pulldown-refresh":"/components/mix-pulldown-refresh/mix-pulldown-refresh","mix-load-more":"/components/mix-load-more/mix-load-more","mix-advert":"/components/mix-advert/vue/mix-advert"}}},"pages/new/details.html":{"window":{"navigationBarTitleText":"详情","navigationBarTextStyle":"white","bounce":"none","usingComponents":{"uni-nav-bar":"/components/uni-nav-bar/uni-nav-bar","mix-loading":"/components/mix-loading/mix-loading"}}},"pages/new/videoDetails.html":{"window":{"navigationBarTitleText":"","titleNView":false,"navigationBarTextStyle":"white","bounce":"none","usingComponents":{"uni-nav-bar":"/components/uni-nav-bar/uni-nav-bar","mix-loading":"/components/mix-loading/mix-loading"}}},"pages/shop/tabBar/home/home.html":{"window":{"navigationBarTextStyle":"black","enablePullDownRefresh":true,"onReachBottomDistance":50,"titleNView":false,"softinputNavBar":"none","subNVues":[{"id":"homeTitleNvue","path":"pages/shop/tabBar/home/subNvue/homeTitleNvue","type":"navigationBar"}],"usingComponents":{}}},"pages/shop/tabBar/cart/cart.html":{"window":{"enablePullDownRefresh":true,"navigationBarTextStyle":"black","titleNView":false,"softinputNavBar":"none","subNVues":[{"id":"cartTitleNvue","path":"pages/shop/tabBar/cart/subNvue/cartTitleNvue","type":"navigationBar"}],"usingComponents":{}}},"pages/shop/tabBar/user/user.html":{"window":{"enablePullDownRefresh":true,"backgroundTextStyle":"light","navigationBarBackgroundColor":"#4c4c4c","backgroundColorTop":"#4c4c4c","navigationBarTextStyle":"white","titleNView":false,"subNVues":[{"id":"userTitleNvue","path":"pages/shop/tabBar/user/subNvue/userTitleNvue","type":"navigationBar"}],"usingComponents":{}}},"pages/shop/goods/goods.html":{"window":{"navigationBarTitleText":"","navigationBarBackgroundColor":"#f1f1f1","onReachBottomDistance":50,"titleNView":false,"bounce":"none","usingComponents":{}}},"pages/shop/order/confirmation.html":{"window":{"navigationBarTitleText":"确认订单","softinputNavBar":"none","usingComponents":{}}},"pages/shop/user/setting/setting.html":{"window":{"navigationBarBackgroundColor":"#f8f8f8","navigationBarTitleText":"我的设置","backgroundColorTop":"#ffffff","backgroundColorBottom":"#f3f3f3","usingComponents":{}}},"pages/shop/msg/msg.html":{"window":{"enablePullDownRefresh":true,"navigationBarTitleText":"消息列表","navigationBarBackgroundColor":"#f06c7a","navigationBarTextStyle":"white","usingComponents":{}}},"pages/shop/msg/chat/chat.html":{"window":{"navigationBarBackgroundColor":"#f2f2f2","backgroundColorTop":"#e5e5e5","backgroundColorBottom":"#e5e5e5","softinputNavBar":"none","bounce":"none","usingComponents":{}}},"pages/shop/user/coupon/coupon.html":{"window":{"navigationBarTitleText":"优惠券","navigationBarBackgroundColor":"#f06c7a","navigationBarTextStyle":"white","bounce":"none","usingComponents":{}}},"pages/shop/user/keep/keep.html":{"window":{"navigationBarTitleText":"我的收藏","navigationBarBackgroundColor":"#f06c7a","navigationBarTextStyle":"white","bounce":"none","usingComponents":{}}},"pages/shop/user/address/address.html":{"window":{"navigationBarBackgroundColor":"#ffffff","navigationBarTitleText":"地址管理","backgroundColorTop":"#ffffff","backgroundColorBottom":"#ffffff","usingComponents":{}}},"pages/shop/user/address/edit/edit.html":{"window":{"navigationBarBackgroundColor":"#ffffff","navigationBarTitleText":"编辑收件人地址","backgroundColorTop":"#ffffff","backgroundColorBottom":"#ffffff","usingComponents":{"mpvue-city-picker":"/components/mpvue-citypicker/mpvueCityPicker"}}},"pages/shop/user/deposit/deposit.html":{"window":{"navigationBarBackgroundColor":"#ffffff","navigationBarTitleText":"充值","backgroundColorTop":"#ffffff","backgroundColorBottom":"#ffffff","usingComponents":{}}},"pages/shop/pay/payment/payment.html":{"window":{"navigationBarBackgroundColor":"#ffffff","navigationBarTitleText":"订单支付","backgroundColorTop":"#ffffff","backgroundColorBottom":"#ffffff","usingComponents":{}}},"pages/shop/pay/success/success.html":{"window":{"navigationBarBackgroundColor":"#ffffff","navigationBarTitleText":"支付成功","backgroundColorTop":"#ffffff","backgroundColorBottom":"#ffffff","usingComponents":{}}},"pages/shop/goods/ratings/ratings.html":{"window":{"navigationBarTitleText":"商品评论","enablePullDownRefresh":true,"onReachBottomDistance":50,"backgroundColorTop":"#ffffff","backgroundColorBottom":"#ffffff","usingComponents":{}}},"pages/translate/translation.html":{"window":{"usingComponents":{"uni-section":"/components/uni-section/uni-section","uni-list":"/components/uni-list/uni-list","uni-list-item":"/components/uni-list-item/uni-list-item","uni-nav-bar":"/components/uni-nav-bar/uni-nav-bar"}}},"pages/declare/declare-form.html":{"window":{"usingComponents":{"wenjuan":"/components/gwh-wenjuan/gwh-wenjuan","uni-nav-bar":"/components/uni-nav-bar/uni-nav-bar","uni-section":"/components/uni-section/uni-section"}}},"pages/declare/declare-form_en.html":{"window":{"usingComponents":{"wenjuan":"/components/gwh-wenjuan/gwh-wenjuan","uni-nav-bar":"/components/uni-nav-bar/uni-nav-bar","uni-section":"/components/uni-section/uni-section"}}},"pages/declare/declare-safecomplete.html":{"window":{"usingComponents":{"uni-nav-bar":"/components/uni-nav-bar/uni-nav-bar","uni-section":"/components/uni-section/uni-section","uni-list":"/components/uni-list/uni-list","uni-list-item":"/components/uni-list-item/uni-list-item"}}},"pages/declare/declare-safecomplete_en.html":{"window":{"usingComponents":{"uni-nav-bar":"/components/uni-nav-bar/uni-nav-bar","uni-section":"/components/uni-section/uni-section","uni-list":"/components/uni-list/uni-list","uni-list-item":"/components/uni-list-item/uni-list-item"}}}},"global":{"window":{"navigationBarTextStyle":"black","navigationBarTitleText":"登陆模板","navigationBarBackgroundColor":"#F8F8F8","backgroundColor":"#F8F8F8","navigationStyle":"custom"}},"tabBar":{"color":"","selectedColor":"","backgroundColor":"","borderStyle":"black","list":[],"position":"bottom"},"networkTimeout":{"request":60000,"connectSocket":60000,"uploadFile":60000,"downloadFile":60000},"platform":"devtools","pages":["pages/infor/infor","pages/declare/declare-incomplete","pages/declare/declare-incomplete_en","pages/login/login_en","pages/infor/first_en","pages/infor/first","pages/login/login","pages/appointment/conference","pages/appointment/conference_en","pages/identify/identify","pages/identify/identify_en","pages/infor/dinningCode","pages/infor/dinningCode_en","pages/login/forget","pages/login/forget_en","pages/login/register","pages/login/register_en","pages/infor/map","pages/infor/infor_en","pages/infor/info","pages/infor/info_en","pages/infor/modify","pages/infor/modify_en","pages/infor/first","pages/infor/feedback","pages/new/index","pages/new/index_en","pages/new/details","pages/new/videoDetails","pages/shop/tabBar/home/home","pages/shop/tabBar/cart/cart","pages/shop/tabBar/user/user","pages/shop/goods/goods","pages/shop/order/confirmation","pages/shop/user/setting/setting","pages/shop/msg/msg","pages/shop/msg/chat/chat","pages/shop/user/coupon/coupon","pages/shop/user/keep/keep","pages/shop/user/address/address","pages/shop/user/address/edit/edit","pages/shop/user/deposit/deposit","pages/shop/pay/payment/payment","pages/shop/pay/success/success","pages/shop/goods/ratings/ratings","pages/translate/translation","pages/declare/declare-form","pages/declare/declare-form_en","pages/declare/declare-safecomplete","pages/declare/declare-safecomplete_en","pages/shop/goods/goods-list/goods-list"],"nvue":{"pages":{"pages/shop/goods/goods-list/goods-list.html":{"window":{"usingComponents":{},"navigationBarTitleText":"","enablePullDownRefresh":true,"bounce":"none"},"nvue":true}}},"nvueCompiler":"weex","renderer":"auto","splashscreen":{"alwaysShowBeforeRender":true,"autoclose":false},"compilerVersion":"2.5.1","usingComponents":{}};
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// install a JSONP callback for chunk loading
+/******/ 	function webpackJsonpCallback(data) {
+/******/ 		var chunkIds = data[0];
+/******/ 		var moreModules = data[1];
+/******/ 		var executeModules = data[2];
+/******/
+/******/ 		// add "moreModules" to the modules object,
+/******/ 		// then flag all "chunkIds" as loaded and fire callback
+/******/ 		var moduleId, chunkId, i = 0, resolves = [];
+/******/ 		for(;i < chunkIds.length; i++) {
+/******/ 			chunkId = chunkIds[i];
+/******/ 			if(installedChunks[chunkId]) {
+/******/ 				resolves.push(installedChunks[chunkId][0]);
+/******/ 			}
+/******/ 			installedChunks[chunkId] = 0;
+/******/ 		}
+/******/ 		for(moduleId in moreModules) {
+/******/ 			if(Object.prototype.hasOwnProperty.call(moreModules, moduleId)) {
+/******/ 				modules[moduleId] = moreModules[moduleId];
+/******/ 			}
+/******/ 		}
+/******/ 		if(parentJsonpFunction) parentJsonpFunction(data);
+/******/
+/******/ 		while(resolves.length) {
+/******/ 			resolves.shift()();
+/******/ 		}
+/******/
+/******/ 		// add entry modules from loaded chunk to deferred list
+/******/ 		deferredModules.push.apply(deferredModules, executeModules || []);
+/******/
+/******/ 		// run deferred modules when all chunks ready
+/******/ 		return checkDeferredModules();
+/******/ 	};
+/******/ 	function checkDeferredModules() {
+/******/ 		var result;
+/******/ 		for(var i = 0; i < deferredModules.length; i++) {
+/******/ 			var deferredModule = deferredModules[i];
+/******/ 			var fulfilled = true;
+/******/ 			for(var j = 1; j < deferredModule.length; j++) {
+/******/ 				var depId = deferredModule[j];
+/******/ 				if(installedChunks[depId] !== 0) fulfilled = false;
+/******/ 			}
+/******/ 			if(fulfilled) {
+/******/ 				deferredModules.splice(i--, 1);
+/******/ 				result = __webpack_require__(__webpack_require__.s = deferredModule[0]);
+/******/ 			}
+/******/ 		}
+/******/ 		return result;
+/******/ 	}
+/******/
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// object to store loaded and loading chunks
+/******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 	// Promise = chunk loading, 0 = chunk loaded
+/******/ 	var installedChunks = {
+/******/ 		"app-config": 0
+/******/ 	};
+/******/
+/******/ 	var deferredModules = [];
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/";
+/******/
+/******/ 	var jsonpArray = this["webpackJsonp"] = this["webpackJsonp"] || [];
+/******/ 	var oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
+/******/ 	jsonpArray.push = webpackJsonpCallback;
+/******/ 	jsonpArray = jsonpArray.slice();
+/******/ 	for(var i = 0; i < jsonpArray.length; i++) webpackJsonpCallback(jsonpArray[i]);
+/******/ 	var parentJsonpFunction = oldJsonpFunction;
+/******/
+/******/
+/******/ 	// run deferred modules from other chunks
+/******/ 	checkDeferredModules();
+/******/ })
+/************************************************************************/
+/******/ ([]);

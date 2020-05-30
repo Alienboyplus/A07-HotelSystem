@@ -45,8 +45,16 @@
 						<navigator url="forget" open-type="navigate">找回密码</navigator>
 						<text>|</text>
 						<navigator url="register" open-type="navigate">注册账号</navigator>
-						<text>|</text>
+					</view>
+					
+					<view class="footer">
 						<navigator url="login_en" open-type="navigate">English</navigator>
+						<text>|</text>
+						<navigator url="login_hk" open-type="navigate">繁體中文</navigator>
+						<text>|</text>
+						<navigator url="login_korean" open-type="navigate">한국어</navigator>
+						<text>|</text>
+						<navigator url="login_jpn" open-type="navigate">にほんご</navigator>
 					</view>
 				</view>
 			</view>
@@ -177,13 +185,18 @@
 					method:'POST',
 					success: (res) => {
 						console.log(res.data)
+						uni.showLoading({
+							title: '登录中'
+						});
 						if(res.data.code == 0){
+							uni.hideLoading()
 							console.log("登录成功")
 							uni.navigateTo({
 								url:"../infor/first"
 							})
 						}
 						else if(res.data.code == 1){
+							uni.hideLoading()
 							console.log("用户身份过期")
 							uni.showToast({
 								icon: 'none',
@@ -192,11 +205,19 @@
 							})
 						}
 						else if(res.data.code == 2){
+							uni.hideLoading()
 							console.log("用户名或密码有误")
 							uni.showToast({
 								icon: 'none',
 								position: 'bottom',
 								title: '用户名或密码有误'
+							})
+						}
+						else{
+							uni.showToast({
+								icon: 'none',
+								position: 'bottom',
+								title: 'unexpected error! '
 							})
 						}
 						//else 
@@ -212,9 +233,6 @@
 				setTimeout(function(){
 					_this.isRotate=false
 				},3000)
-				uni.showLoading({
-					title: '登录中'
-				});
 				// getLogin()
 				// .then(res => {
 				// 	//console.log(res)

@@ -23,16 +23,16 @@
 	  <cmd-cell-item title="Shopping" slot-left @click="fnClick('shop')" arrow>
 	    <cmd-icon type="shopping-cart" size="24" color="#000000"></cmd-icon>
 	  </cmd-cell-item>
-	  <cmd-cell-item title="conferenece room" slot-left @click="fnClick('conference')" arrow>
+	  <cmd-cell-item title="Conferenece room" slot-left @click="fnClick('conference')" arrow>
 	    <cmd-icon type="calendar" size="24" color="#000000"></cmd-icon>
 	  </cmd-cell-item>
-	  <cmd-cell-item title="translation helper" slot-left @click="fnClick('translation')" arrow>
+	  <cmd-cell-item title="Translation helper" slot-left @click="fnClick('translation')" arrow>
 	    <cmd-icon type="streaming" size="24" color="#000000"></cmd-icon>
 	  </cmd-cell-item>
 	  <cmd-cell-item title="COVID-19 declaration" slot-left @click="fnClick('declare')" arrow>
 	    <cmd-icon type="bullet-list" size="24" color="#000000"></cmd-icon>
 	  </cmd-cell-item>
-	  <cmd-cell-item title="feedbacks" slot-left @click="fnClick('feedback')" arrow>
+	  <cmd-cell-item title="Feedbacks" slot-left @click="fnClick('feedback')" arrow>
 	    <cmd-icon type="mail" size="24" color="#000000"></cmd-icon>
 	  </cmd-cell-item>
 	  <cmd-cell-item title="version check" addon="v1.1" @click="checkVersion()" slot-left arrow>
@@ -87,6 +87,11 @@
 			url:'../new/index_en'
 		  })
 		}
+		if(type == 'feedback'){
+			uni.navigateTo({
+				url:"./feedback_en"
+			})
+		}
 		if(type == 'shop'){
 			uni.navigateTo({
 			url:'../shop/tabBar/home/home'
@@ -105,6 +110,11 @@
 		if(type == 'declare'){
 			uni.navigateTo({
 				url:"../declare/declare-incomplete_en"
+			})
+		}
+		if(type == 'translation'){
+			uni.navigateTo({
+				url:"../translate/translation"
 			})
 		}
     },

@@ -48,6 +48,11 @@
 			uniListItem,
 			uniNavBar
 		},
+		onLoad() {
+			let that = this
+			that.index_from = 1
+			that.index_to = 0
+		},
 		data() {
 			return {
 				context_from:'',
@@ -63,8 +68,8 @@
 				context_placeholder:['请输入需要翻译的文字', 'Please input context', '翻訳が必要な文字を入力してください', '번역할 단어를 입력하십시오.'],
 				result_placeholder:['结果', 'result', '結果', '결과'],
 				translate:['翻译', 'translate', '翻訳', '번역'],
-				index_from:1,
-				index_to:0,
+				index_from:'',
+				index_to:'',
 			}	
 		},
 		methods: {

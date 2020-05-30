@@ -1,16 +1,16 @@
-<template>
++<template>
 	<view class="content">
-		<uni-nav-bar color="#000000" background-color="#ffffff" :status-bar="true" left-icon="arrowleft" left-text="返回" title="会议室预约" @clickLeft="back" />
-		<uni-section title="基本信息" type="line"></uni-section>
+		<uni-nav-bar color="#000000" background-color="#ffffff" :status-bar="true" left-icon="arrowleft" left-text="back" title="Reservation" @clickLeft="back" />
+		<uni-section title="Basic Information" type="line"></uni-section>
 		<uni-list>
 			<uni-list-item :show-arrow="false">
-				<input class="uni-input" placeholder="请输入预约者姓名" v-model="name"/>
+				<input class="uni-input" placeholder="Please enter the appointment name" v-model="name"/>
 			</uni-list-item>
 			<uni-list-item :show-arrow="false">
-				<input class="uni-input" type="idcard" placeholder="请输入预约者手机号码" v-model="phoneNum"/>
+				<input class="uni-input" type="idcard" placeholder="Please enter the mobile phone number of the reservation" v-model="phoneNum"/>
 			</uni-list-item>
 		</uni-list>
-		<uni-section title="选择预约日期" type="line"></uni-section>
+		<uni-section title="Select appointment date" type="line"></uni-section>
 		<uni-list>
 			<uni-list-item>
 		        <picker mode="date" :value="date" :start="startDate" :end="endDate" @change="bindDateChange">
@@ -18,7 +18,7 @@
 		        </picker>
 			</uni-list-item>
 		</uni-list>
-		<uni-section title="选择开始时间" type="line"></uni-section>
+		<uni-section title="Choose a start time" type="line"></uni-section>
 		<uni-list>
 			<uni-list-item>
 		        <picker mode="time" :value="start_time" start="09:01" end="21:01" @change="bindStartTimeChange">
@@ -26,7 +26,7 @@
 		        </picker>
 			</uni-list-item>
 		</uni-list>
-		<uni-section title="选择结束时间" type="line"></uni-section>
+		<uni-section title="Choose end time" type="line"></uni-section>
 		<uni-list>
 			<uni-list-item>
 		        <picker mode="time" :value="end_time"  @change="bindEndTimeChange">
@@ -34,14 +34,14 @@
 		        </picker>
 			</uni-list-item>
 		</uni-list>
-		<uni-section title="备注" type="line"></uni-section>
+		<uni-section title="Remarks" type="line"></uni-section>
 		<uni-list>
 			<uni-list-item :show-arrow="false">
-				<textarea v-model="remarks" auto-height placeholder="可以留下相关的备注"/>
+				<textarea v-model="remarks" auto-height placeholder="you can leave relevant notes"/>
 			</uni-list-item>
 		</uni-list>
 		<view style="margin-top:38upx;">
-			<button type="primary" @tap="upload">确认预约</button>
+			<button type="primary" @tap="upload">Confirm appointment</button>
 		</view>
 		
 	</view>
@@ -64,9 +64,9 @@
 	            format: true
 	        })
 			return {
-				start_time: '点击选择',
-				end_time: '点击选择',
-				date: '点击选择',
+				start_time: 'Click to select',
+				end_time: 'Click to select',
+				date: 'Click to select',
 				remarks:''
 			}	
 		},
@@ -106,13 +106,13 @@
 			upload(){
 				uni.showToast({
 					duration:3000,
-					title:"预约成功！",
+					title:"Successful appointment!",
 					icon:'none'
 				})
 			},
 			back(){
 				uni.navigateTo({
-					url:"../infor/infor"
+					url:"../infor/infor_en"
 				})
 			}
 		}

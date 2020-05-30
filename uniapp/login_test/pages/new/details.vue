@@ -67,7 +67,7 @@
 				<input 
 					class="input"
 					type="text" 
-					placeholder="点评一下把.." 
+					placeholder="点评一下吧.." 
 					placeholder-style="color:#adb1b9;"
 				/>
 			</view>

@@ -106,7 +106,7 @@
 					//url:'http://127.0.0.1:8000/gen_captcha/',
 					url:'http://39.106.209.123:8000/gen_captcha/',
 					head:{
-						'content-type': 'application/jsson'
+						'content-type': 'application/json'
 					},
 					data:{
 						phoneNumber:this.phoneData

@@ -1,6 +1,10 @@
 {
     "pages": [ //pages数组中第一项表示应用启动页,
 		{
+		    "path": "pages/login/login",
+		    "style": {}
+		},
+		{
 		    "path" : "pages/infor/infor",
 		    "style" : {}
 		}
@@ -19,16 +23,24 @@
 		    "style": {}
 		},
 		{
+		    "path": "pages/login/login_jpn",
+		    "style": {}
+		},
+		{
+		    "path": "pages/login/login_korean",
+		    "style": {}
+		},
+		{
+		    "path": "pages/login/login_hk",
+		    "style": {}
+		},
+		{
 		    "path" : "pages/infor/first_en",
 		    "style" : {}
 		},
 		{
 		    "path" : "pages/infor/first",
 		    "style" : {}
-		},
-		{
-		    "path": "pages/login/login",
-		    "style": {}
 		},
 		{
 			"path":"pages/appointment/conference",
@@ -112,6 +124,10 @@
 		    "style" : {}
 		},
 		{
+		    "path" : "pages/infor/feedback_en",
+		    "style" : {}
+		},
+		{
 				    "path" : "pages/new/index",
 				    "style" : {
 				    	"navigationBarTitleText" : "首页",
@@ -142,7 +158,28 @@
 					}
 				},
 				{
+				    "path" : "pages/new/details_en",
+				    "style" : {
+						"navigationBarTitleText" : "Details",
+						"app-plus": {
+							"navigationBarTextStyle": "white",
+							"bounce": "none"
+						}
+					}
+				},
+				{
 				    "path" : "pages/new/videoDetails",
+				    "style" : {
+						"navigationBarTitleText" : "",
+						"app-plus": {
+							"titleNView": false,
+							"navigationBarTextStyle": "white",
+							"bounce": "none"
+						}
+					}
+				},
+				{
+				    "path" : "pages/new/videoDetails_en",
 				    "style" : {
 						"navigationBarTitleText" : "",
 						"app-plus": {
