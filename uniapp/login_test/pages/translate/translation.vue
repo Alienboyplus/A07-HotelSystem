@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<uni-nav-bar color="#000000" background-color="#ffffff" :status-bar="true" left-icon="arrowleft" :left-text="back[index_from]" :title="title[index_from]" @clickLeft="back()" />
+		<uni-nav-bar color="#000000" background-color="#ffffff" :status-bar="true" left-icon="arrowleft" :left-text="back[index_from]" :title="title[index_from]" @clickLeft="return_back" />
 		<uni-section :title="source_language[index_from]" type="line"></uni-section>
 		<uni-list>
 			<uni-list-item>
@@ -74,16 +74,16 @@
 		},
 		methods: {
 	        bindPickerChange_from: function(e) {
-	            console.log('picker发送选择改变，携带值为', e.target.value)
+	            // console.log('picker发送选择改变，携带值为', e.target.value)
 	            this.index_from = e.target.value
 	        },
 			bindPickerChange_to: function(e) {
-			    console.log('picker发送选择改变，携带值为', e.target.value)
+			    // console.log('picker发送选择改变，携带值为', e.target.value)
 			    this.index_to = e.target.value
 			},
-			back(){
+			return_back(){
 				uni.navigateTo({
-					url:"../infor/infor"
+					url:"../infor/first"
 				})
 			},
 			upload(){

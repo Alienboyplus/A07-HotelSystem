@@ -99,7 +99,7 @@
 		}
 		if(type == 'conference'){
 			uni.navigateTo({
-				url:"../appointment/conference"
+				url:"../appointment/conference_en"
 			})
 		}
 		if(type == 'identify'){

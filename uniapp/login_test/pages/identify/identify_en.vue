@@ -9,7 +9,7 @@
 			<uni-list-item :show-arrow="false">
 				<input class="uni-input" type="idcard" placeholder="identification number" v-model="idCardNum"/>
 			</uni-list-item>
-			<uni-list-item :disabled="true" :show-arrow="false" title="phone number"/>
+			<uni-list-item :disabled="true" :show-arrow="false" title="phone number: xxxxxxxxxxx"/>
 		</uni-list>
 		<uni-section title="upload photos" type="line"></uni-section>
 		<uni-list>

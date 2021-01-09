@@ -100,7 +100,7 @@
 		methods:{
 			back() {
 				uni.navigateTo({
-					url:'infor_en'
+					url:'first_en'
 				})
 			},
 			initialize() {
@@ -181,50 +181,6 @@
 								icon:'none'
 							})
 						});
-					}
-				})
-			},
-			share(e) {
-				if (this.providerList.length === 0) {
-					uni.showModal({
-						title: 'There are no sharing channels in the current environment!',
-						showCancel: false
-					})
-					return;
-				}
-				let itemList = this.providerList.map(function (value) {
-					return value.name
-				})
-				 
-				console.log(itemList)
-				
-				uni.showActionSheet({
-					itemList: itemList,
-					success: (res) => {
-						console.log(this.providerList[res.tapIndex].id)
-						if(this.providerList[res.tapIndex].id=='qq'){
-							this.type=1
-						}else{
-							this.type=0
-						}
-						 uni.share({
-						 	provider: this.providerList[res.tapIndex].id,
-						 	scene: this.providerList[res.tapIndex].type && this.providerList[res.tapIndex].type === 'WXSenceTimeline' ? 'WXSenceTimeline' : "WXSceneSession",
-						 	type: this.type,
-						 	title:'耘助教',
-						 	summary: '耘助教 is an online education application platform',
-						 	imageUrl:'http://pds.jyt123.com/wxtest/logo.png',
-						 	href:"https://m3w.cn/uniapp",
-						 	success: (res) => {
-						 		console.log("success:" + JSON.stringify(res));
-						 	},
-						 	fail: (e) => {
-						 		uni.showModal({
-						 			content: e.errMsg,
-						 			showCancel:false
-						 		})
-						 	}
-						 });
 					}
 				})
 			},

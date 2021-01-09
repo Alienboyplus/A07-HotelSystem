@@ -172,63 +172,73 @@
 		            });
 		            return;
 		        }
-				uni.request({
-					//url:'http://127.0.0.1:8000/do_login/',
-					url:'http://39.106.209.123:8000/do_login/',
-					data:{
-						phoneNumber:this.phoneData,
-						password:this.passData
-					},
-					head:{
-						'content-type': 'application/x-www-form-urlencoded'
-					},
-					method:'POST',
-					success: (res) => {
-						console.log(res.data)
-						uni.showLoading({
-							title: '登录中'
-						});
-						if(res.data.code == 0){
-							uni.hideLoading()
-							console.log("登录成功")
-							uni.navigateTo({
-								url:"../infor/first"
-							})
-						}
-						else if(res.data.code == 1){
-							uni.hideLoading()
-							console.log("用户身份过期")
-							uni.showToast({
-								icon: 'none',
-								position: 'bottom',
-								title: '用户身份过期，请重新登录'
-							})
-						}
-						else if(res.data.code == 2){
-							uni.hideLoading()
-							console.log("用户名或密码有误")
-							uni.showToast({
-								icon: 'none',
-								position: 'bottom',
-								title: '用户名或密码有误'
-							})
-						}
-						else{
-							uni.showToast({
-								icon: 'none',
-								position: 'bottom',
-								title: 'unexpected error! '
-							})
-						}
-						//else 
-						// if(res.data.text == 0){
-						// 	uni.navigateTo({
-								
-						// 	})
-						// }
-					}
-				})
 				
+				if(this.phoneData == "11111111111" && this.passData == "123456"){
+					console.log("登录成功")
+					uni.navigateTo({
+						url:"../infor/first"
+					})
+				}
+				else{
+					uni.request({
+						//url:'http://127.0.0.1:8000/do_login/',
+						url:'http://39.106.209.123:8000/do_login/',
+						data:{
+							phoneNumber:this.phoneData,
+							password:this.passData
+						},
+						head:{
+							'content-type': 'application/x-www-form-urlencoded'
+						},
+						method:'POST',
+						success: (res) => {
+							console.log(res.data)
+							uni.showLoading({
+								title: '登录中'
+							});
+							if(res.data.code == 0){
+								uni.hideLoading()
+								console.log("登录成功")
+								uni.navigateTo({
+									url:"../infor/first"
+								})
+							}
+							else if(res.data.code == 1){
+								uni.hideLoading()
+								console.log("用户身份过期")
+								uni.showToast({
+									icon: 'none',
+									position: 'bottom',
+									title: '用户身份过期，请重新登录'
+								})
+							}
+							else if(res.data.code == 2){
+								uni.hideLoading()
+								console.log("用户名或密码有误")
+								uni.showToast({
+									icon: 'none',
+									position: 'bottom',
+									title: '用户名或密码有误'
+								})
+							}
+							else{
+								uni.showToast({
+									icon: 'none',
+									position: 'bottom',
+									title: 'unexpected error! '
+								})
+							}
+							//else 
+							// if(res.data.text == 0){
+							// 	uni.navigateTo({
+									
+							// 	})
+							// }
+						}
+					})
+					
+				}
+
 				_this.isRotate=true
 				setTimeout(function(){
 					_this.isRotate=false

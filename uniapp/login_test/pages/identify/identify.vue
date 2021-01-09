@@ -9,7 +9,7 @@
 			<uni-list-item :show-arrow="false">
 				<input class="uni-input" type="idcard" placeholder="请输入身份证号码" v-model="idCardNum"/>
 			</uni-list-item>
-			<uni-list-item :disabled="true" :show-arrow="false" title="15989584526"/>
+			<uni-list-item :disabled="true" :show-arrow="false" title="您的手机号码:xxxxxxxxxxx"/>
 		</uni-list>
 		<uni-section title="上传照片" type="line"></uni-section>
 		<uni-list>

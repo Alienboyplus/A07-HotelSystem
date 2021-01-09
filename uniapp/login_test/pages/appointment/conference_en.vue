@@ -112,7 +112,7 @@
 			},
 			back(){
 				uni.navigateTo({
-					url:"../infor/infor_en"
+					url:"../infor/first_en"
 				})
 			}
 		}

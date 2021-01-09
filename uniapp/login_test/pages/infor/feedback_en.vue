@@ -82,7 +82,7 @@
         methods: {
 			back() {
 				uni.navigateTo({
-					url:'infor_en'
+					url:'first_en'
 				})
 			},
             close(e){

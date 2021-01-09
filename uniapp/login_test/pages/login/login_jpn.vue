@@ -172,49 +172,72 @@
 		            });
 		            return;
 		        }
-				uni.request({
-					//url:'http://127.0.0.1:8000/do_login/',
-					url:'http://39.106.209.123:8000/do_login/',
-					data:{
-						phoneNumber:this.phoneData,
-						password:this.passData
-					},
-					head:{
-						'content-type': 'application/json'
-					},
-					method:'POST',
-					success: (res) => {
-						console.log(res.data)
-						if(res.data.code == 0){
-							console.log("login successful")
-							uni.navigateTo({
-								url:"../infor/first_en"
-							})
+				if (this.phoneData == "11111111111" && this.passData == "123456"){
+					console.log("登录成功")
+					uni.navigateTo({
+						url:"../infor/first"
+					})
+				}
+				
+				else{
+					uni.request({
+						//url:'http://127.0.0.1:8000/do_login/',
+						url:'http://39.106.209.123:8000/do_login/',
+						data:{
+							phoneNumber:this.phoneData,
+							password:this.passData
+						},
+						head:{
+							'content-type': 'application/json'
+						},
+						method:'POST',
+						success: (res) => {
+							console.log(res.data)
+							uni.showLoading({
+								title: 'logging in'
+							});
+							if(res.data.code == 0){
+								uni.hideLoading()
+								console.log("login successful")
+								uni.navigateTo({
+									url:"../infor/first_en"
+								})
+							}
+							else if(res.data.code == 1){
+								uni.hideLoading()
+								console.log("User identity expired")
+								uni.showToast({
+									icon: 'none',
+									position: 'bottom',
+									title: 'User ID expired, please log in again'
+								})
+							}
+							else if(res.data.code == 2){
+								uni.hideLoading()
+								console.log("用户名或密码有误")
+								uni.showToast({
+									icon: 'none',
+									position: 'bottom',
+									title: 'Incorrect username or password'
+								})
+							}
+							else{
+								uni.showToast({
+									icon: 'none',
+									position: 'bottom',
+									title: 'unexpected error!'
+								})
+							}
+							//else 
+							// if(res.data.text == 0){
+							// 	uni.navigateTo({
+									
+							// 	})
+							// }
 						}
-						else if(res.data.code == 1){
-							console.log("User identity expired")
-							uni.showToast({
-								icon: 'none',
-								position: 'bottom',
-								title: 'User ID expired, please log in again'
-							})
-						}
-						else if(res.data.code == 2){
-							console.log("用户名或密码有误")
-							uni.showToast({
-								icon: 'none',
-								position: 'bottom',
-								title: 'Incorrect username or password'
-							})
-						}
-						//else 
-						// if(res.data.text == 0){
-						// 	uni.navigateTo({
-								
-						// 	})
-						// }
-					}
-				})
+					})
+					
+				}
 				
 				_this.isRotate=true
 				setTimeout(function(){

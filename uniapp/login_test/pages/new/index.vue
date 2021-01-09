@@ -146,7 +146,7 @@
 			//获取分类
 			back() {
 				uni.navigateTo({
-					url:'../infor/infor'
+					url:'../infor/first'
 				})
 			},
 			loadTabbars(){
